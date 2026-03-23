@@ -10,10 +10,10 @@ const renderNote = ({ label, title, copy }, index) => SurfaceCard({
   `,
 });
 
-export const AdditionalInfoSection = ({ label, items }) => Section({
+export const AdditionalInfoSection = ({ label, title, items }) => Section({
   className: 'section--notes',
   content: `
-    ${SectionHeading({ label, title: 'A few practical notes for the evening.', align: 'center' })}
+    ${SectionHeading({ label, title, align: 'center' })}
     <div class="notes-grid">
       ${items.map(renderNote).join('')}
     </div>

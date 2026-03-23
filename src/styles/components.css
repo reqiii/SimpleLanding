@@ -68,13 +68,13 @@
 }
 
 .button--primary {
-  background: rgba(248, 240, 227, 0.94);
-  color: #17141b;
+  background: var(--color-text);
+  color: var(--color-bg);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
 }
 
 .button--ghost {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-bg-panel);
   color: var(--color-text);
 }
 
@@ -100,26 +100,26 @@
 .surface-card--soft {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
-    rgba(17, 15, 22, 0.62);
+    var(--color-bg-panel);
 }
 
 .surface-card--accent {
   background:
     radial-gradient(circle at top right, var(--color-accent-soft), transparent 45%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03)),
-    rgba(18, 15, 22, 0.78);
+    var(--color-bg-elevated);
 }
 
 .surface-card--frame {
   padding: var(--space-3);
-  background: rgba(16, 13, 21, 0.6);
+  background: var(--color-bg-elevated);
   box-shadow: var(--shadow-medium);
 }
 
 .surface-card--form {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
-    rgba(14, 12, 18, 0.78);
+    var(--color-bg-elevated);
 }
 
 @media (max-width: 720px) {

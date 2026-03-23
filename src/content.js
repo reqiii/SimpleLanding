@@ -14,11 +14,14 @@ export const siteContent = {
     title: ['Emilia', 'Maksim'],
     date: '18 / 06 / 2027',
     lead:
-      'We would love to welcome you to a heartfelt evening with an outdoor ceremony, candlelit dinner, and dancing beneath the trees.',
+      'We would love to welcome you to an outdoor ceremony, a long dinner, and an evening that unfolds at an easy pace.',
     note:
-      'The page is intentionally structured for layered visuals and motion, so every section can be art-directed with precision during the next stage.',
+      'Save the details below for the full day plan, practical notes, and your reply.',
     cta: 'Explore the day',
     secondaryCta: 'Reply now',
+    summaryLabel: 'At a glance',
+    summaryTitle: 'An intimate celebration shaped around ceremony, dinner, and dancing.',
+    summaryItems: ['Arrival from 16:00', 'Garden ceremony', 'Dinner in the pavilion'],
   },
   intro: {
     label: 'Invitation',
@@ -32,7 +35,7 @@ export const siteContent = {
     fullDate: '18 June 2027',
     time: 'Guests arrive from 16:00 · Ceremony at 16:30',
     copy:
-      'The schedule allows for an unhurried flow, with enough time for the ceremony, dinner, toasts, and the evening program.',
+      'The day is planned with room to settle in, enjoy the ceremony, and stay together through dinner and the evening program.',
   },
   venue: {
     label: 'Venue',
@@ -42,7 +45,7 @@ export const siteContent = {
     addressLabel: 'Address',
     address: 'Birch Lane 14, Riverside District',
     addressCopy:
-      'Parking, transfer timing, and arrival notes can be added later without changing the section structure.',
+      'Arrival logistics, parking notes, and transfer details can be added here once plans are final.',
     mapAction: 'Open directions',
   },
   timeline: {
@@ -57,11 +60,12 @@ export const siteContent = {
   },
   notes: {
     label: 'Additional information',
+    title: 'A few practical notes for the evening.',
     items: [
       {
         label: 'Dress code',
         title: 'Evening palette',
-        copy: 'Muted neutrals, smoky florals, and elegant silhouettes will harmonize beautifully with the setting.',
+        copy: 'Muted neutrals, soft florals, and elegant silhouettes will feel right at home with the setting.',
       },
       {
         label: 'Wishes',

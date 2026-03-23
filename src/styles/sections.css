@@ -1,20 +1,32 @@
 .hero-layout {
   min-height: calc(100svh - 8rem);
   display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(18rem, 0.65fr);
+  align-items: end;
+  gap: var(--space-5);
+}
+
+.hero-layout__content {
+  display: grid;
   align-content: center;
-  justify-items: center;
   gap: var(--space-3);
+  min-height: 100%;
   padding: clamp(2rem, 6vw, 4rem);
-  text-align: center;
   border: 1px solid var(--color-stroke);
   border-radius: min(4rem, 8vw);
   background:
-    radial-gradient(circle at top, rgba(228, 207, 173, 0.14), transparent 34%),
+    radial-gradient(circle at top, var(--color-accent-soft), transparent 34%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025)),
-    rgba(15, 12, 19, 0.56);
+    var(--color-bg-elevated);
   backdrop-filter: blur(var(--blur-soft));
   -webkit-backdrop-filter: blur(var(--blur-soft));
   box-shadow: var(--shadow-medium);
+}
+
+.hero-layout__summary {
+  align-self: stretch;
+  display: grid;
+  align-content: end;
 }
 
 .hero-layout__title {
@@ -45,6 +57,23 @@
   line-height: var(--leading-copy);
 }
 
+.hero-layout__summary-title {
+  margin-top: var(--space-2);
+  line-height: 1.05;
+}
+
+.hero-layout__summary-list {
+  margin: var(--space-4) 0 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: var(--space-2);
+  color: var(--color-text-muted);
+}
+
+.hero-layout__summary-list li::marker {
+  color: var(--color-accent);
+}
+
 .hero-layout__actions {
   display: flex;
   flex-wrap: wrap;
@@ -67,7 +96,8 @@
 
 .date-stage {
   display: grid;
-  place-items: center;
+  justify-items: center;
+  gap: var(--space-5);
 }
 
 .date-stage__card {
@@ -106,6 +136,13 @@
 .venue-stack {
   display: grid;
   gap: var(--space-4);
+}
+
+.venue-stack__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
 }
 
 .timeline-list {
@@ -199,11 +236,16 @@
 
   .hero-layout {
     min-height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-layout__content {
     justify-items: start;
     text-align: left;
   }
 
-  .hero-layout__actions {
+  .hero-layout__actions,
+  .venue-stack__actions {
     justify-content: flex-start;
   }
 
