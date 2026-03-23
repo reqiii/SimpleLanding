@@ -1,67 +1,89 @@
 export const siteContent = {
-  brand: 'A&A',
-  location: 'Moscow region',
-  dateShort: '12 September 2026',
-  dateNumeric: '12 / 09 / 2026',
+  brand: 'E & M',
+  quickFacts: ['Forest estate', '18 June 2027'],
+  countdownTarget: '2027-06-18T16:30:00+03:00',
+  header: {
+    label: 'Wedding weekend',
+    action: {
+      href: '#rsvp',
+      text: 'Confirm attendance',
+    },
+  },
   hero: {
-    eyebrow: 'Wedding day',
-    lead: 'With tenderness and joy, we invite you to share the day when our two families become one.',
-    title: ['Artem', 'Alesya'],
-    note: 'A September evening with vows in the open air, a long table, quiet lights, and the people dearest to us.',
-    cta: 'See the details',
+    eyebrow: 'A celebration of vows, family, and summer light',
+    title: ['Emilia', 'Maksim'],
+    date: '18 / 06 / 2027',
+    lead:
+      'We would love to welcome you to a heartfelt evening with an outdoor ceremony, candlelit dinner, and dancing beneath the trees.',
+    note:
+      'The page is intentionally structured for layered visuals and motion, so every section can be art-directed with precision during the next stage.',
+    cta: 'Explore the day',
+    secondaryCta: 'Reply now',
   },
   intro: {
     label: 'Invitation',
-    title: 'We would be happy to spend this day beside those who know our story best.',
+    title: 'Please join us for a quiet, elegant gathering marking the beginning of our marriage.',
     copy:
-      'Please arrive unhurried, leave room for warm embraces, and stay with us through the ceremony, dinner, and dancing under the evening sky.',
+      'Come ready for warm conversations, gentle music, and a celebration that moves slowly from daylight into a glowing summer night.',
   },
   dateBlock: {
     label: 'Date',
-    weekday: 'Saturday',
-    fullDate: '12 September 2026',
-    copy: 'The celebration begins at half past four and gently carries into the night.',
+    weekday: 'Friday',
+    fullDate: '18 June 2027',
+    time: 'Guests arrive from 16:00 · Ceremony at 16:30',
+    copy:
+      'The schedule allows for an unhurried flow, with enough time for the ceremony, dinner, toasts, and the evening program.',
   },
   venue: {
-    label: 'Location',
-    title: 'Due to Love',
+    label: 'Venue',
+    title: 'Glass Garden Estate',
     copy:
-      'A secluded country setting with an airy terrace, soft candlelight, and space for a quiet ceremony before dinner.',
+      'A secluded country venue with a ceremony lawn, reflective glass pavilion, and long dinner tables surrounded by greenery.',
     addressLabel: 'Address',
-    address: 'Moscow region, pine grove estate',
-    addressCopy: 'Parking and guest arrival details will be shared again closer to the date.',
+    address: 'Birch Lane 14, Riverside District',
+    addressCopy:
+      'Parking, transfer timing, and arrival notes can be added later without changing the section structure.',
+    mapAction: 'Open directions',
   },
-  timelineTitle: 'The day will unfold in an easy, graceful rhythm.',
-  timeline: [
-    ['16:30', 'Gathering', 'A glass of sparkling wine, soft music, and time to greet one another before the ceremony.'],
-    ['17:30', 'Ceremony', 'We will exchange our vows outdoors, surrounded by family and close friends.'],
-    ['18:00', 'Dinner', 'A festive dinner, heartfelt toasts, and the beginning of the evening program.'],
-    ['23:00', 'Dance floor', 'The lights grow lower, the music grows warmer, and the celebration continues.'],
-  ],
-  ribbonWords: ['flowers', 'candlelight', 'music', 'embrace', 'celebration', 'flowers', 'candlelight', 'music'],
-  notes: [
-    {
-      label: 'Dress code',
-      title: 'Elegant evening attire',
-      copy: 'Soft neutrals, muted shades, and refined silhouettes will beautifully support the atmosphere of the evening.',
-    },
-    {
-      label: 'Warm wishes',
-      title: 'Your presence is our main gift',
-      copy: 'If you would like to bring flowers, we would love light seasonal arrangements in gentle tones.',
-    },
-  ],
+  timeline: {
+    label: 'Timeline',
+    title: 'The celebration follows a soft and balanced rhythm.',
+    items: [
+      ['16:00', 'Guest arrival', 'Welcome drinks, quiet music, and time to settle in before the ceremony begins.'],
+      ['16:30', 'Ceremony', 'A garden ceremony framed by florals, vows, and the people who matter most to us.'],
+      ['18:00', 'Dinner', 'Shared courses, speeches, and a long table atmosphere that carries the evening forward.'],
+      ['21:30', 'First dance', 'The formal part gives way to movement, warm light, and a more intimate late-evening mood.'],
+    ],
+  },
+  notes: {
+    label: 'Additional information',
+    items: [
+      {
+        label: 'Dress code',
+        title: 'Evening palette',
+        copy: 'Muted neutrals, smoky florals, and elegant silhouettes will harmonize beautifully with the setting.',
+      },
+      {
+        label: 'Wishes',
+        title: 'The best gift is your presence',
+        copy: 'If you would like to mark the day with a gift, a card with a few warm words will be more than enough.',
+      },
+    ],
+  },
   rsvp: {
     label: 'RSVP',
-    title: 'Please let us know if we may prepare a place for you at our table.',
+    title: 'Please share your response so we can prepare your place at the table.',
     fields: {
       name: 'Full name',
       attendance: 'Attendance',
-      note: 'Comment',
+      guest: 'Guest name',
+      note: 'Dietary notes',
     },
+    options: ['Delighted to attend', 'Attending with a guest', 'Unable to attend'],
+    submit: 'Send response',
   },
   countdown: {
     label: 'Countdown',
-    text: '173 days until our wedding evening',
+    fallback: 'The celebration is drawing near.',
   },
 };

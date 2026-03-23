@@ -1,8 +1,8 @@
-import './styles.css';
-import { renderPage } from './components/sections.js';
-import { setupReveal } from './reveal.js';
+import './styles/index.css';
+import { renderApp } from './app/renderApp.js';
+import { setupReveal } from './app/motion.js';
 
 const app = document.querySelector('#app');
 
-app.innerHTML = renderPage();
-setupReveal();
+app.innerHTML = renderApp();
+setupReveal(app);

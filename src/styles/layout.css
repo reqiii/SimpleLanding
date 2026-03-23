@@ -1,0 +1,104 @@
+.page-shell {
+  position: relative;
+  min-height: 100vh;
+  overflow: clip;
+  isolation: isolate;
+}
+
+.page-shell__chrome {
+  position: relative;
+  z-index: 2;
+  padding-top: var(--space-4);
+}
+
+.page-shell__meta {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  color: var(--color-text-subtle);
+  font-size: var(--text-sm);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.page-main {
+  position: relative;
+  z-index: 1;
+  padding-bottom: var(--space-8);
+}
+
+.container {
+  width: var(--container-width);
+  margin: 0 auto;
+}
+
+.section {
+  padding: var(--space-7) 0;
+}
+
+.background-system,
+.background-system > div {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.background-system {
+  position: fixed;
+  z-index: -1;
+}
+
+.background-system__base {
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255, 244, 226, 0.1), transparent 18%),
+    radial-gradient(circle at 20% 24%, rgba(154, 101, 96, 0.13), transparent 24%),
+    radial-gradient(circle at 80% 20%, rgba(132, 117, 166, 0.1), transparent 20%),
+    linear-gradient(180deg, rgba(14, 12, 18, 0.9) 0%, rgba(9, 9, 12, 1) 100%);
+}
+
+.background-system__gradient--top {
+  background: linear-gradient(180deg, rgba(9, 9, 12, 0.05), rgba(9, 9, 12, 0.65) 38%, rgba(9, 9, 12, 0.96) 100%);
+}
+
+.background-system__gradient--side {
+  background: linear-gradient(110deg, rgba(255, 255, 255, 0.03), transparent 28%, rgba(228, 207, 173, 0.06) 55%, transparent 72%);
+}
+
+.background-system__glow {
+  filter: blur(var(--blur-strong));
+  opacity: 0.55;
+}
+
+.background-system__glow--halo {
+  inset: 0 auto auto 50%;
+  translate: -50% -8%;
+  width: min(48rem, 90vw);
+  height: 18rem;
+  background: rgba(255, 230, 200, 0.18);
+}
+
+.background-system__glow--ember {
+  inset: auto auto 12% 10%;
+  width: 20rem;
+  height: 20rem;
+  background: rgba(162, 103, 96, 0.14);
+}
+
+.background-system__vignette {
+  background: radial-gradient(circle at center, transparent 45%, rgba(8, 8, 11, 0.28) 70%, rgba(8, 8, 11, 0.82) 100%);
+}
+
+.background-system__grain {
+  opacity: 0.08;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.7) 0.65px, transparent 0.65px);
+  background-size: 10px 10px;
+  mix-blend-mode: soft-light;
+}
+
+@media (max-width: 720px) {
+  .page-shell__meta {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+}

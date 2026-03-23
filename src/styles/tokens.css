@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-bg: #09090c;
+  --color-bg-elevated: rgba(20, 17, 22, 0.72);
+  --color-bg-panel: rgba(255, 255, 255, 0.06);
+  --color-bg-strong: rgba(12, 10, 16, 0.88);
+  --color-text: #f8f0e3;
+  --color-text-muted: rgba(248, 240, 227, 0.74);
+  --color-text-subtle: rgba(248, 240, 227, 0.55);
+  --color-accent: #e4cfad;
+  --color-accent-soft: rgba(228, 207, 173, 0.14);
+  --color-accent-rose: rgba(173, 113, 104, 0.18);
+  --color-stroke: rgba(255, 244, 224, 0.15);
+  --color-stroke-strong: rgba(255, 244, 224, 0.28);
+  --shadow-soft: 0 24px 50px rgba(0, 0, 0, 0.24);
+  --shadow-medium: 0 34px 80px rgba(0, 0, 0, 0.3);
+  --radius-sm: 1.25rem;
+  --radius-md: 1.75rem;
+  --radius-lg: 2.5rem;
+  --radius-xl: 3.25rem;
+  --radius-pill: 999px;
+  --blur-soft: 20px;
+  --blur-strong: 72px;
+  --container-width: min(70rem, calc(100vw - 2rem));
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: clamp(2.5rem, 4vw, 3.5rem);
+  --space-7: clamp(4rem, 8vw, 6rem);
+  --space-8: clamp(5rem, 10vw, 8rem);
+  --font-body: 'Manrope', sans-serif;
+  --font-display: 'Cormorant Garamond', serif;
+  --text-sm: 0.8125rem;
+  --text-base: 1rem;
+  --text-md: clamp(1.0625rem, 1.2vw, 1.1875rem);
+  --text-lg: clamp(1.35rem, 2vw, 1.75rem);
+  --text-xl: clamp(2.4rem, 5vw, 4.5rem);
+  --text-hero: clamp(4.1rem, 12vw, 8.75rem);
+  --leading-copy: 1.75;
+  --tracking-label: 0.28em;
+  --tracking-wide: 0.42em;
+  --duration-fast: 220ms;
+  --duration-base: 720ms;
+  --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (max-width: 720px) {
+  :root {
+    --container-width: min(70rem, calc(100vw - 1.25rem));
+    --radius-xl: 2rem;
+    --radius-lg: 1.5rem;
+    --space-7: clamp(3.5rem, 10vw, 4.5rem);
+  }
+}
