@@ -1,23 +1,22 @@
-import { Section, SectionHeading, SurfaceCard } from '../ui/primitives.js';
+import { Section, SectionHeading } from '../ui/primitives.js';
 
-const renderItem = ([time, title, copy], index) => SurfaceCard({
-  className: 'timeline-item reveal',
-  attributes: `data-reveal data-reveal-delay="${index * 60}"`,
-  content: `
-    <div class="timeline-item__time">${time}</div>
-    <div class="timeline-item__body">
-      <h3>${title}</h3>
-      <p>${copy}</p>
-    </div>
-  `,
-});
+const renderItem = ([time, title, copy], index) => `
+  <article class="timeline-point reveal" data-reveal data-reveal-delay="${index * 70}">
+    <p class="timeline-point__label">${title}</p>
+    <p class="timeline-point__time">${time}</p>
+    <p class="timeline-point__copy">${copy}</p>
+  </article>
+`;
 
-export const TimelineSection = ({ label, title, items }) => Section({
+export const TimelineSection = ({ number, label, title, items }) => Section({
   className: 'section--timeline',
   content: `
-    ${SectionHeading({ label, title, align: 'center' })}
-    <div class="timeline-list">
-      ${items.map(renderItem).join('')}
+    ${SectionHeading({ number, label, title, align: 'center' })}
+    <div class="timeline-system">
+      <span class="timeline-system__line"></span>
+      <div class="timeline-system__track">
+        ${items.map(renderItem).join('')}
+      </div>
     </div>
   `,
 });
