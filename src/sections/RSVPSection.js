@@ -1,36 +1,38 @@
-import { Section, SectionHeading, SurfaceCard } from '../ui/primitives.js';
+import { Section, SectionHeading } from '../ui/primitives.js';
 
-export const RSVPSection = ({ label, title, fields, options, submit }) => Section({
+const renderOption = (name, option, index) => `
+  <label class="rsvp-choice">
+    <input type="radio" name="${name}" value="${option}" ${index === 0 ? 'checked' : ''} />
+    <span>${option}</span>
+  </label>
+`;
+
+export const RSVPSection = ({ number, label, title, deadline, fields, attendanceOptions, transferOptions, submit }) => Section({
   id: 'rsvp',
   className: 'section--rsvp',
   content: `
-    ${SectionHeading({ label, title })}
-    ${SurfaceCard({
-      className: 'surface-card--form reveal',
-      attributes: 'data-reveal data-reveal-delay="60"',
-      content: `
-        <form class="rsvp-form">
-          <label>
-            <span>${fields.name}</span>
-            <input type="text" name="name" placeholder="Your full name" />
-          </label>
-          <label>
-            <span>${fields.attendance}</span>
-            <select name="attendance">
-              ${options.map((option) => `<option>${option}</option>`).join('')}
-            </select>
-          </label>
-          <label>
-            <span>${fields.guest}</span>
-            <input type="text" name="guest" placeholder="If you are bringing someone" />
-          </label>
-          <label>
-            <span>${fields.note}</span>
-            <textarea name="note" rows="4" placeholder="Share allergies or seating notes"></textarea>
-          </label>
-          <button type="button" class="button button--primary">${submit}</button>
-        </form>
-      `,
-    })}
+    <div class="rsvp-layout">
+      ${SectionHeading({ number, label, title })}
+      <p class="rsvp-layout__deadline reveal" data-reveal data-reveal-delay="70">${deadline}</p>
+      <form class="rsvp-form reveal" data-reveal data-reveal-delay="120">
+        <label class="rsvp-form__field">
+          <span>${fields.name}</span>
+          <input type="text" name="name" placeholder="Ваше имя" />
+        </label>
+        <fieldset class="rsvp-form__fieldset">
+          <legend>${fields.attendance}</legend>
+          <div class="rsvp-form__choices">
+            ${attendanceOptions.map((option, index) => renderOption('attendance', option, index)).join('')}
+          </div>
+        </fieldset>
+        <fieldset class="rsvp-form__fieldset">
+          <legend>${fields.transfer}</legend>
+          <div class="rsvp-form__choices">
+            ${transferOptions.map((option, index) => renderOption('transfer', option, index)).join('')}
+          </div>
+        </fieldset>
+        <button type="button" class="button button--ghost">${submit}</button>
+      </form>
+    </div>
   `,
 });

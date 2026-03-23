@@ -18,7 +18,7 @@ export const renderApp = () => {
     DateSection(siteContent.dateBlock),
     VenueSection(siteContent.venue),
     TimelineSection(siteContent.timeline),
-    AdditionalInfoSection(siteContent.notes),
+    AdditionalInfoSection({ dressCode: siteContent.dressCode, details: siteContent.details }),
     RSVPSection(siteContent.rsvp),
     CountdownSection(siteContent.countdown),
   ].join('');
