@@ -1,6 +1,8 @@
 import { Section, ButtonLink } from '../ui/primitives.js';
 
-export const HeroSection = ({ topLeft, topRight, title, date, location, poetic, cta, secondaryCta }) => Section({
+const renderAction = ({ href, text, variant = 'ghost' }) => ButtonLink({ href, text, variant });
+
+export const HeroSection = ({ topLeft, topRight, title, date, location, poetic, actions = [] }) => Section({
   id: 'top',
   className: 'section--hero',
   content: `
@@ -20,8 +22,7 @@ export const HeroSection = ({ topLeft, topRight, title, date, location, poetic, 
       </div>
       <p class="hero-stage__poetic">${poetic}</p>
       <div class="hero-stage__actions">
-        ${ButtonLink({ href: '#details', text: cta })}
-        ${ButtonLink({ href: '#rsvp', text: secondaryCta, variant: 'ghost' })}
+        ${actions.map(renderAction).join('')}
       </div>
     </div>
   `,

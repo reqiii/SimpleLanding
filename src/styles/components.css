@@ -126,6 +126,25 @@
   color: var(--color-text);
 }
 
+.button--text {
+  min-height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--color-text-subtle);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.button--text:hover,
+.button--text:focus-visible {
+  transform: none;
+  color: var(--color-text);
+  box-shadow: none;
+}
+
 .surface-card {
   border: 1px solid var(--color-stroke);
   border-radius: var(--radius-xl);

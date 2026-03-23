@@ -8,6 +8,13 @@ const setupCountdown = (root) => {
 
   const targetValue = countdown.getAttribute('data-countdown-target');
   const fallback = countdown.getAttribute('data-countdown-fallback') || '';
+  const completeText = countdown.getAttribute('data-countdown-complete') || 'Today is the day.';
+  const units = {
+    days: countdown.getAttribute('data-countdown-days') || 'days',
+    hours: countdown.getAttribute('data-countdown-hours') || 'hours',
+    minutes: countdown.getAttribute('data-countdown-minutes') || 'minutes',
+    suffix: countdown.getAttribute('data-countdown-suffix') || '',
+  };
   const targetDate = new Date(targetValue);
 
   if (Number.isNaN(targetDate.getTime())) {
@@ -25,15 +32,16 @@ const setupCountdown = (root) => {
     const diff = targetDate.getTime() - Date.now();
 
     if (diff <= 0) {
-      countdown.textContent = 'Today is the day.';
+      countdown.textContent = completeText;
       return;
     }
 
     const days = Math.floor(diff / parts.day);
     const hours = Math.floor((diff % parts.day) / parts.hour);
     const minutes = Math.floor((diff % parts.hour) / parts.minute);
+    const suffix = units.suffix ? ` ${units.suffix}` : '';
 
-    countdown.textContent = `${days} days · ${hours} hours · ${minutes} minutes until the celebration`;
+    countdown.textContent = `${days} ${units.days} · ${hours} ${units.hours} · ${minutes} ${units.minutes}${suffix}`;
   };
 
   update();

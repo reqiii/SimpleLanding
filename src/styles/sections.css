@@ -66,7 +66,7 @@
 
 .hero-stage__location {
   margin: 0;
-  max-width: 22ch;
+  max-width: 26ch;
   color: var(--color-text-subtle);
   font-size: 0.78rem;
   letter-spacing: 0.55em;
@@ -87,7 +87,15 @@
   right: 0;
   bottom: clamp(1rem, 4vw, 2rem);
   display: flex;
-  gap: var(--space-3);
+  align-items: center;
+  gap: 1.1rem;
+  opacity: 0.88;
+}
+
+.hero-stage__actions .button--ghost {
+  min-height: 2.9rem;
+  padding: 0.72rem 1.15rem;
+  background: rgba(255, 255, 255, 0.18);
 }
 
 .editorial-block,
@@ -364,6 +372,10 @@
   max-width: 52rem;
 }
 
+.rsvp-layout .section-heading__title {
+  max-width: 10ch;
+}
+
 .rsvp-layout__deadline {
   margin: 0;
   color: var(--color-text-subtle);
@@ -519,6 +531,12 @@
   .hero-stage__actions {
     position: static;
     flex-wrap: wrap;
+    row-gap: 0.75rem;
+  }
+
+  .hero-stage__actions .button--text {
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .venue-ornament__frame {
@@ -544,6 +562,10 @@
   .timeline-system__track,
   .dresscode-grid {
     grid-template-columns: 1fr;
+  }
+
+  .timeline-system__track {
+    row-gap: var(--space-5);
   }
 
   .dresscode-marquee {
