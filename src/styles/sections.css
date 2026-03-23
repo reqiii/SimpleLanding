@@ -15,12 +15,12 @@
   border: 1px solid var(--color-stroke);
   border-radius: min(4rem, 8vw);
   background:
-    radial-gradient(circle at top, var(--color-accent-soft), transparent 34%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025)),
-    var(--color-bg-elevated);
+    var(--gradient-sunrise),
+    var(--gradient-hero-surface),
+    var(--gradient-dawn);
   backdrop-filter: blur(var(--blur-soft));
   -webkit-backdrop-filter: blur(var(--blur-soft));
-  box-shadow: var(--shadow-medium);
+  box-shadow: var(--shadow);
 }
 
 .hero-layout__summary {
@@ -38,7 +38,8 @@
 }
 
 .hero-layout__title span {
-  opacity: 0.68;
+  color: var(--color-accent);
+  opacity: 0.82;
   font-style: italic;
 }
 
@@ -121,12 +122,14 @@
 
 .date-stage__date {
   margin-top: var(--space-3);
+  color: var(--color-text-subtle);
   letter-spacing: 0.26em;
   text-transform: uppercase;
 }
 
 .date-stage__time {
   margin-top: var(--space-2);
+  color: var(--color-accent);
 }
 
 .date-stage__copy {
@@ -165,7 +168,7 @@
   place-items: center;
   border-radius: var(--radius-pill);
   border: 1px solid var(--color-stroke-strong);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--gradient-time-pill);
   color: var(--color-accent);
   font-family: var(--font-display);
   font-size: 2rem;
@@ -174,6 +177,7 @@
 .timeline-item__body h3,
 .notes-grid h3 {
   margin: 0 0 var(--space-2);
+  color: var(--color-text);
   font-size: var(--text-lg);
   font-weight: 600;
 }
@@ -203,10 +207,14 @@
   width: 100%;
   border: 1px solid var(--color-stroke);
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--color-overlay-strong);
   color: var(--color-text);
   padding: 0.95rem 1rem;
   outline: none;
+  transition:
+    border-color var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard);
 }
 
 .rsvp-form textarea {
@@ -223,6 +231,7 @@
 }
 
 .countdown-panel__value {
+  color: var(--color-accent);
   font-size: clamp(2.75rem, 6vw, 4.75rem);
 }
 

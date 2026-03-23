@@ -3,7 +3,7 @@
   transform: translateY(1.5rem) scale(0.985);
   transition:
     opacity var(--duration-base) var(--ease-standard) var(--reveal-delay, 0ms),
-    transform var(--duration-base) var(--ease-standard) var(--reveal-delay, 0ms);
+    transform var(--duration-base) var(--ease-emphasis) var(--reveal-delay, 0ms);
 }
 
 .reveal.is-visible {
