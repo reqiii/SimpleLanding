@@ -4,24 +4,26 @@ export const VenueSection = ({ label, title, copy, addressLabel, address, addres
   className: 'section--venue',
   content: `
     <div class="split-layout split-layout--venue">
-      ${SurfaceCard({
-        className: 'surface-card--accent reveal',
-        attributes: 'data-reveal',
-        content: `
-          <p class="section-heading__label">${label}</p>
-          <h2 class="surface-card__title">${title}</h2>
-          <p>${copy}</p>
-          ${ButtonLink({ href: '#rsvp', text: 'Share your reply' })}
-        `,
-      })}
       <div class="venue-stack">
+        ${SectionHeading({ label, title })}
         ${SurfaceCard({
           className: 'surface-card--soft reveal',
-          attributes: 'data-reveal data-reveal-delay="80"',
+          attributes: 'data-reveal data-reveal-delay="60"',
+          content: `<p>${copy}</p>`,
+        })}
+      </div>
+      <div class="venue-stack">
+        ${SurfaceCard({
+          className: 'surface-card--accent reveal',
+          attributes: 'data-reveal data-reveal-delay="120"',
           content: `
-            ${SectionHeading({ label: addressLabel, title: address, reveal: false })}
+            <p class="section-heading__label">${addressLabel}</p>
+            <h3 class="surface-card__title">${address}</h3>
             <p>${addressCopy}</p>
-            ${ButtonLink({ href: '#top', text: mapAction, variant: 'ghost' })}
+            <div class="venue-stack__actions">
+              ${ButtonLink({ href: '#rsvp', text: 'Share your reply' })}
+              ${ButtonLink({ href: '#top', text: mapAction, variant: 'ghost' })}
+            </div>
           `,
         })}
       </div>
