@@ -49,24 +49,20 @@
 }
 
 .background-system__base {
-  background:
-    radial-gradient(circle at 50% 18%, rgba(255, 244, 226, 0.1), transparent 18%),
-    radial-gradient(circle at 20% 24%, rgba(154, 101, 96, 0.13), transparent 24%),
-    radial-gradient(circle at 80% 20%, rgba(132, 117, 166, 0.1), transparent 20%),
-    linear-gradient(180deg, rgba(14, 12, 18, 0.9) 0%, rgba(9, 9, 12, 1) 100%);
+  background: var(--gradient-background-base);
 }
 
 .background-system__gradient--top {
-  background: linear-gradient(180deg, rgba(9, 9, 12, 0.05), rgba(9, 9, 12, 0.65) 38%, rgba(9, 9, 12, 0.96) 100%);
+  background: var(--gradient-background-top);
 }
 
 .background-system__gradient--side {
-  background: linear-gradient(110deg, rgba(255, 255, 255, 0.03), transparent 28%, rgba(228, 207, 173, 0.06) 55%, transparent 72%);
+  background: var(--gradient-background-side);
 }
 
 .background-system__glow {
   filter: blur(var(--blur-strong));
-  opacity: 0.55;
+  opacity: 0.8;
 }
 
 .background-system__glow--halo {
@@ -74,23 +70,23 @@
   translate: -50% -8%;
   width: min(48rem, 90vw);
   height: 18rem;
-  background: rgba(255, 230, 200, 0.18);
+  background: var(--color-accent-apricot-glow);
 }
 
 .background-system__glow--ember {
   inset: auto auto 12% 10%;
   width: 20rem;
   height: 20rem;
-  background: rgba(162, 103, 96, 0.14);
+  background: var(--color-accent-lavender-glow);
 }
 
 .background-system__vignette {
-  background: radial-gradient(circle at center, transparent 45%, rgba(8, 8, 11, 0.28) 70%, rgba(8, 8, 11, 0.82) 100%);
+  background: var(--gradient-vignette);
 }
 
 .background-system__grain {
   opacity: 0.08;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.7) 0.65px, transparent 0.65px);
+  background-image: var(--texture-grain);
   background-size: 10px 10px;
   mix-blend-mode: soft-light;
 }
