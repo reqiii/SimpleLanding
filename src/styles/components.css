@@ -125,7 +125,7 @@
 
 .button:focus-visible,
 .rsvp-form input:focus-visible,
-.rsvp-form input[type='radio']:focus-visible + span {
+.rsvp-choice__input:focus-visible + .rsvp-choice__button {
   border-color: var(--color-accent);
   box-shadow: var(--focus-ring);
 }
