@@ -101,59 +101,68 @@
 }
 
 .background-system__light--orb {
-  inset: 17% auto auto 50%;
-  translate: -50% -50%;
-  width: min(15rem, 40vw);
-  height: min(15rem, 40vw);
+  top: 18%;
+  left: 50%;
+  width: min(13.5rem, 34vw);
+  height: min(13.5rem, 34vw);
   border-radius: 50%;
   background: var(--gradient-sun-orb);
   opacity: var(--atmo-sun-orb-opacity);
+  transform: translate3d(-50%, -50%, 0);
   animation: sunriseOrbPulse 16s ease-in-out infinite alternate;
+  will-change: transform, opacity;
 }
 
 .background-system__light--sun {
-  inset: 17% auto auto 50%;
-  translate: -50% -50%;
-  width: min(42rem, 72vw);
-  height: clamp(17rem, 32vw, 25rem);
+  top: 18%;
+  left: 50%;
+  width: min(35rem, 64vw);
+  height: clamp(14rem, 26vw, 20rem);
   border-radius: 50%;
   background: var(--gradient-sun-core);
   opacity: var(--atmo-sun-core-opacity);
   transform-origin: 50% 50%;
+  transform: translate3d(-50%, -50%, 0);
   animation: sunriseCorePulse 18s ease-in-out infinite alternate;
+  will-change: transform, opacity;
 }
 
 .background-system__light--halo {
-  inset: 17% auto auto 50%;
-  translate: -50% -50%;
-  width: min(62rem, 94vw);
-  height: clamp(23rem, 42vw, 32rem);
+  top: 18%;
+  left: 50%;
+  width: min(52rem, 86vw);
+  height: clamp(19rem, 35vw, 27rem);
   border-radius: 50%;
   background: var(--gradient-sun-halo);
-  filter: blur(9px);
+  filter: blur(7px);
   opacity: var(--atmo-sun-halo-opacity);
   transform-origin: 50% 51%;
+  transform: translate3d(-50%, -50%, 0);
   animation: sunriseHaloBreath 24s ease-in-out infinite alternate;
+  will-change: transform, opacity;
 }
 
 .background-system__light--rays {
   inset: 0;
   background-image: var(--gradient-sun-rays);
   opacity: var(--atmo-ray-opacity);
-  mix-blend-mode: soft-light;
+  mix-blend-mode: screen;
   animation: sunriseRayDrift 34s ease-in-out infinite alternate;
+  will-change: transform, opacity;
 }
 
 .background-system__light--reflection {
-  inset: 52% auto auto 50%;
-  translate: -50% -50%;
-  width: min(76rem, 110vw);
-  height: clamp(12rem, 24vw, 17rem);
+  top: 60%;
+  left: 50%;
+  width: min(68rem, 100vw);
+  height: clamp(11rem, 20vw, 15rem);
   border-radius: 50%;
   background: var(--gradient-sea-reflection);
-  filter: blur(18px);
+  filter: blur(14px);
   opacity: var(--atmo-reflection-opacity);
+  transform: translate3d(-50%, -50%, 0);
   animation: sunriseReflectionShift 28s ease-in-out infinite alternate;
+  will-change: transform, opacity;
 }
 
 .background-system__haze {
@@ -186,37 +195,37 @@
   }
 
   .background-system__light--orb {
-    inset: 20.5% auto auto 50%;
-    width: min(13rem, 48vw);
-    height: min(13rem, 48vw);
+    top: 22%;
+    width: min(11.25rem, 46vw);
+    height: min(11.25rem, 46vw);
     opacity: calc(var(--atmo-sun-orb-opacity) * 0.92);
   }
 
   .background-system__light--sun {
-    inset: 20.5% auto auto 50%;
-    width: min(34rem, 90vw);
-    height: clamp(13rem, 48vw, 17rem);
-    opacity: calc(var(--atmo-sun-core-opacity) * 0.9);
+    top: 22%;
+    width: min(28rem, 82vw);
+    height: clamp(11.5rem, 43vw, 15rem);
+    opacity: calc(var(--atmo-sun-core-opacity) * 0.94);
   }
 
   .background-system__light--halo {
-    inset: 20.5% auto auto 50%;
-    width: min(42rem, 116vw);
-    height: clamp(17rem, 64vw, 22rem);
-    filter: blur(8px);
-    opacity: calc(var(--atmo-sun-halo-opacity) * 0.88);
+    top: 22%;
+    width: min(36rem, 106vw);
+    height: clamp(15rem, 56vw, 20rem);
+    filter: blur(6px);
+    opacity: calc(var(--atmo-sun-halo-opacity) * 0.96);
   }
 
   .background-system__light--reflection {
-    inset: 57% auto auto 50%;
-    width: 128vw;
-    height: clamp(10.5rem, 44vw, 14rem);
-    filter: blur(14px);
-    opacity: calc(var(--atmo-reflection-opacity) * 0.84);
+    top: 67%;
+    width: 118vw;
+    height: clamp(9rem, 34vw, 12rem);
+    filter: blur(11px);
+    opacity: calc(var(--atmo-reflection-opacity) * 0.9);
   }
 
   .background-system__light--rays {
-    opacity: calc(var(--atmo-ray-opacity) * 1.1);
+    opacity: calc(var(--atmo-ray-opacity) * 1.18);
   }
 
   .background-system__depth {
@@ -230,8 +239,8 @@
 
 @media (max-width: 430px) {
   .background-system__light--rays {
-    opacity: calc(var(--atmo-ray-opacity) * 1.16);
-    animation-duration: 32s;
+    opacity: calc(var(--atmo-ray-opacity) * 1.24);
+    animation-duration: 24s;
   }
 
   .background-system__haze {
@@ -239,8 +248,8 @@
   }
 
   .background-system__light--halo {
-    filter: blur(6px);
-    opacity: calc(var(--atmo-sun-halo-opacity) * 0.96);
+    filter: blur(5px);
+    opacity: calc(var(--atmo-sun-halo-opacity) * 1.02);
   }
 
   .background-system__light--orb {
@@ -248,11 +257,11 @@
   }
 
   .background-system__light--sun {
-    opacity: calc(var(--atmo-sun-core-opacity) * 0.88);
+    opacity: calc(var(--atmo-sun-core-opacity) * 0.96);
   }
 
   .background-system__light--reflection {
-    inset: 59% auto auto 50%;
-    opacity: calc(var(--atmo-reflection-opacity) * 0.76);
+    top: 69%;
+    opacity: calc(var(--atmo-reflection-opacity) * 0.82);
   }
 }
