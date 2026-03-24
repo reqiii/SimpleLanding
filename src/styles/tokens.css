@@ -75,14 +75,14 @@
   --sun-center-y: 50%;
   --horizon-shift: 0%;
 
-  --glass-blur: 15px;
-  --glass-blur-strong: 18px;
-  --glass-fill-soft: rgba(255, 250, 244, 0.14);
-  --glass-fill-strong: rgba(255, 248, 241, 0.2);
-  --glass-border: rgba(122, 97, 104, 0.2);
-  --glass-border-soft: rgba(126, 103, 111, 0.18);
-  --glass-highlight: rgba(255, 255, 255, 0.22);
-  --glass-shadow: 0 10px 24px rgba(120, 85, 74, 0.08);
+  --glass-blur: 13px;
+  --glass-blur-strong: 16px;
+  --glass-fill-soft: rgba(255, 249, 243, 0.11);
+  --glass-fill-strong: rgba(255, 247, 240, 0.16);
+  --glass-border: rgba(122, 97, 104, 0.17);
+  --glass-border-soft: rgba(126, 103, 111, 0.14);
+  --glass-highlight: rgba(255, 255, 255, 0.26);
+  --glass-shadow: 0 10px 28px rgba(120, 85, 74, 0.07);
 
   --gradient-page: linear-gradient(
     180deg,
@@ -165,11 +165,13 @@
   --text-hero: clamp(5.4rem, 15vw, 10rem);
   --text-display-number: clamp(8rem, 20vw, 16rem);
   --text-timeline-time: clamp(3.1rem, 5.8vw, 4.8rem);
-  --leading-copy: 1.78;
-  --leading-display: 0.8;
-  --tracking-display: -0.022em;
-  --tracking-label: 0.24em;
-  --tracking-label-tight: 0.18em;
+  --leading-copy: 1.74;
+  --leading-display: 0.82;
+  --tracking-display: -0.02em;
+  --tracking-display-soft: -0.012em;
+  --tracking-label: 0.23em;
+  --tracking-label-tight: 0.16em;
+  --tracking-label-micro: 0.28em;
   --tracking-wide: 0.5em;
   --duration-fast: 220ms;
   --duration-base: 720ms;
