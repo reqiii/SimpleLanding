@@ -340,15 +340,28 @@
   display: grid;
   justify-items: center;
   gap: var(--space-2);
-  padding: clamp(2rem, 4vw, 3rem);
-  border: 1px solid color-mix(in srgb, var(--glass-border) 90%, rgba(255, 255, 255, 0.12));
-  border-radius: min(4rem, 9vw);
-  background: color-mix(in srgb, var(--glass-fill-soft) 95%, rgba(255, 255, 255, 0.02));
-  box-shadow:
-    inset 0 1px 0 var(--glass-highlight),
-    var(--glass-shadow);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
+  padding: clamp(1.8rem, 4vw, 2.7rem) clamp(0.8rem, 2vw, 1.4rem);
+  position: relative;
+}
+
+.date-stage__content::before,
+.date-stage__content::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+  width: min(100%, 34rem);
+  pointer-events: none;
+}
+
+.date-stage__content::before {
+  top: 0;
+  border-top: 1px solid color-mix(in srgb, var(--glass-border-soft) 80%, rgba(255, 255, 255, 0.15));
+}
+
+.date-stage__content::after {
+  bottom: 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--glass-border-soft) 74%, rgba(255, 255, 255, 0.16));
 }
 
 .date-stage__weekday {
@@ -390,14 +403,26 @@
   min-height: 32rem;
   display: grid;
   place-items: center;
-  border: 1px solid color-mix(in srgb, var(--glass-border) 90%, rgba(255, 255, 255, 0.12));
-  border-radius: min(10rem, 10vw);
-  background: color-mix(in srgb, var(--glass-fill-soft) 95%, rgba(255, 255, 255, 0.02));
-  box-shadow:
-    inset 0 1px 0 var(--glass-highlight),
-    var(--glass-shadow);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
+}
+
+.venue-ornament__frame::before,
+.venue-ornament__frame::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+  width: min(100%, 56rem);
+  pointer-events: none;
+}
+
+.venue-ornament__frame::before {
+  top: 0;
+  border-top: 1px solid color-mix(in srgb, var(--glass-border-soft) 74%, rgba(255, 255, 255, 0.16));
+}
+
+.venue-ornament__frame::after {
+  bottom: 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--glass-border-soft) 74%, rgba(255, 255, 255, 0.16));
 }
 
 .venue-ornament__loop {
@@ -457,15 +482,7 @@
   position: relative;
   margin-top: clamp(1.8rem, 4.2vw, 2.9rem);
   isolation: isolate;
-  padding: clamp(1.3rem, 2.4vw, 1.8rem) clamp(0.95rem, 2.4vw, 1.6rem);
-  border-radius: min(3.1rem, 8vw);
-  border: 1px solid color-mix(in srgb, var(--glass-border) 90%, rgba(255, 255, 255, 0.12));
-  background: color-mix(in srgb, var(--glass-fill-soft) 95%, rgba(255, 255, 255, 0.02));
-  box-shadow:
-    inset 0 1px 0 var(--glass-highlight),
-    var(--glass-shadow);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
+  padding: clamp(1rem, 2.1vw, 1.5rem) clamp(0.7rem, 2vw, 1.25rem);
 }
 
 .timeline-system::before,
@@ -478,13 +495,29 @@
 }
 
 .timeline-system::before {
-  border: 1px solid var(--glass-border-soft);
+  top: 0;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  translate: -50% 0;
+  width: min(100%, 54rem);
+  height: 1px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(123, 109, 118, 0.24) 14%, rgba(123, 109, 118, 0.24) 86%, transparent);
   z-index: 0;
 }
 
 .timeline-system::after {
-  inset: 0.8rem;
-  border: 1px solid color-mix(in srgb, var(--glass-border-soft) 86%, rgba(255, 255, 255, 0.12));
+  top: auto;
+  left: 50%;
+  right: auto;
+  bottom: 0;
+  inset: auto;
+  translate: -50% 0;
+  width: min(100%, 54rem);
+  height: 1px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(123, 109, 118, 0.2) 14%, rgba(123, 109, 118, 0.2) 86%, transparent);
   z-index: 0;
 }
 
@@ -561,7 +594,7 @@
   display: grid;
   gap: clamp(0.6rem, 1vw, 0.9rem);
   padding: clamp(0.95rem, 2vw, 1.3rem) clamp(0.65rem, 1.4vw, 1rem);
-  border-top: 1px solid color-mix(in srgb, var(--glass-border-soft) 82%, rgba(255, 255, 255, 0.1));
+  border-top: 1px solid color-mix(in srgb, var(--glass-border-soft) 62%, rgba(255, 255, 255, 0.12));
 }
 
 .timeline-point:first-child {
@@ -733,14 +766,27 @@
   align-items: center;
   gap: 0.9rem 1.1rem;
   width: fit-content;
-  padding: 1rem 1.35rem;
-  border: 1px solid color-mix(in srgb, var(--glass-border) 90%, rgba(255, 255, 255, 0.12));
-  border-radius: var(--radius-pill);
-  background: color-mix(in srgb, var(--glass-fill-soft) 95%, rgba(255, 255, 255, 0.02));
-  box-shadow: inset 0 1px 0 var(--glass-highlight), var(--glass-shadow);
-  backdrop-filter: blur(calc(var(--glass-blur) * 0.72));
-  -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 0.72));
+  padding: 0.9rem 0.2rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  position: relative;
 }
+
+.organizer-field::before,
+.organizer-field::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(124, 102, 108, 0.25) 12%, rgba(124, 102, 108, 0.25) 88%, transparent);
+}
+
+.organizer-field::before { top: 0; }
+.organizer-field::after { bottom: 0; }
 
 .organizer-field__label {
   display: inline-flex;
@@ -804,22 +850,22 @@
 .rsvp-layout__frame {
   position: relative;
   isolation: isolate;
-  padding: clamp(1.3rem, 2.5vw, 1.9rem) clamp(1rem, 2.2vw, 1.5rem);
-  border-radius: min(2.7rem, 7vw);
+  padding: clamp(1.05rem, 2.2vw, 1.45rem) clamp(0.85rem, 2vw, 1.25rem);
+  border-radius: min(2.4rem, 6.5vw);
 }
 
 .rsvp-layout__halo {
   position: absolute;
-  inset: 56% auto auto 50%;
+  inset: 57% auto auto 50%;
   translate: -50% -50%;
-  width: min(48rem, 122%);
-  height: clamp(14rem, 34vw, 22rem);
+  width: min(46rem, 116%);
+  height: clamp(12rem, 30vw, 17rem);
   border-radius: 50% / 44%;
   background:
-    radial-gradient(88% 64% at 50% 48%, color-mix(in srgb, var(--color-sunrise-core) 60%, white 20%), transparent 72%),
+    radial-gradient(88% 64% at 50% 48%, color-mix(in srgb, var(--color-sunrise-core) 54%, white 14%), transparent 74%),
     var(--gradient-sun-halo);
-  opacity: var(--rsvp-halo-opacity, 0.54);
-  filter: blur(15px);
+  opacity: var(--rsvp-halo-opacity, 0.34);
+  filter: blur(13px);
   z-index: -1;
 }
 
@@ -834,18 +880,16 @@
 }
 
 .rsvp-layout__frame::before {
-  border: 1px solid color-mix(in srgb, var(--glass-border) 90%, rgba(255, 255, 255, 0.12));
-  background: color-mix(in srgb, var(--glass-fill-soft) 95%, rgba(255, 255, 255, 0.02));
-  box-shadow:
-    inset 0 1px 0 var(--glass-highlight),
-    var(--glass-shadow);
-  backdrop-filter: blur(var(--glass-blur-strong));
-  -webkit-backdrop-filter: blur(var(--glass-blur-strong));
+  border: 1px solid color-mix(in srgb, var(--glass-border) 72%, rgba(255, 255, 255, 0.14));
+  background: color-mix(in srgb, var(--glass-fill-soft) 70%, rgba(255, 255, 255, 0.01));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(calc(var(--glass-blur) * 0.8));
+  -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 0.8));
 }
 
 .rsvp-layout__frame::after {
   inset: 0.75rem;
-  border: 1px solid color-mix(in srgb, var(--glass-border-soft) 82%, rgba(255, 255, 255, 0.12));
+  border: 1px solid color-mix(in srgb, var(--glass-border-soft) 52%, rgba(255, 255, 255, 0.14));
 }
 
 .rsvp-layout__frame .rsvp-form {
@@ -893,12 +937,12 @@
   display: grid;
   gap: clamp(0.5rem, 0.95vw, 0.72rem);
   padding: clamp(0.72rem, 1.5vw, 0.96rem);
-  border: 1px solid color-mix(in srgb, var(--glass-border-soft) 84%, rgba(255, 255, 255, 0.14));
+  border: 1px solid color-mix(in srgb, var(--glass-border-soft) 62%, rgba(255, 255, 255, 0.16));
   border-radius: clamp(1rem, 2vw, 1.3rem);
-  background: color-mix(in srgb, var(--glass-fill-soft) 96%, rgba(255, 255, 255, 0.015));
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(calc(var(--glass-blur) * 0.48));
-  -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 0.48));
+  background: color-mix(in srgb, var(--glass-fill-soft) 72%, rgba(255, 255, 255, 0.01));
+  box-shadow: none;
+  backdrop-filter: blur(calc(var(--glass-blur) * 0.35));
+  -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 0.35));
 }
 
 .rsvp-form__field,
@@ -1055,24 +1099,20 @@
 
 .countdown-stage__orbit--outer {
   inset: 3%;
-  border: 1px solid rgba(112, 105, 128, 0.13);
-  box-shadow:
-    0 0 0 1px rgba(255, 248, 233, 0.25) inset,
-    0 0 1.9rem rgba(202, 150, 129, 0.14);
+  border: 1px solid rgba(112, 105, 128, 0.14);
+  box-shadow: 0 0 0 1px rgba(255, 248, 233, 0.2) inset;
 }
 
 .countdown-stage__orbit--inner {
   inset: 18%;
   display: grid;
   place-items: center;
-  border: 1px solid color-mix(in srgb, var(--glass-border) 82%, rgba(255, 255, 255, 0.04));
+  border: 1px solid color-mix(in srgb, var(--glass-border) 76%, rgba(255, 255, 255, 0.08));
   box-shadow:
-    0 0 0 0.25rem rgba(255, 255, 255, 0.07),
-    0 0 0 1.1rem rgba(255, 255, 255, 0.05),
-    0 0 2rem rgba(255, 214, 169, 0.26),
-    inset 0 0 3rem rgba(255, 255, 255, 0.1),
-    inset 0 0 1.7rem rgba(202, 150, 129, 0.2);
-  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.28), rgba(255,255,255,0.03));
+    0 0 0 0.25rem rgba(255, 255, 255, 0.05),
+    0 0 0 0.8rem rgba(255, 255, 255, 0.04),
+    inset 0 0 1.4rem rgba(255, 255, 255, 0.08);
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.16), rgba(255,255,255,0.02));
   animation: ringPulse 5.5s ease-in-out infinite;
 }
 
@@ -1190,7 +1230,6 @@
   .venue-ornament__frame {
     min-height: auto;
     padding: clamp(2.8rem, 10vw, 4rem) 0;
-    border-radius: 2.4rem;
   }
 
   .venue-ornament__loop {
@@ -1204,12 +1243,12 @@
 
   .timeline-system {
     margin-top: clamp(1.8rem, 7vw, 2.7rem);
-    padding: 1.15rem 0.95rem 1.35rem;
-    border-radius: 1.65rem;
+    padding: 1rem 0.55rem 1.2rem;
   }
 
+  .timeline-system::before,
   .timeline-system::after {
-    inset: 0.45rem;
+    width: calc(100% - 0.5rem);
   }
 
   .timeline-ornament__arc,
@@ -1231,8 +1270,8 @@
   }
 
   .rsvp-layout__frame {
-    padding: 1rem 0.9rem 1.15rem;
-    border-radius: 1.8rem;
+    padding: 0.95rem 0.75rem 1.05rem;
+    border-radius: 1.55rem;
   }
 
   .rsvp-layout__halo {
@@ -1376,8 +1415,7 @@
   }
 
   .date-stage__content {
-    padding: 1.25rem 1rem 1.35rem;
-    border-radius: 1.7rem;
+    padding: 1.2rem 0.7rem 1.25rem;
     gap: 0.45rem;
   }
 
@@ -1395,7 +1433,6 @@
   }
 
   .venue-ornament__frame {
-    border-radius: 1.8rem;
     padding: 1.8rem 0;
   }
 
@@ -1409,8 +1446,7 @@
   }
 
   .timeline-system {
-    padding: 1rem 0.8rem 1.2rem;
-    border-radius: 1.35rem;
+    padding: 0.9rem 0.45rem 1.05rem;
   }
 
   .timeline-point {
