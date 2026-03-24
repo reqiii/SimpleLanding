@@ -4,6 +4,7 @@ export const BackgroundLayers = () => `
     <div class="background-system__horizon"></div>
     <div class="background-system__sea"></div>
     <div class="background-system__depth"></div>
+    <div class="background-system__light background-system__light--orb"></div>
     <div class="background-system__light background-system__light--sun"></div>
     <div class="background-system__light background-system__light--halo"></div>
     <div class="background-system__light background-system__light--rays"></div>
