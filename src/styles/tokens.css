@@ -218,9 +218,9 @@
     --container-pad: clamp(0.625rem, 3.8vw, 0.85rem);
     --radius-xl: 2rem;
     --radius-lg: 1.8rem;
-    --sun-center-x: 50.5%;
-    --sun-center-y: 56.5%;
-    --horizon-shift: 11%;
+    --sun-center-x: 52%;
+    --sun-center-y: 58.8%;
+    --horizon-shift: 9.5%;
     --space-7: clamp(4rem, 12vw, 5.5rem);
     --space-8: clamp(5rem, 14vw, 7rem);
     --space-section-tight: clamp(3.3rem, 9vw, 4.6rem);
@@ -241,6 +241,7 @@
         var(--color-sunrise-sea-coral) 96%,
         #a9887b 100%
       );
+    --gradient-background-haze: radial-gradient(circle at var(--sun-center-x) 23%, rgba(255, 240, 211, 0.34) 0%, rgba(255, 228, 198, 0.08) 44%, rgba(255, 255, 255, 0) 72%);
     --gradient-background-horizon: linear-gradient(180deg, rgba(183, 149, 164, 0) 93%, rgba(160, 126, 145, 0.28) 98%, rgba(160, 126, 145, 0) 100%);
     --gradient-background-sea: linear-gradient(180deg, rgba(210, 162, 146, 0) 94%, rgba(175, 114, 96, 0.16) 98%, rgba(147, 104, 93, 0) 100%);
     --gradient-background-depth: linear-gradient(180deg, rgba(127, 96, 87, 0) 97%, rgba(121, 90, 84, 0.1) 99%, rgba(113, 84, 79, 0.18) 100%);
@@ -251,8 +252,8 @@
 
 @media (max-width: 430px) {
   :root {
-    --sun-center-x: 50%;
-    --sun-center-y: 57%;
-    --horizon-shift: 12%;
+    --sun-center-x: 52.4%;
+    --sun-center-y: 59.6%;
+    --horizon-shift: 10.4%;
   }
 }

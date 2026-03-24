@@ -22,7 +22,7 @@
 .hero-stage__inner::before {
   content: '';
   position: absolute;
-  inset: clamp(4rem, 8vw, 6rem) 50% auto;
+  inset: clamp(4rem, 8vw, 6rem) var(--sun-center-x) auto;
   translate: -50% 0;
   width: min(52rem, 96%);
   height: clamp(20rem, 42vw, 28rem);
