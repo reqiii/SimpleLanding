@@ -34,11 +34,33 @@
 
 .section {
   position: relative;
-  padding: var(--space-8) 0;
+  padding: var(--space-section-medium) 0;
 }
 
 .section + .section {
-  margin-top: clamp(-1rem, -1vw, -0.5rem);
+  margin-top: clamp(-0.7rem, -0.65vw, -0.35rem);
+}
+
+.section--intro,
+.section--timeline,
+.section--details {
+  padding-block: var(--space-section-tight);
+}
+
+.section--hero,
+.section--date {
+  padding-block: var(--space-section-medium);
+}
+
+.section--venue,
+.section--countdown {
+  padding-block: var(--space-section-large);
+}
+
+.section + .section.section--venue,
+.section + .section.section--rsvp,
+.section + .section.section--countdown {
+  margin-top: var(--space-section-lead);
 }
 
 .background-system,

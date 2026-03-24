@@ -80,6 +80,11 @@
   --space-7: clamp(4.5rem, 9vw, 7rem);
   --space-8: clamp(6rem, 14vw, 10rem);
   --space-9: clamp(7rem, 16vw, 12rem);
+  --space-section-tight: clamp(4.5rem, 8vw, 6.5rem);
+  --space-section-medium: clamp(5.8rem, 10vw, 8.5rem);
+  --space-section-large: clamp(7.2rem, 12vw, 10.8rem);
+  --space-section-lead: clamp(1.1rem, 3vw, 2.4rem);
+  --space-heading-content: clamp(1.5rem, 3.6vw, 2.9rem);
   --font-body: 'Manrope', sans-serif;
   --font-display: 'Cormorant Garamond', serif;
   --text-sm: 0.8125rem;
@@ -110,6 +115,11 @@
     --radius-lg: 1.8rem;
     --space-7: clamp(4rem, 12vw, 5.5rem);
     --space-8: clamp(5rem, 14vw, 7rem);
+    --space-section-tight: clamp(3.8rem, 10vw, 5.1rem);
+    --space-section-medium: clamp(4.6rem, 12vw, 6rem);
+    --space-section-large: clamp(5.8rem, 14vw, 7.2rem);
+    --space-section-lead: clamp(0.7rem, 3.2vw, 1.3rem);
+    --space-heading-content: clamp(1.15rem, 4.8vw, 2rem);
     --text-hero: clamp(4.25rem, 18vw, 6.2rem);
   }
 }

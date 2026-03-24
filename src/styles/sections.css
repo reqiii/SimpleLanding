@@ -8,7 +8,7 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   justify-items: center;
-  padding: clamp(1.4rem, 3vw, 2.2rem) 0 clamp(4.2rem, 9vw, 7rem);
+  padding: clamp(1.4rem, 3vw, 2.2rem) 0 clamp(5.6rem, 11vw, 8.6rem);
   overflow: clip;
 }
 
@@ -136,7 +136,30 @@
 .rsvp-layout,
 .countdown-stage {
   display: grid;
-  gap: var(--space-5);
+}
+
+.editorial-block {
+  gap: clamp(1.8rem, 3.8vw, 2.8rem);
+}
+
+.date-stage {
+  gap: clamp(2.3rem, 5.2vw, 4rem);
+}
+
+.dresscode-layout {
+  gap: clamp(1.4rem, 2.8vw, 2.2rem);
+}
+
+.details-layout {
+  gap: clamp(1.8rem, 4.1vw, 3rem);
+}
+
+.rsvp-layout {
+  gap: clamp(1.2rem, 2.8vw, 2rem);
+}
+
+.countdown-stage {
+  gap: clamp(2.4rem, 5.4vw, 4.4rem);
 }
 
 .editorial-block--intro {
@@ -200,12 +223,12 @@
 }
 
 .venue-ornament {
-  padding: min(5vw, 2rem) 0;
+  padding: clamp(1.8rem, 4.6vw, 3.1rem) 0;
 }
 
 .venue-ornament__frame {
   position: relative;
-  min-height: 30rem;
+  min-height: 32rem;
   display: grid;
   place-items: center;
   border: 1px solid var(--color-stroke-strong);
@@ -246,8 +269,12 @@
   width: min(32rem, calc(100% - 4rem));
   display: grid;
   justify-items: center;
-  gap: var(--space-3);
+  gap: clamp(0.85rem, 2.1vw, 1.4rem);
   text-align: center;
+}
+
+.venue-ornament__content > .section-heading {
+  margin-bottom: var(--space-heading-content);
 }
 
 .venue-ornament__address {
@@ -263,7 +290,7 @@
 
 .timeline-system {
   position: relative;
-  margin-top: var(--space-6);
+  margin-top: clamp(3rem, 6.2vw, 5rem);
 }
 
 .timeline-system__line {
@@ -345,14 +372,14 @@
 .dresscode-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-4) var(--space-5);
+  gap: clamp(1rem, 2.6vw, 1.6rem) clamp(1.2rem, 3.1vw, 2rem);
 }
 
 .dresscode-bar {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: var(--space-3);
+  gap: clamp(0.7rem, 1.6vw, 1rem);
 }
 
 .dresscode-bar__index,
@@ -438,13 +465,13 @@
 
 .rsvp-form {
   display: grid;
-  gap: var(--space-4);
+  gap: clamp(1.1rem, 2.2vw, 1.6rem);
 }
 
 .rsvp-form__field,
 .rsvp-form__fieldset {
   display: grid;
-  gap: var(--space-2);
+  gap: clamp(0.45rem, 1vw, 0.75rem);
   border: 0;
   padding: 0;
   margin: 0;
@@ -471,7 +498,7 @@
 
 .rsvp-form__choices {
   display: grid;
-  gap: var(--space-2);
+  gap: clamp(0.4rem, 0.85vw, 0.65rem);
 }
 
 .rsvp-choice {
@@ -564,7 +591,7 @@
   .hero-stage {
     min-height: auto;
     gap: var(--space-4);
-    padding-bottom: clamp(2.6rem, 8vw, 3.2rem);
+    padding-bottom: clamp(3.4rem, 10vw, 4.6rem);
   }
 
   .hero-stage__center {
@@ -613,7 +640,7 @@
 
   .venue-ornament__frame {
     min-height: auto;
-    padding: 5rem 0;
+    padding: clamp(4.3rem, 13vw, 5.5rem) 0;
     border-radius: 3.2rem;
   }
 
@@ -637,7 +664,7 @@
   }
 
   .timeline-system__track {
-    row-gap: var(--space-5);
+    row-gap: clamp(1.6rem, 5.8vw, 2.3rem);
   }
 
   .dresscode-marquee {
