@@ -16,9 +16,9 @@ export const SurfaceCard = ({ className = '', attributes = '', content = '' }) =
 
 export const SectionHeading = ({ label, title, number = '', align = 'start', reveal = true, kicker = '' }) => `
   <header class="section-heading section-heading--${align} ${reveal ? 'reveal' : ''}" ${reveal ? 'data-reveal' : ''}>
-    ${number ? `<span class="section-heading__number">${number}.</span>` : ''}
+    ${number ? `<span class="section-heading__number">${number}</span>` : ''}
     <div class="section-heading__content">
-      <p class="section-heading__label">${label}</p>
+      ${label ? `<p class="section-heading__label">${label}</p>` : ''}
       <h2 class="section-heading__title">${title}</h2>
       ${kicker ? `<p class="section-heading__kicker">${kicker}</p>` : ''}
     </div>

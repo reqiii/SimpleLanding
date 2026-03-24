@@ -14,15 +14,16 @@ const renderPalette = ([index, name, color], delay) => `
 export const AdditionalInfoSection = ({ dressCode, details }) => Section({
   className: 'section--details',
   content: `
+    <div class="dresscode-layout">
+      ${SectionHeading({ number: dressCode.number, label: dressCode.label, title: dressCode.label, align: 'center' })}
+      <p class="dresscode-layout__copy reveal" data-reveal data-reveal-delay="70">${dressCode.title}</p>
+      <div class="dresscode-swatches">
+        ${dressCode.palette.map((item, index) => renderPalette(item, index * 50)).join('')}
+      </div>
+    </div>
     <div class="dresscode-marquee" aria-hidden="true">
       <div class="dresscode-marquee__track">
         <span>${dressCode.marquee}</span><span>${dressCode.marquee}</span><span>${dressCode.marquee}</span><span>${dressCode.marquee}</span>
-      </div>
-    </div>
-    <div class="dresscode-layout">
-      ${SectionHeading({ number: dressCode.number, label: dressCode.label, title: dressCode.title })}
-      <div class="dresscode-grid">
-        ${dressCode.palette.map((item, index) => renderPalette(item, index * 50)).join('')}
       </div>
     </div>
     <div class="details-layout">

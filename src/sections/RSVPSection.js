@@ -23,22 +23,24 @@ export const RSVPSection = ({ number, label, title, deadline, fields, attendance
       <div class="rsvp-layout__frame reveal" data-reveal data-reveal-delay="120">
         <span class="rsvp-layout__halo" aria-hidden="true"></span>
         <form class="rsvp-form">
-          <label class="rsvp-form__field">
-            <span>${fields.name}</span>
-            <input type="text" name="name" placeholder="Ваше имя" />
-          </label>
-          <fieldset class="rsvp-form__fieldset">
-            <legend>${fields.attendance}</legend>
-            <div class="rsvp-form__choices">
-              ${attendanceOptions.map((option, index) => renderOption('attendance', option, index)).join('')}
-            </div>
-          </fieldset>
-          <fieldset class="rsvp-form__fieldset">
-            <legend>${fields.transfer}</legend>
-            <div class="rsvp-form__choices">
-              ${transferOptions.map((option, index) => renderOption('transfer', option, index)).join('')}
-            </div>
-          </fieldset>
+          <div class="rsvp-form__stack">
+            <label class="rsvp-form__field">
+              <span>${fields.name}</span>
+              <input type="text" name="name" placeholder="Ваше имя" />
+            </label>
+            <fieldset class="rsvp-form__fieldset">
+              <legend>${fields.attendance}</legend>
+              <div class="rsvp-form__choices">
+                ${attendanceOptions.map((option, index) => renderOption('attendance', option, index)).join('')}
+              </div>
+            </fieldset>
+            <fieldset class="rsvp-form__fieldset">
+              <legend>${fields.transfer}</legend>
+              <div class="rsvp-form__choices">
+                ${transferOptions.map((option, index) => renderOption('transfer', option, index)).join('')}
+              </div>
+            </fieldset>
+          </div>
           <button type="button" class="button button--ghost">${submit}</button>
         </form>
       </div>

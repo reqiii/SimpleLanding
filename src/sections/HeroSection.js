@@ -5,28 +5,30 @@ export const HeroSection = ({ topLeft, topRight, title, date, location, poetic }
   className: 'section--hero',
   content: `
     <div class="hero-stage reveal" data-reveal>
-      <div class="hero-stage__corner-decor" aria-hidden="true">
-        <p class="hero-stage__decor hero-stage__decor--left">${topLeft}</p>
-        <p class="hero-stage__decor hero-stage__decor--right">${topRight}</p>
-      </div>
-      <div class="hero-stage__center">
-        <h1 class="hero-stage__title">
-          <span>${title[0]}</span>
-          <span>&amp;</span>
-          <span>${title[1]}</span>
-        </h1>
-        <div class="hero-stage__date-wrap" aria-hidden="true">
-          <span class="hero-stage__date-ring hero-stage__date-ring--outer"></span>
-          <span class="hero-stage__date-ring hero-stage__date-ring--inner"></span>
-          <p class="hero-stage__date">${date}</p>
+      <div class="hero-stage__inner">
+        <div class="hero-stage__layer hero-stage__layer--decorative" aria-hidden="true">
+          <p class="hero-stage__decor hero-stage__decor--top">${topLeft}</p>
+          <div class="hero-stage__ring-system">
+            <span class="hero-stage__ring hero-stage__ring--outer"></span>
+            <span class="hero-stage__ring hero-stage__ring--inner"></span>
+            <span class="hero-stage__ring hero-stage__ring--core"></span>
+          </div>
+          <p class="hero-stage__decor hero-stage__decor--bottom">${topRight}</p>
         </div>
-        <p class="hero-stage__location">${location}</p>
+        <div class="hero-stage__layer hero-stage__layer--text">
+          <p class="hero-stage__invite-label">${topLeft}</p>
+          <h1 class="hero-stage__title">
+            <span>${title[0]}</span>
+            <span>&amp;</span>
+            <span>${title[1]}</span>
+          </h1>
+          <div class="hero-stage__date-wrap">
+            <p class="hero-stage__date">${date}</p>
+          </div>
+          <p class="hero-stage__location">${location}</p>
+        </div>
       </div>
       <p class="hero-stage__poetic">${poetic}</p>
-      <div class="hero-stage__ornaments" aria-hidden="true">
-        <span class="hero-stage__arc hero-stage__arc--left"></span>
-        <span class="hero-stage__arc hero-stage__arc--right"></span>
-      </div>
     </div>
   `,
 });
