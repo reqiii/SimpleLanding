@@ -48,6 +48,10 @@
   padding-block: var(--space-section-tight);
 }
 
+.section--intro {
+  padding-block: clamp(2.2rem, 5.8vw, 3.4rem);
+}
+
 .section--hero,
 .section--date {
   padding-block: var(--space-section-medium);
@@ -65,7 +69,7 @@
 }
 
 .section--hero + .section--intro {
-  margin-top: clamp(-2rem, -2.5vw, -1rem);
+  margin-top: clamp(-2.6rem, -3.5vw, -1.4rem);
 }
 
 .section--timeline + .section--details {
@@ -94,7 +98,7 @@
 
 .background-system__horizon {
   background: var(--gradient-background-horizon);
-  mix-blend-mode: multiply;
+  mix-blend-mode: soft-light;
   opacity: var(--atmo-horizon-opacity);
   transform: translateY(var(--horizon-shift));
 }
@@ -159,6 +163,7 @@
 }
 
 .background-system__light--rays-soft,
+.background-system__light--rays-focus,
 .background-system__light--rays-structure {
   inset: 0;
   mix-blend-mode: screen;
@@ -170,14 +175,21 @@
 
 .background-system__light--rays-soft {
   background-image: var(--gradient-sun-rays-soft);
-  filter: blur(10px);
+  filter: blur(8px);
   opacity: var(--atmo-ray-soft-opacity);
   animation: sunriseRaySoftDrift 38s cubic-bezier(0.3, 0.05, 0.25, 1) infinite alternate;
 }
 
+.background-system__light--rays-focus {
+  background-image: var(--gradient-sun-rays-focus);
+  filter: blur(3px);
+  opacity: var(--atmo-ray-focus-opacity);
+  animation: sunriseRayFocusDrift 28s cubic-bezier(0.32, 0.08, 0.3, 1) infinite alternate;
+}
+
 .background-system__light--rays-structure {
   background-image: var(--gradient-sun-rays-structure);
-  filter: blur(4px);
+  filter: blur(3px);
   opacity: var(--atmo-ray-structure-opacity);
   animation:
     sunriseRayStructureDrift 31s cubic-bezier(0.35, 0.08, 0.28, 1) infinite alternate,
@@ -202,6 +214,7 @@
   background: var(--gradient-background-haze);
   mix-blend-mode: screen;
   opacity: var(--atmo-haze-opacity);
+  transform: translateY(calc(var(--horizon-shift) * 0.2));
 }
 
 .background-system__vignette {
@@ -247,21 +260,26 @@
   }
 
   .background-system__light--reflection {
-    top: calc(84.5% + var(--horizon-shift));
+    top: calc(83.3% + var(--horizon-shift));
     width: 112vw;
     height: clamp(7.8rem, 30vw, 10.2rem);
     filter: blur(8px);
-    opacity: calc(var(--atmo-reflection-opacity) * 0.86);
+    opacity: calc(var(--atmo-reflection-opacity) * 0.82);
   }
 
   .background-system__light--rays-soft {
-    filter: blur(8px);
-    opacity: calc(var(--atmo-ray-soft-opacity) * 1.16);
+    filter: blur(6px);
+    opacity: calc(var(--atmo-ray-soft-opacity) * 1.12);
+  }
+
+  .background-system__light--rays-focus {
+    filter: blur(2.2px);
+    opacity: calc(var(--atmo-ray-focus-opacity) * 1.05);
   }
 
   .background-system__light--rays-structure {
-    filter: blur(3px);
-    opacity: calc(var(--atmo-ray-structure-opacity) * 1.12);
+    filter: blur(2.2px);
+    opacity: calc(var(--atmo-ray-structure-opacity) * 1.08);
     -webkit-mask-image: radial-gradient(105% 66% at var(--sun-center-x) var(--sun-center-y), rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 52%, rgba(0, 0, 0, 0.2) 71%, rgba(0, 0, 0, 0) 88%);
     mask-image: radial-gradient(105% 66% at var(--sun-center-x) var(--sun-center-y), rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 52%, rgba(0, 0, 0, 0.2) 71%, rgba(0, 0, 0, 0) 88%);
   }
@@ -283,15 +301,21 @@
   }
 
   .background-system__light--rays-soft {
-    opacity: calc(var(--atmo-ray-soft-opacity) * 1.12);
-    filter: blur(9px);
-    animation-duration: 32s;
+    opacity: calc(var(--atmo-ray-soft-opacity) * 1.06);
+    filter: blur(5.6px);
+    animation-duration: 30s;
+  }
+
+  .background-system__light--rays-focus {
+    opacity: calc(var(--atmo-ray-focus-opacity) * 1.14);
+    filter: blur(1.7px);
+    animation-duration: 22s;
   }
 
   .background-system__light--rays-structure {
-    opacity: calc(var(--atmo-ray-structure-opacity) * 1.2);
-    filter: blur(2.8px);
-    animation-duration: 24s, 13s;
+    opacity: calc(var(--atmo-ray-structure-opacity) * 1.12);
+    filter: blur(1.9px);
+    animation-duration: 22s, 12s;
   }
 
   .background-system__haze {
@@ -312,7 +336,7 @@
   }
 
   .background-system__light--reflection {
-    top: calc(84% + var(--horizon-shift));
-    opacity: calc(var(--atmo-reflection-opacity) * 0.96);
+    top: calc(83% + var(--horizon-shift));
+    opacity: calc(var(--atmo-reflection-opacity) * 0.86);
   }
 }
