@@ -1,28 +1,28 @@
-import { Section, ButtonLink } from '../ui/primitives.js';
+import { Section } from '../ui/primitives.js';
 
-const renderAction = ({ href, text, variant = 'ghost' }) => ButtonLink({ href, text, variant });
-
-export const HeroSection = ({ topLeft, topRight, title, date, location, poetic, actions = [] }) => Section({
+export const HeroSection = ({ topLeft, title, date, location, poetic }) => Section({
   id: 'top',
   className: 'section--hero',
   content: `
     <div class="hero-stage reveal" data-reveal>
-      <div class="hero-stage__topline">
-        <p class="hero-stage__decor hero-stage__decor--left">${topLeft}</p>
-        <p class="hero-stage__decor hero-stage__decor--right">${topRight}</p>
-      </div>
+      <p class="hero-stage__decor">${topLeft}</p>
       <div class="hero-stage__center">
         <h1 class="hero-stage__title">
           <span>${title[0]}</span>
           <span>&amp;</span>
           <span>${title[1]}</span>
         </h1>
-        <p class="hero-stage__date">${date}</p>
+        <div class="hero-stage__date-wrap" aria-hidden="true">
+          <span class="hero-stage__date-ring hero-stage__date-ring--outer"></span>
+          <span class="hero-stage__date-ring hero-stage__date-ring--inner"></span>
+          <p class="hero-stage__date">${date}</p>
+        </div>
         <p class="hero-stage__location">${location}</p>
       </div>
       <p class="hero-stage__poetic">${poetic}</p>
-      <div class="hero-stage__actions">
-        ${actions.map(renderAction).join('')}
+      <div class="hero-stage__ornaments" aria-hidden="true">
+        <span class="hero-stage__arc hero-stage__arc--left"></span>
+        <span class="hero-stage__arc hero-stage__arc--right"></span>
       </div>
     </div>
   `,
