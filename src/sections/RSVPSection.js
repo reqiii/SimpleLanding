@@ -21,6 +21,7 @@ export const RSVPSection = ({ number, label, title, deadline, fields, attendance
       </div>
       <p class="rsvp-layout__deadline reveal" data-reveal data-reveal-delay="70">${deadline}</p>
       <div class="rsvp-layout__frame reveal" data-reveal data-reveal-delay="120">
+        <span class="rsvp-layout__halo" aria-hidden="true"></span>
         <form class="rsvp-form">
           <label class="rsvp-form__field">
             <span>${fields.name}</span>
