@@ -228,6 +228,7 @@
 
 .venue-ornament__frame {
   position: relative;
+  isolation: isolate;
   min-height: 32rem;
   display: grid;
   place-items: center;
@@ -244,6 +245,9 @@
   border: 1px solid var(--color-stroke-strong);
   border-radius: 50%;
   translate: 0 -50%;
+  opacity: 0.72;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .venue-ornament__loop--left { left: clamp(-6rem, -8vw, -4rem); }
@@ -258,6 +262,8 @@
   background: rgba(255, 255, 255, 0.74);
   border: 1px solid var(--color-stroke-strong);
   translate: 0 -50%;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .venue-ornament__node--left { left: 11%; }
@@ -265,7 +271,7 @@
 
 .venue-ornament__content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: min(32rem, calc(100% - 4rem));
   display: grid;
   justify-items: center;
@@ -291,6 +297,87 @@
 .timeline-system {
   position: relative;
   margin-top: clamp(3rem, 6.2vw, 5rem);
+  isolation: isolate;
+  padding: clamp(1.6rem, 2.8vw, 2.2rem) clamp(1.1rem, 2.8vw, 2rem) clamp(1.8rem, 3vw, 2.6rem);
+  border-radius: min(3.1rem, 8vw);
+}
+
+.timeline-system::before,
+.timeline-system::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.timeline-system::before {
+  border: 1px solid rgba(112, 105, 128, 0.22);
+  z-index: 0;
+}
+
+.timeline-system::after {
+  inset: 0.8rem;
+  border: 1px solid rgba(112, 105, 128, 0.12);
+  z-index: 0;
+}
+
+.timeline-ornament {
+  position: relative;
+  isolation: isolate;
+}
+
+.timeline-ornament .section-heading__number {
+  top: -2.5rem;
+  opacity: 0.92;
+}
+
+.timeline-ornament .section-heading__content {
+  padding-block: 0.7rem 0.9rem;
+}
+
+.timeline-ornament__line,
+.rsvp-ornament__line {
+  position: absolute;
+  left: clamp(0.2rem, 2vw, 1.4rem);
+  right: clamp(0.2rem, 2vw, 1.4rem);
+  height: 1px;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(112, 105, 128, 0.3) 12%, rgba(112, 105, 128, 0.3) 88%, transparent);
+}
+
+.timeline-ornament__line--top,
+.rsvp-ornament__line--top {
+  top: clamp(-0.25rem, -0.45vw, -0.12rem);
+}
+
+.timeline-ornament__line--bottom,
+.rsvp-ornament__line--bottom {
+  bottom: clamp(-0.6rem, -0.9vw, -0.35rem);
+}
+
+.timeline-ornament__arc,
+.rsvp-ornament__arc {
+  position: absolute;
+  width: clamp(8.8rem, 16vw, 12.6rem);
+  height: clamp(2.4rem, 5.8vw, 4rem);
+  border: 1px solid rgba(112, 105, 128, 0.2);
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.timeline-ornament__arc--left {
+  top: clamp(0.2rem, 0.8vw, 0.7rem);
+  left: clamp(-1.4rem, -1.7vw, -0.5rem);
+  border-right-color: transparent;
+  rotate: -9deg;
+}
+
+.timeline-ornament__arc--right {
+  top: clamp(2.6rem, 4.4vw, 3.2rem);
+  right: clamp(-1.3rem, -1.6vw, -0.4rem);
+  border-left-color: transparent;
+  rotate: 8deg;
 }
 
 .timeline-system__line {
@@ -300,9 +387,12 @@
   top: 5.8rem;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--color-stroke-strong) 12%, var(--color-stroke-strong) 88%, transparent);
+  z-index: 1;
 }
 
 .timeline-system__track {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--space-4);
@@ -447,11 +537,44 @@
 }
 
 .rsvp-layout {
+  position: relative;
   max-width: 52rem;
 }
 
 .rsvp-layout .section-heading__title {
   max-width: 10ch;
+}
+
+.rsvp-ornament {
+  position: relative;
+  isolation: isolate;
+}
+
+.rsvp-ornament .section-heading__number {
+  top: -2.4rem;
+  left: -0.12rem;
+  opacity: 0.94;
+}
+
+.rsvp-ornament .section-heading__content {
+  padding-block: 0.55rem 0.8rem;
+}
+
+.rsvp-ornament__arc--left {
+  top: clamp(0.5rem, 1.2vw, 1.1rem);
+  left: clamp(-1.1rem, -1.5vw, -0.4rem);
+  border-right-color: transparent;
+  rotate: -12deg;
+  opacity: 0.82;
+}
+
+.rsvp-ornament__arc--right {
+  top: clamp(3.2rem, 5.3vw, 4.2rem);
+  right: clamp(-0.9rem, -1.4vw, -0.3rem);
+  width: clamp(7.6rem, 14vw, 10.4rem);
+  border-left-color: transparent;
+  rotate: 11deg;
+  opacity: 0.74;
 }
 
 .rsvp-layout__deadline {
@@ -463,7 +586,65 @@
   text-transform: uppercase;
 }
 
+.rsvp-layout__frame {
+  position: relative;
+  isolation: isolate;
+  padding: clamp(1.3rem, 2.5vw, 1.9rem) clamp(1rem, 2.2vw, 1.5rem);
+  border-radius: min(2.7rem, 7vw);
+}
+
+.rsvp-layout__frame::before,
+.rsvp-layout__frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.rsvp-layout__frame::before {
+  border: 1px solid rgba(112, 105, 128, 0.2);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.04));
+}
+
+.rsvp-layout__frame::after {
+  inset: 0.75rem;
+  border: 1px solid rgba(112, 105, 128, 0.12);
+}
+
+.rsvp-layout__frame .rsvp-form {
+  position: relative;
+  z-index: 1;
+}
+
+.rsvp-layout__frame .rsvp-form::before,
+.rsvp-layout__frame .rsvp-form::after {
+  content: '';
+  position: absolute;
+  width: clamp(10rem, 18vw, 13rem);
+  height: clamp(3rem, 6.6vw, 4.5rem);
+  border-radius: 999px;
+  border: 1px solid rgba(112, 105, 128, 0.14);
+  pointer-events: none;
+}
+
+.rsvp-layout__frame .rsvp-form::before {
+  top: clamp(-1.1rem, -1.8vw, -0.8rem);
+  right: clamp(0rem, 2.2vw, 1.2rem);
+  border-left-color: transparent;
+  rotate: 12deg;
+}
+
+.rsvp-layout__frame .rsvp-form::after {
+  bottom: clamp(-1.2rem, -1.6vw, -0.8rem);
+  left: clamp(-0.3rem, 1.4vw, 0.7rem);
+  border-right-color: transparent;
+  rotate: -10deg;
+}
+
 .rsvp-form {
+  position: relative;
   display: grid;
   gap: clamp(1.1rem, 2.2vw, 1.6rem);
 }
@@ -585,6 +766,14 @@
     left: 16%;
     right: 16%;
   }
+
+  .timeline-ornament__arc--left {
+    left: -0.4rem;
+  }
+
+  .timeline-ornament__arc--right {
+    right: -0.25rem;
+  }
 }
 
 @media (max-width: 720px) {
@@ -656,6 +845,44 @@
     left: 9%;
     right: 9%;
     top: 4.9rem;
+  }
+
+  .timeline-system {
+    padding-inline: 0.8rem;
+    border-radius: 2rem;
+  }
+
+  .timeline-system::after {
+    inset: 0.45rem;
+  }
+
+  .timeline-ornament__arc,
+  .rsvp-ornament__arc {
+    width: 7.2rem;
+    height: 2.3rem;
+    opacity: 0.58;
+  }
+
+  .timeline-ornament__arc--right,
+  .rsvp-ornament__arc--right {
+    display: none;
+  }
+
+  .timeline-ornament__line,
+  .rsvp-ornament__line {
+    left: 0.1rem;
+    right: 0.1rem;
+  }
+
+  .rsvp-layout__frame {
+    padding: 1rem 0.85rem;
+    border-radius: 1.8rem;
+  }
+
+  .rsvp-layout__frame::after,
+  .rsvp-layout__frame .rsvp-form::before,
+  .rsvp-layout__frame .rsvp-form::after {
+    display: none;
   }
 
   .timeline-system__track,

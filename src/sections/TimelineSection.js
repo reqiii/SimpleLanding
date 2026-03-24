@@ -11,7 +11,13 @@ const renderItem = ([time, title, copy], index) => `
 export const TimelineSection = ({ number, label, title, items }) => Section({
   className: 'section--timeline',
   content: `
-    ${SectionHeading({ number, label, title, align: 'center' })}
+    <div class="timeline-ornament reveal" data-reveal>
+      <span class="timeline-ornament__line timeline-ornament__line--top"></span>
+      <span class="timeline-ornament__line timeline-ornament__line--bottom"></span>
+      <span class="timeline-ornament__arc timeline-ornament__arc--left"></span>
+      <span class="timeline-ornament__arc timeline-ornament__arc--right"></span>
+      ${SectionHeading({ number, label, title, align: 'center', reveal: false })}
+    </div>
     <div class="timeline-system">
       <span class="timeline-system__line"></span>
       <div class="timeline-system__track">
