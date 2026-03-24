@@ -2,6 +2,7 @@ import { Section, SectionHeading } from '../ui/primitives.js';
 
 const renderItem = ([time, title, copy], index) => `
   <article class="timeline-point reveal" data-reveal data-reveal-delay="${index * 70}">
+    <span class="timeline-point__dot" aria-hidden="true"></span>
     <div class="timeline-point__row">
       <p class="timeline-point__label">${title}</p>
       <p class="timeline-point__time">${time}</p>
