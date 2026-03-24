@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Marcellus&display=swap');
 
 :root {
   --color-bg: #f6efe7;
@@ -61,25 +61,25 @@
   --color-accent-mist-deep: rgba(172, 141, 128, 0.24);
   --color-bg-vignette: rgba(153, 125, 112, 0.24);
 
-  --atmo-horizon-opacity: 0.74;
-  --atmo-sea-opacity: 0.78;
-  --atmo-depth-opacity: 0.5;
+  --atmo-horizon-opacity: 0.62;
+  --atmo-sea-opacity: 0.68;
+  --atmo-depth-opacity: 0.42;
   --atmo-sun-orb-opacity: 0.96;
-  --atmo-sun-core-opacity: 0.9;
-  --atmo-sun-halo-opacity: 0.54;
-  --atmo-reflection-opacity: 0.48;
-  --atmo-ray-opacity: 0.2;
-  --atmo-haze-opacity: 0.38;
-  --atmo-vignette-opacity: 0.68;
+  --atmo-sun-core-opacity: 0.95;
+  --atmo-sun-halo-opacity: 0.5;
+  --atmo-reflection-opacity: 0.42;
+  --atmo-ray-opacity: 0.28;
+  --atmo-haze-opacity: 0.28;
+  --atmo-vignette-opacity: 0.58;
 
-  --glass-blur: 18px;
-  --glass-blur-strong: 22px;
-  --glass-fill-soft: rgba(255, 248, 238, 0.32);
-  --glass-fill-strong: rgba(255, 244, 231, 0.46);
-  --glass-border: rgba(118, 98, 108, 0.24);
-  --glass-border-soft: rgba(118, 98, 108, 0.14);
-  --glass-highlight: rgba(255, 255, 255, 0.38);
-  --glass-shadow: 0 18px 40px rgba(132, 89, 78, 0.14);
+  --glass-blur: 16px;
+  --glass-blur-strong: 20px;
+  --glass-fill-soft: rgba(255, 248, 238, 0.24);
+  --glass-fill-strong: rgba(255, 244, 231, 0.3);
+  --glass-border: rgba(126, 103, 111, 0.3);
+  --glass-border-soft: rgba(126, 103, 111, 0.18);
+  --glass-highlight: rgba(255, 255, 255, 0.34);
+  --glass-shadow: 0 12px 30px rgba(132, 89, 78, 0.12);
 
   --gradient-page: linear-gradient(
     180deg,
@@ -101,30 +101,29 @@
   --gradient-accent-glow: radial-gradient(circle at top right, var(--color-accent-soft), var(--color-white-clear) 44%);
 
   --gradient-background-base:
-    radial-gradient(circle at 50% 19%, rgba(255, 225, 173, 0.72), rgba(255, 225, 173, 0) 31%),
-    radial-gradient(128% 76% at 50% 40%, rgba(203, 148, 140, 0.4), rgba(203, 148, 140, 0) 66%),
+    radial-gradient(86% 36% at 50% 18%, rgba(255, 226, 176, 0.64), rgba(255, 226, 176, 0) 58%),
+    radial-gradient(112% 54% at 50% 59%, rgba(186, 139, 132, 0.26), rgba(186, 139, 132, 0) 72%),
     linear-gradient(
       180deg,
       var(--color-sunrise-sky-blush) 0%,
-      #f6d2b6 16%,
-      var(--color-sunrise-apricot-light) 31%,
-      #b996a6 45%,
-      var(--color-sunrise-sea-coral) 60%,
-      #ab8779 78%,
-      var(--color-sunrise-sand-taupe) 100%
+      #f5d8c2 24%,
+      var(--color-sunrise-apricot-light) 42%,
+      #c2a0ac 64%,
+      var(--color-sunrise-sea-coral) 82%,
+      #a9887b 100%
     );
-  --gradient-background-horizon: linear-gradient(180deg, rgba(183, 149, 164, 0) 34%, rgba(160, 126, 145, 0.64) 46%, rgba(160, 126, 145, 0) 58%);
-  --gradient-background-sea: linear-gradient(180deg, rgba(210, 162, 146, 0) 42%, rgba(175, 114, 96, 0.52) 57%, rgba(147, 104, 93, 0.32) 71%, rgba(147, 104, 93, 0) 83%);
-  --gradient-background-depth: linear-gradient(180deg, rgba(127, 96, 87, 0) 62%, rgba(121, 90, 84, 0.24) 80%, rgba(113, 84, 79, 0.44) 100%);
-  --gradient-background-haze: radial-gradient(circle at 50% 14%, rgba(255, 240, 211, 0.52) 0%, rgba(255, 228, 198, 0.14) 36%, rgba(255, 255, 255, 0) 64%);
-  --gradient-sun-orb: radial-gradient(circle, rgba(255, 249, 233, 0.96) 0%, rgba(255, 233, 181, 0.95) 44%, rgba(255, 223, 158, 0.82) 64%, rgba(255, 223, 158, 0) 76%);
-  --gradient-sun-core: radial-gradient(circle, rgba(255, 247, 226, 0.92) 0%, rgba(255, 216, 139, 0.88) 26%, rgba(255, 190, 130, 0.44) 49%, rgba(255, 190, 130, 0) 72%);
-  --gradient-sun-halo: radial-gradient(circle, rgba(255, 224, 168, 0.58) 0%, rgba(222, 151, 134, 0.32) 42%, rgba(183, 146, 164, 0.16) 60%, rgba(183, 146, 164, 0) 80%);
+  --gradient-background-horizon: linear-gradient(180deg, rgba(183, 149, 164, 0) 50%, rgba(160, 126, 145, 0.58) 65%, rgba(160, 126, 145, 0) 79%);
+  --gradient-background-sea: linear-gradient(180deg, rgba(210, 162, 146, 0) 56%, rgba(175, 114, 96, 0.46) 70%, rgba(147, 104, 93, 0.28) 83%, rgba(147, 104, 93, 0) 94%);
+  --gradient-background-depth: linear-gradient(180deg, rgba(127, 96, 87, 0) 72%, rgba(121, 90, 84, 0.2) 86%, rgba(113, 84, 79, 0.38) 100%);
+  --gradient-background-haze: radial-gradient(circle at 50% 12%, rgba(255, 240, 211, 0.44) 0%, rgba(255, 228, 198, 0.1) 40%, rgba(255, 255, 255, 0) 68%);
+  --gradient-sun-orb: radial-gradient(circle, rgba(255, 248, 225, 1) 0%, rgba(255, 232, 177, 0.94) 36%, rgba(255, 214, 148, 0.72) 58%, rgba(255, 214, 148, 0) 74%);
+  --gradient-sun-core: radial-gradient(circle, rgba(255, 250, 235, 0.98) 0%, rgba(255, 223, 152, 0.95) 20%, rgba(255, 198, 133, 0.62) 40%, rgba(255, 184, 123, 0.22) 56%, rgba(255, 184, 123, 0) 69%);
+  --gradient-sun-halo: radial-gradient(circle, rgba(255, 224, 168, 0.52) 0%, rgba(222, 151, 134, 0.24) 45%, rgba(183, 146, 164, 0.1) 62%, rgba(183, 146, 164, 0) 82%);
   --gradient-sun-rays:
-    conic-gradient(from -88deg at 50% 23%, rgba(255, 255, 255, 0), rgba(255, 229, 180, 0.2) 11%, rgba(255, 255, 255, 0) 24%, rgba(242, 172, 133, 0.13) 38%, rgba(255, 255, 255, 0) 52%, rgba(255, 230, 196, 0.17) 66%, rgba(255, 255, 255, 0) 82%, rgba(236, 167, 133, 0.1) 91%, rgba(255, 255, 255, 0) 100%),
-    radial-gradient(124% 58% at 50% 26%, rgba(255, 223, 182, 0.38), rgba(255, 223, 182, 0) 67%);
-  --gradient-sea-reflection: radial-gradient(70% 68% at 50% 26%, rgba(242, 180, 133, 0.72) 0%, rgba(199, 128, 108, 0.38) 48%, rgba(199, 128, 108, 0) 80%);
-  --gradient-vignette: radial-gradient(circle at center, rgba(255, 255, 255, 0) 38%, rgba(181, 151, 137, 0.2) 76%, var(--color-bg-vignette) 100%);
+    conic-gradient(from -90deg at 50% 23%, rgba(255, 255, 255, 0), rgba(255, 230, 190, 0.28) 8%, rgba(255, 255, 255, 0) 20%, rgba(245, 180, 143, 0.2) 34%, rgba(255, 255, 255, 0) 48%, rgba(255, 233, 198, 0.24) 62%, rgba(255, 255, 255, 0) 78%, rgba(235, 166, 135, 0.18) 90%, rgba(255, 255, 255, 0) 100%),
+    radial-gradient(116% 52% at 50% 28%, rgba(255, 226, 184, 0.32), rgba(255, 226, 184, 0) 70%);
+  --gradient-sea-reflection: radial-gradient(64% 62% at 50% 28%, rgba(242, 180, 133, 0.62) 0%, rgba(199, 128, 108, 0.3) 44%, rgba(199, 128, 108, 0) 78%);
+  --gradient-vignette: radial-gradient(circle at center, rgba(255, 255, 255, 0) 46%, rgba(181, 151, 137, 0.16) 82%, var(--color-bg-vignette) 100%);
   --texture-grain: radial-gradient(rgba(255, 255, 255, 0.72) 0.65px, transparent 0.65px);
 
   --shadow-soft: 0 18px 40px rgba(161, 108, 86, 0.16);
@@ -152,8 +151,8 @@
   --space-section-large: clamp(7.2rem, 12vw, 10.8rem);
   --space-section-lead: clamp(1.1rem, 3vw, 2.4rem);
   --space-heading-content: clamp(1.5rem, 3.6vw, 2.9rem);
-  --font-body: 'Manrope', sans-serif;
-  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Montserrat', sans-serif;
+  --font-display: 'Marcellus', serif;
   --text-sm: 0.8125rem;
   --text-base: 1rem;
   --text-md: clamp(1.08rem, 1.22vw, 1.18rem);
@@ -164,7 +163,7 @@
   --text-timeline-time: clamp(3.1rem, 5.8vw, 4.8rem);
   --leading-copy: 1.9;
   --leading-display: 0.86;
-  --tracking-display: -0.012em;
+  --tracking-display: -0.006em;
   --tracking-label: 0.5em;
   --tracking-label-tight: 0.32em;
   --tracking-wide: 0.5em;

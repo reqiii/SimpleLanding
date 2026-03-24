@@ -20,8 +20,8 @@
 
 .site-header__brand {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 3vw, 3rem);
-  letter-spacing: 0.08em;
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  letter-spacing: 0.06em;
 }
 
 .section-heading {
@@ -72,7 +72,7 @@
 .date-stage__weekday {
   margin: 0;
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: 400;
   line-height: var(--leading-display);
 }
 
@@ -95,8 +95,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 3.4rem;
-  padding: 0.95rem 1.65rem;
+  min-height: 3.3rem;
+  padding: 0.92rem 1.55rem;
   border-radius: var(--radius-pill);
   border: 1px solid var(--color-stroke-strong);
   transition:
@@ -104,6 +104,7 @@
     background-color var(--duration-fast) var(--ease-standard),
     border-color var(--duration-fast) var(--ease-standard),
     box-shadow var(--duration-fast) var(--ease-standard),
+    backdrop-filter var(--duration-fast) var(--ease-standard),
     color var(--duration-fast) var(--ease-standard);
 }
 
@@ -120,15 +121,21 @@
 }
 
 .button--primary {
-  background: var(--gradient-button-primary);
+  background: color-mix(in srgb, var(--glass-fill-strong) 76%, rgba(239, 188, 151, 0.34));
   color: var(--color-text);
-  box-shadow: var(--shadow-soft);
-  border-color: color-mix(in srgb, var(--color-accent-sunrise) 40%, var(--color-stroke-strong));
+  box-shadow: inset 0 1px 0 var(--glass-highlight), 0 10px 22px rgba(132, 89, 78, 0.14);
+  border-color: color-mix(in srgb, var(--color-accent-sunrise) 44%, var(--glass-border));
+  backdrop-filter: blur(calc(var(--glass-blur) * 0.9));
+  -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 0.9));
 }
 
 .button--ghost {
-  background: rgba(255, 255, 255, 0.24);
+  background: color-mix(in srgb, var(--glass-fill-soft) 88%, rgba(255, 255, 255, 0.06));
   color: var(--color-text);
+  border-color: var(--glass-border);
+  box-shadow: inset 0 1px 0 var(--glass-highlight);
+  backdrop-filter: blur(calc(var(--glass-blur) * 0.8));
+  -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 0.8));
 }
 
 .button--text {
@@ -154,7 +161,7 @@
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-xl);
   padding: clamp(1.5rem, 3vw, 2.5rem);
-  background: linear-gradient(180deg, var(--glass-fill-strong), var(--glass-fill-soft));
+  background: color-mix(in srgb, var(--glass-fill-soft) 74%, rgba(255, 255, 255, 0.06));
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
   box-shadow:
