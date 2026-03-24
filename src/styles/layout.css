@@ -39,7 +39,7 @@
 }
 
 .section + .section {
-  margin-top: clamp(-0.8rem, -0.75vw, -0.35rem);
+  margin-top: clamp(-0.55rem, -0.6vw, -0.22rem);
 }
 
 .section--intro,
@@ -65,7 +65,7 @@
 }
 
 .section--hero + .section--intro {
-  margin-top: clamp(-1.1rem, -1.2vw, -0.45rem);
+  margin-top: clamp(-2rem, -2.5vw, -1rem);
 }
 
 .section--timeline + .section--details {
@@ -164,20 +164,20 @@
   mix-blend-mode: screen;
   transform-origin: var(--sun-center-x) var(--sun-center-y);
   will-change: transform, opacity, filter;
-  -webkit-mask-image: radial-gradient(94% 58% at var(--sun-center-x) var(--sun-center-y), rgba(0, 0, 0, 0.94) 0%, rgba(0, 0, 0, 0.65) 48%, rgba(0, 0, 0, 0.18) 66%, rgba(0, 0, 0, 0) 84%);
-  mask-image: radial-gradient(94% 58% at var(--sun-center-x) var(--sun-center-y), rgba(0, 0, 0, 0.94) 0%, rgba(0, 0, 0, 0.65) 48%, rgba(0, 0, 0, 0.18) 66%, rgba(0, 0, 0, 0) 84%);
+  -webkit-mask-image: radial-gradient(100% 62% at var(--sun-center-x) var(--sun-center-y), rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, 0.74) 52%, rgba(0, 0, 0, 0.28) 71%, rgba(0, 0, 0, 0) 88%);
+  mask-image: radial-gradient(100% 62% at var(--sun-center-x) var(--sun-center-y), rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, 0.74) 52%, rgba(0, 0, 0, 0.28) 71%, rgba(0, 0, 0, 0) 88%);
 }
 
 .background-system__light--rays-soft {
   background-image: var(--gradient-sun-rays-soft);
-  filter: blur(14px);
+  filter: blur(10px);
   opacity: var(--atmo-ray-soft-opacity);
   animation: sunriseRaySoftDrift 38s cubic-bezier(0.3, 0.05, 0.25, 1) infinite alternate;
 }
 
 .background-system__light--rays-structure {
   background-image: var(--gradient-sun-rays-structure);
-  filter: blur(6px);
+  filter: blur(4px);
   opacity: var(--atmo-ray-structure-opacity);
   animation:
     sunriseRayStructureDrift 31s cubic-bezier(0.35, 0.08, 0.28, 1) infinite alternate,
@@ -185,10 +185,10 @@
 }
 
 .background-system__light--reflection {
-  top: calc(82% + var(--horizon-shift));
+  top: calc(79% + var(--horizon-shift));
   left: var(--sun-center-x);
-  width: min(62rem, 92vw);
-  height: clamp(9rem, 16vw, 12.5rem);
+  width: min(66rem, 96vw);
+  height: clamp(8rem, 15vw, 11.5rem);
   border-radius: 50%;
   background: var(--gradient-sea-reflection);
   filter: blur(10px);
@@ -228,40 +228,40 @@
   }
 
   .background-system__light--orb {
-    width: min(10.25rem, 44vw);
-    height: min(10.25rem, 44vw);
-    opacity: calc(var(--atmo-sun-orb-opacity) * 0.96);
+    width: min(11.2rem, 48vw);
+    height: min(11.2rem, 48vw);
+    opacity: calc(var(--atmo-sun-orb-opacity) * 1.02);
   }
 
   .background-system__light--sun {
-    width: min(22rem, 76vw);
-    height: clamp(9.4rem, 36vw, 13rem);
-    opacity: calc(var(--atmo-sun-core-opacity) * 1.02);
+    width: min(24rem, 82vw);
+    height: clamp(10.4rem, 40vw, 14.2rem);
+    opacity: calc(var(--atmo-sun-core-opacity) * 1.06);
   }
 
   .background-system__light--halo {
-    width: min(31rem, 98vw);
-    height: clamp(12.5rem, 50vw, 18rem);
+    width: min(34rem, 108vw);
+    height: clamp(13.5rem, 56vw, 19rem);
     filter: blur(4.5px);
-    opacity: calc(var(--atmo-sun-halo-opacity) * 1.05);
+    opacity: calc(var(--atmo-sun-halo-opacity) * 1.1);
   }
 
   .background-system__light--reflection {
-    top: calc(86% + var(--horizon-shift));
-    width: 106vw;
-    height: clamp(7.2rem, 27vw, 9.6rem);
+    top: calc(84.5% + var(--horizon-shift));
+    width: 112vw;
+    height: clamp(7.8rem, 30vw, 10.2rem);
     filter: blur(8px);
-    opacity: calc(var(--atmo-reflection-opacity) * 0.92);
+    opacity: calc(var(--atmo-reflection-opacity) * 0.86);
   }
 
   .background-system__light--rays-soft {
-    filter: blur(11px);
-    opacity: calc(var(--atmo-ray-soft-opacity) * 1.05);
+    filter: blur(8px);
+    opacity: calc(var(--atmo-ray-soft-opacity) * 1.16);
   }
 
   .background-system__light--rays-structure {
-    filter: blur(4px);
-    opacity: calc(var(--atmo-ray-structure-opacity) * 1.08);
+    filter: blur(3px);
+    opacity: calc(var(--atmo-ray-structure-opacity) * 1.12);
     -webkit-mask-image: radial-gradient(105% 66% at var(--sun-center-x) var(--sun-center-y), rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 52%, rgba(0, 0, 0, 0.2) 71%, rgba(0, 0, 0, 0) 88%);
     mask-image: radial-gradient(105% 66% at var(--sun-center-x) var(--sun-center-y), rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 52%, rgba(0, 0, 0, 0.2) 71%, rgba(0, 0, 0, 0) 88%);
   }

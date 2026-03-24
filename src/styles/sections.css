@@ -1,13 +1,13 @@
 .section--hero {
-  padding-top: clamp(1rem, 2.5vw, 1.8rem);
+  padding-top: clamp(0.8rem, 2vw, 1.5rem);
 }
 
 .hero-stage {
   position: relative;
-  min-height: calc(100svh - 6rem);
+  min-height: calc(88svh - 5rem);
   display: grid;
   place-items: center;
-  padding: clamp(1.5rem, 3.6vw, 2.4rem) 0 clamp(2.1rem, 5vw, 3.2rem);
+  padding: clamp(1.2rem, 3vw, 2rem) 0 clamp(1.2rem, 3.6vw, 2.1rem);
   overflow: clip;
 }
 
@@ -16,7 +16,7 @@
   width: min(100%, 52rem);
   display: grid;
   justify-items: center;
-  gap: clamp(1.6rem, 3.6vw, 2.7rem);
+  gap: clamp(1.05rem, 2.6vw, 1.9rem);
 }
 
 .hero-stage__inner::before {
@@ -187,7 +187,7 @@
 
 .hero-stage__poetic {
   margin: 0;
-  max-width: 32rem;
+  max-width: 30rem;
   color: var(--color-text-muted);
   font-size: clamp(0.96rem, 1.25vw, 1.1rem);
   line-height: 1.82;
@@ -252,29 +252,34 @@
 
 .editorial-block--intro {
   justify-items: center;
-  padding-top: var(--space-5);
+  padding-top: clamp(0.1rem, 1.2vw, 0.8rem);
+}
+
+.section--intro .section-heading {
+  padding-top: clamp(0.9rem, 2.2vw, 1.4rem);
+  margin-bottom: clamp(0.7rem, 2vw, 1.2rem);
 }
 
 .intro-ornament {
   --intro-loop-width: min(100%, 56rem);
-  --intro-loop-height: clamp(10.5rem, 23vw, 15rem);
+  --intro-loop-height: clamp(8.8rem, 20vw, 12rem);
   --intro-loop-node-size: clamp(0.6rem, 1.05vw, 0.82rem);
   --intro-loop-stroke: 1px;
   width: min(100%, 58rem);
   position: relative;
   display: grid;
   justify-items: center;
-  gap: clamp(1.3rem, 3.3vw, 2rem);
+  gap: clamp(0.75rem, 2.1vw, 1.35rem);
 }
 
 .intro-ornament__frame {
   position: relative;
   isolation: isolate;
   width: var(--intro-loop-width);
-  min-height: var(--intro-loop-height);
+  min-height: auto;
   display: grid;
   place-items: center;
-  padding: clamp(1.8rem, 4.4vw, 2.8rem) clamp(1.4rem, 5vw, 4rem);
+  padding: clamp(1.15rem, 3vw, 1.8rem) clamp(1rem, 3.4vw, 2.2rem);
 }
 
 .intro-ornament__frame::before,
@@ -286,21 +291,23 @@
 
 .intro-ornament__frame::before {
   inset: 0;
-  border: var(--intro-loop-stroke) solid var(--glass-border);
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--glass-fill-soft) 95%, rgba(255, 255, 255, 0.02));
-  box-shadow:
-    inset 0 0 0 1px var(--glass-highlight),
-    var(--glass-shadow);
-  backdrop-filter: blur(calc(var(--glass-blur) * 0.72));
-  -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 0.72));
+  border: 0;
+  border-radius: 0;
+  background:
+    linear-gradient(90deg, rgba(124, 94, 83, 0), rgba(124, 94, 83, 0.24) 18%, rgba(124, 94, 83, 0.24) 82%, rgba(124, 94, 83, 0)) top / 100% 1px no-repeat,
+    linear-gradient(90deg, rgba(124, 94, 83, 0), rgba(124, 94, 83, 0.18) 18%, rgba(124, 94, 83, 0.18) 82%, rgba(124, 94, 83, 0)) bottom / 100% 1px no-repeat;
+  box-shadow: none;
   z-index: -2;
 }
 
 .intro-ornament__frame::after {
-  inset: clamp(0.5rem, 1.3vw, 0.8rem) clamp(0.8rem, 2.1vw, 1.3rem);
-  border: 1px solid var(--glass-border-soft);
-  border-radius: 999px;
+  inset: clamp(0.45rem, 1vw, 0.7rem) clamp(0.8rem, 2.1vw, 1.3rem);
+  border-top: 1px solid color-mix(in srgb, var(--glass-border-soft) 82%, rgba(255, 255, 255, 0.1));
+  border-bottom: 1px solid color-mix(in srgb, var(--glass-border-soft) 78%, rgba(255, 255, 255, 0.08));
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+  opacity: 0.65;
   z-index: -1;
 }
 
@@ -308,13 +315,13 @@
 .intro-ornament::after {
   content: '';
   position: absolute;
-  top: calc(50% + clamp(1.9rem, 5vw, 2.7rem));
+  top: calc(50% + clamp(0.9rem, 2.6vw, 1.3rem));
   width: var(--intro-loop-node-size);
   height: var(--intro-loop-node-size);
   border-radius: 50%;
   border: 1px solid color-mix(in srgb, var(--glass-border) 82%, rgba(255, 255, 255, 0.04));
   background: var(--color-overlay-strong);
-  box-shadow: 0 0 0 0.26rem var(--color-white-faint);
+  box-shadow: 0 0 0 0.18rem var(--color-white-faint);
   z-index: 1;
 }
 
@@ -1155,13 +1162,13 @@
 @media (max-width: 720px) {
   .intro-ornament {
     --intro-loop-width: min(100%, 30rem);
-    --intro-loop-height: clamp(8.8rem, 36vw, 11rem);
+    --intro-loop-height: auto;
     --intro-loop-stroke: 1px;
-    gap: clamp(1rem, 4vw, 1.4rem);
+    gap: clamp(0.65rem, 2.6vw, 1rem);
   }
 
   .intro-ornament__frame {
-    padding: clamp(1.35rem, 4.4vw, 2rem) clamp(1.1rem, 4.2vw, 1.7rem);
+    padding: clamp(0.7rem, 2.8vw, 1rem) clamp(0.8rem, 3.2vw, 1.2rem);
   }
 
   .intro-ornament__frame::after {
@@ -1176,17 +1183,17 @@
   .hero-stage {
     min-height: auto;
     gap: 0.9rem;
-    padding: clamp(1.1rem, 4vw, 1.6rem) 0 clamp(1.5rem, 5vw, 2.2rem);
+    padding: clamp(0.7rem, 2.6vw, 1.2rem) 0 clamp(0.7rem, 3.1vw, 1.25rem);
   }
 
   .hero-stage__composition {
     width: min(100%, 31rem);
-    min-height: clamp(19rem, 84vw, 24rem);
+    min-height: clamp(16.5rem, 76vw, 20.5rem);
     gap: 0.7rem;
   }
 
   .hero-stage__core {
-    min-height: clamp(16.5rem, 70vw, 20.5rem);
+    min-height: clamp(14.8rem, 64vw, 18rem);
   }
 
   .hero-stage__title,
@@ -1228,7 +1235,7 @@
   .hero-stage__poetic {
     max-width: 22rem;
     font-size: clamp(0.9rem, 3.7vw, 1rem);
-    line-height: 1.76;
+    line-height: 1.66;
   }
 
   .venue-ornament__frame {
@@ -1346,8 +1353,8 @@
 
 @media (max-width: 430px) {
   .hero-stage {
-    padding-top: 0.6rem;
-    gap: 0.6rem;
+    padding-top: 0.35rem;
+    gap: 0.45rem;
   }
 
   .hero-stage__inner {
@@ -1355,11 +1362,11 @@
   }
 
   .hero-stage__composition {
-    min-height: clamp(17rem, 92vw, 20rem);
+    min-height: clamp(15rem, 80vw, 17.5rem);
   }
 
   .hero-stage__core {
-    min-height: clamp(15.5rem, 78vw, 18.5rem);
+    min-height: clamp(13.8rem, 68vw, 16.3rem);
   }
 
   .hero-stage__title {
@@ -1383,30 +1390,24 @@
   }
 
   .hero-stage__poetic {
-    max-width: 20.5rem;
+    max-width: 19.8rem;
   }
 
   .editorial-block {
-    gap: 1.3rem;
+    gap: 0.9rem;
   }
 
   .editorial-block--intro {
-    padding-top: 0.2rem;
+    padding-top: 0;
   }
 
   .intro-ornament {
     --intro-loop-height: auto;
-    gap: 0.85rem;
+    gap: 0.55rem;
   }
 
   .intro-ornament__frame {
-    border-radius: 1.5rem;
-    padding: 1rem 0.9rem;
-  }
-
-  .intro-ornament__frame::before,
-  .intro-ornament__frame::after {
-    border-radius: 1.5rem;
+    padding: 0.6rem 0.72rem;
   }
 
   .editorial-block__copy {
@@ -1504,11 +1505,11 @@
   }
 
   .rsvp-form {
-    gap: 0.85rem;
+    gap: 0.55rem;
   }
 
   .rsvp-form__actions {
-    gap: 0.6rem;
+    gap: 0.45rem;
   }
 
   .rsvp-form__group {
