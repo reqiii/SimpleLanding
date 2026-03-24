@@ -220,6 +220,81 @@
   padding-top: var(--space-5);
 }
 
+.intro-ornament {
+  --intro-loop-width: min(100%, 56rem);
+  --intro-loop-height: clamp(10.5rem, 23vw, 15rem);
+  --intro-loop-node-size: clamp(0.6rem, 1.05vw, 0.82rem);
+  --intro-loop-stroke: 1px;
+  width: min(100%, 58rem);
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: clamp(1.3rem, 3.3vw, 2rem);
+}
+
+.intro-ornament .section-heading {
+  margin-bottom: 0;
+}
+
+.intro-ornament__frame {
+  position: relative;
+  isolation: isolate;
+  width: var(--intro-loop-width);
+  min-height: var(--intro-loop-height);
+  display: grid;
+  place-items: center;
+  padding: clamp(1.8rem, 4.4vw, 2.8rem) clamp(1.4rem, 5vw, 4rem);
+}
+
+.intro-ornament__frame::before,
+.intro-ornament__frame::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+}
+
+.intro-ornament__frame::before {
+  inset: 0;
+  border: var(--intro-loop-stroke) solid var(--color-stroke-strong);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 50% 18%, var(--color-overlay), transparent 66%),
+    linear-gradient(180deg, var(--color-overlay-soft), var(--color-white-clear));
+  box-shadow:
+    inset 0 0 0 1px var(--color-overlay-soft),
+    0 0 2.2rem var(--color-overlay-soft);
+  z-index: -2;
+}
+
+.intro-ornament__frame::after {
+  inset: clamp(0.5rem, 1.3vw, 0.8rem) clamp(0.8rem, 2.1vw, 1.3rem);
+  border: 1px solid var(--color-stroke);
+  border-radius: 999px;
+  z-index: -1;
+}
+
+.intro-ornament::before,
+.intro-ornament::after {
+  content: '';
+  position: absolute;
+  top: calc(50% + clamp(1.9rem, 5vw, 2.7rem));
+  width: var(--intro-loop-node-size);
+  height: var(--intro-loop-node-size);
+  border-radius: 50%;
+  border: 1px solid var(--color-stroke-strong);
+  background: var(--color-overlay-strong);
+  box-shadow: 0 0 0 0.32rem var(--color-white-faint);
+  z-index: 1;
+}
+
+.intro-ornament::before {
+  left: clamp(0.15rem, 1.4vw, 1rem);
+}
+
+.intro-ornament::after {
+  right: clamp(0.15rem, 1.4vw, 1rem);
+}
+
 .editorial-block__copy {
   margin: 0;
   max-width: 44rem;
@@ -830,6 +905,26 @@
 }
 
 @media (max-width: 720px) {
+  .intro-ornament {
+    --intro-loop-width: min(100%, 30rem);
+    --intro-loop-height: clamp(9.6rem, 40vw, 12.2rem);
+    --intro-loop-stroke: 1px;
+    gap: clamp(1rem, 4vw, 1.4rem);
+  }
+
+  .intro-ornament__frame {
+    padding: clamp(1.35rem, 4.4vw, 2rem) clamp(1.1rem, 4.2vw, 1.7rem);
+  }
+
+  .intro-ornament__frame::after {
+    inset: clamp(0.42rem, 1.6vw, 0.56rem) clamp(0.56rem, 2vw, 0.76rem);
+  }
+
+  .intro-ornament::before,
+  .intro-ornament::after {
+    display: none;
+  }
+
   .hero-stage {
     min-height: auto;
     gap: var(--space-4);
