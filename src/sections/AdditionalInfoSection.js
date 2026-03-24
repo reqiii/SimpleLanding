@@ -27,13 +27,13 @@ export const AdditionalInfoSection = ({ dressCode, details }) => Section({
       <div class="details-layout__body reveal" data-reveal data-reveal-delay="70">
         <p class="details-layout__intro">${details.intro}</p>
         <div class="details-layout__text-group">
-          <h3>${details.wishesTitle}</h3>
+          <h3><span class="details-star" aria-hidden="true">✦</span>${details.wishesTitle}</h3>
           <p>${details.wishes}</p>
         </div>
         <div class="organizer-field">
-          <span class="organizer-field__label">${details.organizerLabel}</span>
+          <span class="organizer-field__label"><span class="details-star" aria-hidden="true">✦</span>${details.organizerLabel}</span>
           <strong>${details.organizerName}</strong>
-          <a href="tel:${details.organizerPhone.replace(/[^+\d]/g, '')}">${details.organizerPhone}</a>
+          <a class="organizer-field__contact" href="tel:${details.organizerPhone.replace(/[^+\d]/g, '')}"><span class="details-star" aria-hidden="true">✦</span>${details.organizerPhone}</a>
         </div>
         <p class="details-layout__note">${details.organizerNote}</p>
       </div>
