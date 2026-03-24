@@ -65,7 +65,7 @@
 
 .hero-stage__title span:nth-child(2) {
   font-size: 0.5em;
-  color: rgba(206, 126, 79, 0.72);
+  color: color-mix(in srgb, var(--color-accent) 74%, var(--color-sunrise-sea-coral));
   margin: -0.045em 0 -0.02em;
 }
 
@@ -92,7 +92,7 @@
 
 .hero-stage__date-ring--inner {
   inset: 0.5rem 0.9rem;
-  border: 1px solid rgba(112, 105, 128, 0.28);
+  border: 1px solid rgba(141, 114, 105, 0.3);
 }
 
 .hero-stage__date {
@@ -136,7 +136,7 @@
   position: absolute;
   width: clamp(10rem, 21vw, 16rem);
   height: clamp(3rem, 8vw, 5.4rem);
-  border: 1px solid rgba(112, 105, 128, 0.26);
+  border: 1px solid rgba(141, 114, 105, 0.28);
   border-radius: 999px;
   opacity: 0.62;
 }
@@ -316,7 +316,7 @@
   padding: clamp(2rem, 4vw, 3rem);
   border: 1px solid var(--color-stroke);
   border-radius: min(4rem, 9vw);
-  background: linear-gradient(180deg, rgba(255, 250, 239, 0.66), rgba(255, 241, 223, 0.22));
+  background: linear-gradient(180deg, rgba(255, 250, 243, 0.68), rgba(251, 235, 220, 0.26));
   backdrop-filter: blur(var(--blur-soft));
   -webkit-backdrop-filter: blur(var(--blur-soft));
 }

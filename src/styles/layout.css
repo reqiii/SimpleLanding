@@ -79,100 +79,85 @@
   background: var(--gradient-background-base);
 }
 
-.background-system__gradient--top {
-  background: var(--gradient-background-top);
+.background-system__horizon {
+  background: var(--gradient-background-horizon);
+  mix-blend-mode: multiply;
+  opacity: var(--atmo-horizon-opacity);
 }
 
-.background-system__gradient--side {
-  background: var(--gradient-background-side);
+.background-system__sea {
+  background: var(--gradient-background-sea);
+  opacity: var(--atmo-sea-opacity);
 }
 
-.background-system__bloom {
+.background-system__depth {
+  background: var(--gradient-background-depth);
+  opacity: var(--atmo-depth-opacity);
+}
+
+.background-system__light {
+  background-repeat: no-repeat;
+  filter: blur(0.2px);
+}
+
+.background-system__light--sun {
   inset: 8% auto auto 50%;
   translate: -50% 0;
-  width: min(72rem, 94vw);
-  height: 44rem;
+  width: min(62rem, 90vw);
+  height: clamp(20rem, 42vw, 34rem);
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 226, 171, 0.88) 0%, rgba(255, 226, 171, 0) 66%);
-  filter: blur(18px);
-  opacity: 0.96;
-  transform-origin: 50% 0%;
-  animation: sunriseGlow 18s ease-in-out infinite alternate;
+  background: var(--gradient-sun-core);
+  opacity: var(--atmo-sun-core-opacity);
+  transform-origin: 50% 48%;
+  animation: sunriseCorePulse 18s ease-in-out infinite alternate;
 }
 
-.background-system__streak {
-  opacity: 0.42;
-  filter: blur(0.5px);
-  background-repeat: no-repeat;
-}
-
-.background-system__streak--one {
-  background-image: linear-gradient(95deg, transparent 0%, rgba(255, 247, 227, 0.72) 20%, transparent 44%);
-  transform: translate3d(-8%, 10%, 0) rotate(-8deg);
-}
-
-.background-system__streak--two {
-  background-image: linear-gradient(100deg, transparent 6%, rgba(255, 219, 173, 0.44) 32%, transparent 56%);
-  transform: translate3d(12%, 44%, 0) rotate(8deg);
-}
-
-.background-system__orb {
+.background-system__light--halo {
+  inset: 4% auto auto 50%;
+  translate: -50% 0;
+  width: min(82rem, 116vw);
+  height: clamp(28rem, 56vw, 44rem);
   border-radius: 50%;
+  background: var(--gradient-sun-halo);
   filter: blur(14px);
-  opacity: 0.65;
-  animation: floatDrift var(--duration-slow) ease-in-out infinite alternate;
+  opacity: var(--atmo-sun-halo-opacity);
+  transform-origin: 50% 46%;
+  animation: sunriseHaloBreath 24s ease-in-out infinite alternate;
 }
 
-.background-system__orb--one {
-  inset: 14% auto auto 8%;
-  width: 16rem;
-  height: 16rem;
-  background: radial-gradient(circle, var(--color-accent-rose-glow), transparent 70%);
+.background-system__light--rays {
+  inset: 0;
+  background-image: var(--gradient-sun-rays);
+  opacity: var(--atmo-ray-opacity);
+  mix-blend-mode: soft-light;
+  animation: sunriseRayDrift 34s ease-in-out infinite alternate;
 }
 
-.background-system__orb--two {
-  inset: 28% 8% auto auto;
-  width: 18rem;
-  height: 18rem;
-  background: radial-gradient(circle, var(--color-accent-sky-glow), transparent 70%);
-  animation-duration: 18000ms;
+.background-system__light--reflection {
+  inset: 30% auto auto 50%;
+  translate: -50% 0;
+  width: min(98rem, 132vw);
+  height: clamp(18rem, 34vw, 26rem);
+  border-radius: 50%;
+  background: var(--gradient-sea-reflection);
+  filter: blur(22px);
+  opacity: var(--atmo-reflection-opacity);
+  animation: sunriseReflectionShift 28s ease-in-out infinite alternate;
 }
 
-.background-system__orb--three {
-  inset: auto auto 16% 22%;
-  width: 20rem;
-  height: 20rem;
-  background: radial-gradient(circle, var(--color-accent-lavender-glow), transparent 70%);
-  animation-duration: 22000ms;
-}
-
-.background-system__glow {
-  filter: blur(var(--blur-strong));
-  opacity: 0.7;
-}
-
-.background-system__glow--halo {
-  inset: 0 auto auto 50%;
-  translate: -50% -8%;
-  width: min(50rem, 90vw);
-  height: 18rem;
-  background: var(--color-accent-apricot-glow);
-  animation: sunriseHalo 20s ease-in-out infinite alternate;
-}
-
-.background-system__glow--ember {
-  inset: auto 8% 12% auto;
-  width: 18rem;
-  height: 18rem;
-  background: var(--color-accent-lavender-glow);
+.background-system__haze {
+  background: var(--gradient-background-haze);
+  mix-blend-mode: screen;
+  opacity: var(--atmo-haze-opacity);
 }
 
 .background-system__vignette {
   background: var(--gradient-vignette);
+  opacity: var(--atmo-vignette-opacity);
 }
 
 .background-system__grain {
-  opacity: 0.08;
+  opacity: 0.045;
   background-image: var(--texture-grain);
   background-size: 10px 10px;
   mix-blend-mode: soft-light;
@@ -185,42 +170,56 @@
     gap: var(--space-2);
   }
 
-  .background-system__bloom {
-    width: 115vw;
-    height: 24rem;
-    top: 10%;
+  .background-system__horizon {
+    opacity: calc(var(--atmo-horizon-opacity) * 0.85);
   }
 
-  .background-system__orb {
-    opacity: 0.52;
+  .background-system__light--sun {
+    inset: 11% auto auto 50%;
+    width: min(48rem, 112vw);
+    height: clamp(16rem, 64vw, 24rem);
+    opacity: calc(var(--atmo-sun-core-opacity) * 0.84);
   }
 
-  .background-system__orb--one {
-    width: 12rem;
-    height: 12rem;
-    inset: 18% auto auto -4%;
+  .background-system__light--halo {
+    inset: 8% auto auto 50%;
+    width: min(58rem, 142vw);
+    height: clamp(22rem, 82vw, 30rem);
+    filter: blur(12px);
+    opacity: calc(var(--atmo-sun-halo-opacity) * 0.8);
   }
 
-  .background-system__orb--two {
-    width: 12rem;
-    height: 12rem;
-    inset: 30% -4% auto auto;
+  .background-system__light--reflection {
+    inset: 33% auto auto 50%;
+    width: 146vw;
+    height: clamp(13rem, 56vw, 18rem);
+    filter: blur(18px);
+    opacity: calc(var(--atmo-reflection-opacity) * 0.84);
   }
 
-  .background-system__orb--three {
-    width: 14rem;
-    height: 14rem;
-    inset: auto auto 14% 12%;
+  .background-system__light--rays {
+    opacity: calc(var(--atmo-ray-opacity) * 0.7);
+  }
+
+  .background-system__depth {
+    opacity: calc(var(--atmo-depth-opacity) * 0.84);
+  }
+
+  .background-system__grain {
+    opacity: 0.032;
   }
 }
 
 @media (max-width: 430px) {
-  .background-system__streak {
+  .background-system__light--rays {
     display: none;
   }
 
-  .background-system__orb--two,
-  .background-system__orb--three {
-    display: none;
+  .background-system__haze {
+    opacity: calc(var(--atmo-haze-opacity) * 0.74);
+  }
+
+  .background-system__light--halo {
+    filter: blur(10px);
   }
 }
