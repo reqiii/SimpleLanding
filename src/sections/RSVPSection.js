@@ -2,8 +2,8 @@ import { Section, SectionHeading } from '../ui/primitives.js';
 
 const renderOption = (name, option, index) => `
   <label class="rsvp-choice">
-    <input type="radio" name="${name}" value="${option}" ${index === 0 ? 'checked' : ''} />
-    <span>${option}</span>
+    <input class="rsvp-choice__input" type="radio" name="${name}" value="${option}" ${index === 0 ? 'checked' : ''} />
+    <span class="rsvp-choice__button">${option}</span>
   </label>
 `;
 
@@ -44,7 +44,7 @@ export const RSVPSection = ({ number, label, title, deadline, fields, attendance
           </div>
           <div class="rsvp-form__actions">
             <p class="rsvp-form__helper">${deadline}</p>
-            <button type="button" class="button button--ghost">${submit}</button>
+            <button type="button" class="button button--ghost rsvp-form__submit">${submit}</button>
           </div>
         </form>
       </div>
