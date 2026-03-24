@@ -526,6 +526,20 @@
   z-index: 1;
 }
 
+.timeline-system__line::after {
+  content: '';
+  position: absolute;
+  inset: -0.4rem 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--color-sunrise-sea-coral) 30%, transparent) 50%,
+    transparent
+  );
+  filter: blur(7px);
+  opacity: 0.46;
+}
+
 .timeline-system__track {
   position: relative;
   z-index: 2;
@@ -603,9 +617,9 @@
 
 .dresscode-bar {
   display: grid;
-  grid-template-columns: auto minmax(10rem, 1fr) auto;
+  grid-template-columns: auto minmax(13.5rem, 1fr) minmax(7.6rem, auto);
   align-items: center;
-  gap: clamp(0.7rem, 1.6vw, 1rem);
+  gap: clamp(0.75rem, 1.7vw, 1.15rem);
 }
 
 .dresscode-bar__index,
@@ -618,17 +632,30 @@
 }
 
 .dresscode-bar__index {
-  opacity: 0.68;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.02rem;
+  opacity: 0.7;
   min-width: 2.7rem;
   font-weight: 500;
 }
 
+.dresscode-bar__slash {
+  opacity: 0.84;
+}
+
+.dresscode-bar__code {
+  letter-spacing: 0.2em;
+}
+
 .dresscode-bar__name {
-  opacity: 0.76;
+  opacity: 0.8;
+  justify-self: end;
+  text-align: right;
 }
 
 .dresscode-bar__swatch {
-  min-height: clamp(3.8rem, 4.8vw, 4.5rem);
+  min-height: clamp(3.9rem, 4.9vw, 4.65rem);
   border-radius: clamp(1.25rem, 2vw, 1.8rem);
   background: linear-gradient(135deg, color-mix(in srgb, var(--dresscode-swatch) 92%, white), color-mix(in srgb, var(--dresscode-swatch) 72%, white));
   border: 1px solid rgba(255,255,255,0.42);
@@ -760,14 +787,16 @@
 
 .rsvp-layout__halo {
   position: absolute;
-  inset: 50% auto auto 50%;
-  translate: -50% -52%;
-  width: min(44rem, 118%);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--gradient-sun-halo);
-  opacity: var(--rsvp-halo-opacity, 0.5);
-  filter: blur(18px);
+  inset: 56% auto auto 50%;
+  translate: -50% -50%;
+  width: min(54rem, 134%);
+  height: clamp(18rem, 42vw, 28rem);
+  border-radius: 50% / 44%;
+  background:
+    radial-gradient(88% 64% at 50% 48%, color-mix(in srgb, var(--color-sunrise-core) 60%, white 20%), transparent 72%),
+    var(--gradient-sun-halo);
+  opacity: var(--rsvp-halo-opacity, 0.54);
+  filter: blur(20px);
   z-index: -1;
 }
 
@@ -1097,10 +1126,11 @@
   }
 
   .rsvp-layout__halo {
-    width: 126%;
-    translate: -50% -48%;
-    opacity: 0.34;
-    filter: blur(15px);
+    width: 124%;
+    height: clamp(13rem, 44vw, 16rem);
+    inset: 52% auto auto 50%;
+    opacity: 0.36;
+    filter: blur(16px);
   }
 
   .rsvp-form {
@@ -1151,6 +1181,8 @@
 
   .dresscode-bar__name {
     grid-column: 1 / -1;
+    justify-self: start;
+    text-align: left;
   }
 
   .organizer-field {

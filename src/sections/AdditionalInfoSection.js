@@ -2,7 +2,10 @@ import { Section, SectionHeading } from '../ui/primitives.js';
 
 const renderPalette = ([index, name, color], delay) => `
   <div class="dresscode-bar reveal" data-reveal data-reveal-delay="${delay}">
-    <span class="dresscode-bar__index">/${index}</span>
+    <span class="dresscode-bar__index" aria-label="/${index}">
+      <span class="dresscode-bar__slash">/</span>
+      <span class="dresscode-bar__code">${index}</span>
+    </span>
     <div class="dresscode-bar__swatch" style="--dresscode-swatch:${color}"></div>
     <span class="dresscode-bar__name">${name}</span>
   </div>
