@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap');
 
 :root {
   --color-bg: #f6efe7;
@@ -68,7 +68,7 @@
   --atmo-sun-core-opacity: 0.95;
   --atmo-sun-halo-opacity: 0.5;
   --atmo-reflection-opacity: 0.42;
-  --atmo-ray-opacity: 0.28;
+  --atmo-ray-opacity: 0.36;
   --atmo-haze-opacity: 0.28;
   --atmo-vignette-opacity: 0.58;
 
@@ -112,16 +112,16 @@
       var(--color-sunrise-sea-coral) 82%,
       #a9887b 100%
     );
-  --gradient-background-horizon: linear-gradient(180deg, rgba(183, 149, 164, 0) 50%, rgba(160, 126, 145, 0.58) 65%, rgba(160, 126, 145, 0) 79%);
-  --gradient-background-sea: linear-gradient(180deg, rgba(210, 162, 146, 0) 56%, rgba(175, 114, 96, 0.46) 70%, rgba(147, 104, 93, 0.28) 83%, rgba(147, 104, 93, 0) 94%);
-  --gradient-background-depth: linear-gradient(180deg, rgba(127, 96, 87, 0) 72%, rgba(121, 90, 84, 0.2) 86%, rgba(113, 84, 79, 0.38) 100%);
+  --gradient-background-horizon: linear-gradient(180deg, rgba(183, 149, 164, 0) 68%, rgba(160, 126, 145, 0.54) 79%, rgba(160, 126, 145, 0) 92%);
+  --gradient-background-sea: linear-gradient(180deg, rgba(210, 162, 146, 0) 73%, rgba(175, 114, 96, 0.42) 84%, rgba(147, 104, 93, 0.26) 92%, rgba(147, 104, 93, 0) 100%);
+  --gradient-background-depth: linear-gradient(180deg, rgba(127, 96, 87, 0) 82%, rgba(121, 90, 84, 0.22) 92%, rgba(113, 84, 79, 0.38) 100%);
   --gradient-background-haze: radial-gradient(circle at 50% 12%, rgba(255, 240, 211, 0.44) 0%, rgba(255, 228, 198, 0.1) 40%, rgba(255, 255, 255, 0) 68%);
-  --gradient-sun-orb: radial-gradient(circle, rgba(255, 248, 225, 1) 0%, rgba(255, 232, 177, 0.94) 36%, rgba(255, 214, 148, 0.72) 58%, rgba(255, 214, 148, 0) 74%);
-  --gradient-sun-core: radial-gradient(circle, rgba(255, 250, 235, 0.98) 0%, rgba(255, 223, 152, 0.95) 20%, rgba(255, 198, 133, 0.62) 40%, rgba(255, 184, 123, 0.22) 56%, rgba(255, 184, 123, 0) 69%);
-  --gradient-sun-halo: radial-gradient(circle, rgba(255, 224, 168, 0.52) 0%, rgba(222, 151, 134, 0.24) 45%, rgba(183, 146, 164, 0.1) 62%, rgba(183, 146, 164, 0) 82%);
+  --gradient-sun-orb: radial-gradient(circle, rgba(255, 251, 236, 1) 0%, rgba(255, 236, 188, 0.96) 32%, rgba(255, 214, 148, 0.74) 56%, rgba(255, 214, 148, 0) 74%);
+  --gradient-sun-core: radial-gradient(circle, rgba(255, 255, 248, 0.99) 0%, rgba(255, 242, 200, 0.98) 18%, rgba(255, 223, 152, 0.9) 34%, rgba(255, 198, 133, 0.54) 50%, rgba(255, 184, 123, 0.2) 63%, rgba(255, 184, 123, 0) 72%);
+  --gradient-sun-halo: radial-gradient(circle, rgba(255, 224, 168, 0.56) 0%, rgba(222, 151, 134, 0.28) 46%, rgba(183, 146, 164, 0.12) 64%, rgba(183, 146, 164, 0) 84%);
   --gradient-sun-rays:
-    conic-gradient(from -90deg at 50% 23%, rgba(255, 255, 255, 0), rgba(255, 230, 190, 0.28) 8%, rgba(255, 255, 255, 0) 20%, rgba(245, 180, 143, 0.2) 34%, rgba(255, 255, 255, 0) 48%, rgba(255, 233, 198, 0.24) 62%, rgba(255, 255, 255, 0) 78%, rgba(235, 166, 135, 0.18) 90%, rgba(255, 255, 255, 0) 100%),
-    radial-gradient(116% 52% at 50% 28%, rgba(255, 226, 184, 0.32), rgba(255, 226, 184, 0) 70%);
+    conic-gradient(from -90deg at 50% 23%, rgba(255, 255, 255, 0), rgba(255, 236, 202, 0.34) 8%, rgba(255, 255, 255, 0) 20%, rgba(245, 180, 143, 0.24) 34%, rgba(255, 255, 255, 0) 48%, rgba(255, 233, 198, 0.3) 62%, rgba(255, 255, 255, 0) 78%, rgba(235, 166, 135, 0.24) 90%, rgba(255, 255, 255, 0) 100%),
+    radial-gradient(116% 52% at 50% 28%, rgba(255, 226, 184, 0.38), rgba(255, 226, 184, 0) 70%);
   --gradient-sea-reflection: radial-gradient(64% 62% at 50% 28%, rgba(242, 180, 133, 0.62) 0%, rgba(199, 128, 108, 0.3) 44%, rgba(199, 128, 108, 0) 78%);
   --gradient-vignette: radial-gradient(circle at center, rgba(255, 255, 255, 0) 46%, rgba(181, 151, 137, 0.16) 82%, var(--color-bg-vignette) 100%);
   --texture-grain: radial-gradient(rgba(255, 255, 255, 0.72) 0.65px, transparent 0.65px);
@@ -151,19 +151,19 @@
   --space-section-large: clamp(7.2rem, 12vw, 10.8rem);
   --space-section-lead: clamp(1.1rem, 3vw, 2.4rem);
   --space-heading-content: clamp(1.5rem, 3.6vw, 2.9rem);
-  --font-body: 'Montserrat', sans-serif;
-  --font-display: 'Marcellus', serif;
+  --font-body: 'Manrope', sans-serif;
+  --font-display: 'Cormorant Garamond', serif;
   --text-sm: 0.8125rem;
   --text-base: 1rem;
-  --text-md: clamp(1.08rem, 1.22vw, 1.18rem);
-  --text-lg: clamp(1.8rem, 3vw, 2.9rem);
-  --text-xl: clamp(3.9rem, 7.8vw, 7rem);
+  --text-md: clamp(1rem, 1.12vw, 1.14rem);
+  --text-lg: clamp(1.9rem, 3.2vw, 3rem);
+  --text-xl: clamp(4.2rem, 8vw, 7.3rem);
   --text-hero: clamp(5.4rem, 15vw, 10rem);
   --text-display-number: clamp(8rem, 20vw, 16rem);
   --text-timeline-time: clamp(3.1rem, 5.8vw, 4.8rem);
-  --leading-copy: 1.9;
-  --leading-display: 0.86;
-  --tracking-display: -0.006em;
+  --leading-copy: 1.82;
+  --leading-display: 0.83;
+  --tracking-display: -0.012em;
   --tracking-label: 0.5em;
   --tracking-label-tight: 0.32em;
   --tracking-wide: 0.5em;
@@ -187,5 +187,8 @@
     --space-section-lead: clamp(0.7rem, 3.2vw, 1.3rem);
     --space-heading-content: clamp(1.15rem, 4.8vw, 2rem);
     --text-hero: clamp(4.25rem, 18vw, 6.2rem);
+    --gradient-background-horizon: linear-gradient(180deg, rgba(183, 149, 164, 0) 74%, rgba(160, 126, 145, 0.5) 85%, rgba(160, 126, 145, 0) 97%);
+    --gradient-background-sea: linear-gradient(180deg, rgba(210, 162, 146, 0) 79%, rgba(175, 114, 96, 0.4) 89%, rgba(147, 104, 93, 0.24) 96%, rgba(147, 104, 93, 0) 100%);
+    --gradient-background-depth: linear-gradient(180deg, rgba(127, 96, 87, 0) 88%, rgba(121, 90, 84, 0.2) 95%, rgba(113, 84, 79, 0.34) 100%);
   }
 }

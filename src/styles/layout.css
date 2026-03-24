@@ -101,8 +101,8 @@
 }
 
 .background-system__light--orb {
-  inset: 14.5% auto auto 50%;
-  translate: -50% 0;
+  inset: 17% auto auto 50%;
+  translate: -50% -50%;
   width: min(15rem, 40vw);
   height: min(15rem, 40vw);
   border-radius: 50%;
@@ -112,10 +112,10 @@
 }
 
 .background-system__light--sun {
-  inset: 12.5% auto auto 50%;
-  translate: -50% 0;
+  inset: 17% auto auto 50%;
+  translate: -50% -50%;
   width: min(42rem, 72vw);
-  height: clamp(16rem, 31vw, 24rem);
+  height: clamp(17rem, 32vw, 25rem);
   border-radius: 50%;
   background: var(--gradient-sun-core);
   opacity: var(--atmo-sun-core-opacity);
@@ -124,10 +124,10 @@
 }
 
 .background-system__light--halo {
-  inset: 8% auto auto 50%;
-  translate: -50% 0;
+  inset: 17% auto auto 50%;
+  translate: -50% -50%;
   width: min(62rem, 94vw);
-  height: clamp(22rem, 40vw, 31rem);
+  height: clamp(23rem, 42vw, 32rem);
   border-radius: 50%;
   background: var(--gradient-sun-halo);
   filter: blur(9px);
@@ -145,10 +145,10 @@
 }
 
 .background-system__light--reflection {
-  inset: 39% auto auto 50%;
-  translate: -50% 0;
+  inset: 52% auto auto 50%;
+  translate: -50% -50%;
   width: min(76rem, 110vw);
-  height: clamp(13rem, 25vw, 18rem);
+  height: clamp(12rem, 24vw, 17rem);
   border-radius: 50%;
   background: var(--gradient-sea-reflection);
   filter: blur(18px);
@@ -186,29 +186,29 @@
   }
 
   .background-system__light--orb {
-    inset: 16.5% auto auto 50%;
+    inset: 20.5% auto auto 50%;
     width: min(13rem, 48vw);
     height: min(13rem, 48vw);
     opacity: calc(var(--atmo-sun-orb-opacity) * 0.92);
   }
 
   .background-system__light--sun {
-    inset: 15% auto auto 50%;
+    inset: 20.5% auto auto 50%;
     width: min(34rem, 90vw);
-    height: clamp(12rem, 45vw, 16rem);
+    height: clamp(13rem, 48vw, 17rem);
     opacity: calc(var(--atmo-sun-core-opacity) * 0.9);
   }
 
   .background-system__light--halo {
-    inset: 12% auto auto 50%;
+    inset: 20.5% auto auto 50%;
     width: min(42rem, 116vw);
-    height: clamp(16rem, 60vw, 21rem);
+    height: clamp(17rem, 64vw, 22rem);
     filter: blur(8px);
     opacity: calc(var(--atmo-sun-halo-opacity) * 0.88);
   }
 
   .background-system__light--reflection {
-    inset: 42% auto auto 50%;
+    inset: 57% auto auto 50%;
     width: 128vw;
     height: clamp(10.5rem, 44vw, 14rem);
     filter: blur(14px);
@@ -230,8 +230,8 @@
 
 @media (max-width: 430px) {
   .background-system__light--rays {
-    opacity: calc(var(--atmo-ray-opacity) * 1.08);
-    animation-duration: 38s;
+    opacity: calc(var(--atmo-ray-opacity) * 1.16);
+    animation-duration: 32s;
   }
 
   .background-system__haze {
@@ -239,8 +239,8 @@
   }
 
   .background-system__light--halo {
-    filter: blur(7px);
-    opacity: calc(var(--atmo-sun-halo-opacity) * 0.9);
+    filter: blur(6px);
+    opacity: calc(var(--atmo-sun-halo-opacity) * 0.96);
   }
 
   .background-system__light--orb {
@@ -252,6 +252,7 @@
   }
 
   .background-system__light--reflection {
-    opacity: calc(var(--atmo-reflection-opacity) * 0.7);
+    inset: 59% auto auto 50%;
+    opacity: calc(var(--atmo-reflection-opacity) * 0.76);
   }
 }
