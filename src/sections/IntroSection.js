@@ -5,8 +5,12 @@ export const IntroSection = ({ number, label, title, copy }) => Section({
   className: 'section--intro',
   content: `
     <div class="editorial-block editorial-block--intro">
-      ${SectionHeading({ number, label, title, align: 'center' })}
-      <p class="editorial-block__copy reveal" data-reveal data-reveal-delay="80">${copy}</p>
+      <div class="intro-ornament reveal" data-reveal data-reveal-delay="80">
+        ${SectionHeading({ number, label, title, align: 'center' })}
+        <div class="intro-ornament__frame">
+          <p class="editorial-block__copy">${copy}</p>
+        </div>
+      </div>
     </div>
   `,
 });
