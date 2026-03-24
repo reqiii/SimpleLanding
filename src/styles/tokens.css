@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Montserrat:wght@400;500;600;700&display=swap');
 
 :root {
   --color-bg: #f6efe7;
@@ -71,15 +71,18 @@
   --atmo-ray-opacity: 0.48;
   --atmo-haze-opacity: 0.22;
   --atmo-vignette-opacity: 0.58;
+  --sun-center-x: 50%;
+  --sun-center-y: 50%;
+  --horizon-shift: 0%;
 
-  --glass-blur: 16px;
-  --glass-blur-strong: 20px;
-  --glass-fill-soft: rgba(255, 248, 238, 0.2);
-  --glass-fill-strong: rgba(255, 244, 231, 0.25);
-  --glass-border: rgba(126, 103, 111, 0.3);
+  --glass-blur: 15px;
+  --glass-blur-strong: 18px;
+  --glass-fill-soft: rgba(255, 250, 244, 0.14);
+  --glass-fill-strong: rgba(255, 248, 241, 0.2);
+  --glass-border: rgba(122, 97, 104, 0.2);
   --glass-border-soft: rgba(126, 103, 111, 0.18);
-  --glass-highlight: rgba(255, 255, 255, 0.28);
-  --glass-shadow: 0 10px 24px rgba(132, 89, 78, 0.1);
+  --glass-highlight: rgba(255, 255, 255, 0.22);
+  --glass-shadow: 0 10px 24px rgba(120, 85, 74, 0.08);
 
   --gradient-page: linear-gradient(
     180deg,
@@ -101,8 +104,8 @@
   --gradient-accent-glow: radial-gradient(circle at top right, var(--color-accent-soft), var(--color-white-clear) 44%);
 
   --gradient-background-base:
-    radial-gradient(80% 32% at 50% 18%, rgba(255, 226, 176, 0.62), rgba(255, 226, 176, 0) 56%),
-    radial-gradient(108% 52% at 50% 72%, rgba(186, 139, 132, 0.16), rgba(186, 139, 132, 0) 82%),
+    radial-gradient(80% 32% at var(--sun-center-x) 18%, rgba(255, 226, 176, 0.62), rgba(255, 226, 176, 0) 56%),
+    radial-gradient(108% 52% at 50% calc(72% + var(--horizon-shift)), rgba(186, 139, 132, 0.16), rgba(186, 139, 132, 0) 82%),
     linear-gradient(
       180deg,
       var(--color-sunrise-sky-blush) 0%,
@@ -115,14 +118,14 @@
   --gradient-background-horizon: linear-gradient(180deg, rgba(183, 149, 164, 0) 82%, rgba(160, 126, 145, 0.38) 91%, rgba(160, 126, 145, 0.06) 97%, rgba(160, 126, 145, 0) 100%);
   --gradient-background-sea: linear-gradient(180deg, rgba(210, 162, 146, 0) 86%, rgba(175, 114, 96, 0.26) 94%, rgba(147, 104, 93, 0.14) 98%, rgba(147, 104, 93, 0) 100%);
   --gradient-background-depth: linear-gradient(180deg, rgba(127, 96, 87, 0) 93%, rgba(121, 90, 84, 0.14) 98%, rgba(113, 84, 79, 0.28) 100%);
-  --gradient-background-haze: radial-gradient(circle at 50% 12%, rgba(255, 240, 211, 0.44) 0%, rgba(255, 228, 198, 0.1) 40%, rgba(255, 255, 255, 0) 68%);
+  --gradient-background-haze: radial-gradient(circle at var(--sun-center-x) 12%, rgba(255, 240, 211, 0.44) 0%, rgba(255, 228, 198, 0.1) 40%, rgba(255, 255, 255, 0) 68%);
   --gradient-sun-orb: radial-gradient(circle, rgba(255, 255, 248, 1) 0%, rgba(255, 247, 218, 0.98) 24%, rgba(255, 222, 165, 0.84) 42%, rgba(255, 206, 144, 0.2) 60%, rgba(255, 206, 144, 0) 74%);
   --gradient-sun-core: radial-gradient(circle, rgba(255, 255, 250, 1) 0%, rgba(255, 252, 236, 1) 12%, rgba(255, 232, 176, 0.92) 26%, rgba(255, 206, 142, 0.56) 40%, rgba(255, 186, 126, 0.18) 56%, rgba(255, 186, 126, 0) 68%);
   --gradient-sun-halo: radial-gradient(circle, rgba(255, 232, 182, 0.48) 0%, rgba(233, 172, 149, 0.2) 38%, rgba(194, 154, 166, 0.08) 54%, rgba(183, 146, 164, 0) 72%);
   --gradient-sun-rays:
-    conic-gradient(from -90deg at 50% 50%, rgba(255, 255, 255, 0), rgba(255, 243, 213, 0.52) 9%, rgba(255, 255, 255, 0) 23%, rgba(246, 185, 147, 0.36) 36%, rgba(255, 255, 255, 0) 50%, rgba(255, 239, 210, 0.45) 64%, rgba(255, 255, 255, 0) 79%, rgba(236, 169, 138, 0.36) 92%, rgba(255, 255, 255, 0) 100%),
-    radial-gradient(118% 56% at 50% 50%, rgba(255, 228, 188, 0.5), rgba(255, 228, 188, 0) 68%);
-  --gradient-sea-reflection: radial-gradient(58% 56% at 50% 18%, rgba(242, 180, 133, 0.46) 0%, rgba(199, 128, 108, 0.18) 40%, rgba(199, 128, 108, 0) 72%);
+    conic-gradient(from -90deg at var(--sun-center-x) var(--sun-center-y), rgba(255, 255, 255, 0), rgba(255, 243, 213, 0.52) 9%, rgba(255, 255, 255, 0) 23%, rgba(246, 185, 147, 0.36) 36%, rgba(255, 255, 255, 0) 50%, rgba(255, 239, 210, 0.45) 64%, rgba(255, 255, 255, 0) 79%, rgba(236, 169, 138, 0.36) 92%, rgba(255, 255, 255, 0) 100%),
+    radial-gradient(118% 56% at var(--sun-center-x) var(--sun-center-y), rgba(255, 228, 188, 0.5), rgba(255, 228, 188, 0) 68%);
+  --gradient-sea-reflection: radial-gradient(58% 56% at var(--sun-center-x) 18%, rgba(242, 180, 133, 0.46) 0%, rgba(199, 128, 108, 0.18) 40%, rgba(199, 128, 108, 0) 72%);
   --gradient-vignette: radial-gradient(circle at center, rgba(255, 255, 255, 0) 46%, rgba(181, 151, 137, 0.16) 82%, var(--color-bg-vignette) 100%);
   --texture-grain: radial-gradient(rgba(255, 255, 255, 0.72) 0.65px, transparent 0.65px);
 
@@ -151,8 +154,8 @@
   --space-section-large: clamp(7.2rem, 12vw, 10.8rem);
   --space-section-lead: clamp(1.1rem, 3vw, 2.4rem);
   --space-heading-content: clamp(1.5rem, 3.6vw, 2.9rem);
-  --font-body: 'Manrope', sans-serif;
-  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Montserrat', 'Avenir Next', Avenir, sans-serif;
+  --font-display: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', serif;
   --text-sm: 0.8125rem;
   --text-base: 1rem;
   --text-md: clamp(1rem, 1.14vw, 1.14rem);
@@ -161,11 +164,11 @@
   --text-hero: clamp(5.4rem, 15vw, 10rem);
   --text-display-number: clamp(8rem, 20vw, 16rem);
   --text-timeline-time: clamp(3.1rem, 5.8vw, 4.8rem);
-  --leading-copy: 1.84;
-  --leading-display: 0.83;
-  --tracking-display: -0.01em;
-  --tracking-label: 0.5em;
-  --tracking-label-tight: 0.32em;
+  --leading-copy: 1.78;
+  --leading-display: 0.8;
+  --tracking-display: -0.022em;
+  --tracking-label: 0.24em;
+  --tracking-label-tight: 0.18em;
   --tracking-wide: 0.5em;
   --duration-fast: 220ms;
   --duration-base: 720ms;
@@ -179,6 +182,7 @@
     --container-width: min(74rem, calc(100vw - 1.25rem));
     --radius-xl: 2rem;
     --radius-lg: 1.8rem;
+    --horizon-shift: 5%;
     --space-7: clamp(4rem, 12vw, 5.5rem);
     --space-8: clamp(5rem, 14vw, 7rem);
     --space-section-tight: clamp(3.8rem, 10vw, 5.1rem);
@@ -188,8 +192,8 @@
     --space-heading-content: clamp(1.15rem, 4.8vw, 2rem);
     --text-hero: clamp(4.25rem, 18vw, 6.2rem);
     --gradient-background-base:
-      radial-gradient(84% 34% at 50% 17%, rgba(255, 226, 176, 0.6), rgba(255, 226, 176, 0) 56%),
-      radial-gradient(108% 52% at 50% 74%, rgba(186, 139, 132, 0.14), rgba(186, 139, 132, 0) 82%),
+      radial-gradient(84% 34% at var(--sun-center-x) 17%, rgba(255, 226, 176, 0.6), rgba(255, 226, 176, 0) 56%),
+      radial-gradient(108% 52% at 50% calc(74% + var(--horizon-shift)), rgba(186, 139, 132, 0.14), rgba(186, 139, 132, 0) 82%),
       linear-gradient(
         180deg,
         var(--color-sunrise-sky-blush) 0%,
