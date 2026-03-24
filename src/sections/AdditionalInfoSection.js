@@ -30,11 +30,6 @@ export const AdditionalInfoSection = ({ dressCode, details }) => Section({
         ${dressCode.palette.map((item, index) => renderPalette(item, index * 50)).join('')}
       </div>
     </div>
-    <div class="dresscode-marquee" aria-hidden="true">
-      <div class="dresscode-marquee__track">
-        <span>${dressCode.marquee}</span><span>${dressCode.marquee}</span><span>${dressCode.marquee}</span><span>${dressCode.marquee}</span>
-      </div>
-    </div>
     ${renderDressCodeBars(dressCode.marquee, 'dresscode-bars--bottom')}
     <div class="details-layout">
       ${SectionHeading({ number: details.number, label: details.label, title: details.title })}

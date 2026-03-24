@@ -25,12 +25,14 @@
 }
 
 .section-heading {
+  margin: 0;
   position: relative;
   display: grid;
   align-items: start;
   grid-template-columns: 1fr;
   gap: clamp(0.65rem, 1.6vw, 1rem);
   padding-top: clamp(2rem, 4.2vw, 3rem);
+  margin-bottom: var(--space-heading-content);
 }
 
 .section-heading--center {
