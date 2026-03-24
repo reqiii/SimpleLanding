@@ -27,8 +27,10 @@
   width: min(52rem, 96%);
   height: clamp(20rem, 42vw, 28rem);
   border-radius: 50%;
-  border: 1px solid rgba(128, 100, 92, 0.12);
-  background: radial-gradient(circle at 50% 45%, rgba(255, 246, 232, 0.28), rgba(255, 246, 232, 0) 70%);
+  border: 1px solid rgba(128, 100, 92, 0.09);
+  background:
+    radial-gradient(circle at 50% 43%, rgba(255, 248, 236, 0.31), rgba(255, 246, 232, 0.08) 48%, rgba(255, 246, 232, 0) 73%),
+    linear-gradient(180deg, rgba(255, 251, 244, 0.08), rgba(255, 246, 232, 0));
   z-index: 0;
   pointer-events: none;
 }
@@ -114,7 +116,9 @@
   font-size: clamp(4.6rem, 14vw, 9.6rem);
   line-height: 0.78;
   letter-spacing: var(--tracking-display-soft);
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.34);
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.3),
+    0 12px 30px rgba(143, 103, 84, 0.1);
 }
 
 .hero-stage__title span:nth-child(2) {
@@ -154,21 +158,21 @@
 }
 
 .hero-stage__ring--outer {
-  border: 1px solid color-mix(in srgb, var(--glass-border) 92%, rgba(255, 255, 255, 0.08));
+  border: 1px solid color-mix(in srgb, var(--glass-border) 88%, rgba(255, 255, 255, 0.12));
   background: color-mix(in srgb, var(--glass-fill-soft) 96%, rgba(255, 255, 255, 0.02));
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.28),
-    0 10px 24px rgba(133, 91, 76, 0.08);
+    inset 0 1px 0 rgba(255, 255, 255, 0.24),
+    0 10px 24px rgba(133, 91, 76, 0.06);
 }
 
 .hero-stage__ring--inner {
   inset: 0.5rem 0.9rem;
-  border: 1px solid rgba(141, 114, 105, 0.24);
+  border: 1px solid rgba(141, 114, 105, 0.2);
 }
 
 .hero-stage__ring--core {
   inset: 1.05rem 1.65rem;
-  border: 1px solid rgba(141, 114, 105, 0.18);
+  border: 1px solid rgba(141, 114, 105, 0.16);
 }
 
 .hero-stage__location {
