@@ -9,8 +9,8 @@ export const siteContent = {
     },
   },
   hero: {
-    topLeft: 'Wedding day / 23 july 2026',
-    topRight: 'Moscow → Solnechnogorsk / THE SUN',
+    topLeft: 'Свадебный день',
+    topRight: 'Любовь навсегда',
     title: ['Анастасия', 'Роман'],
     date: '23 / 07 / 2026',
     location: 'THE SUN · МОСКВА / СОЛНЕЧНОГОРСК',

@@ -6,21 +6,43 @@
   position: relative;
   min-height: calc(100svh - 6.5rem);
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 1fr auto;
   justify-items: center;
-  padding: clamp(1.4rem, 3vw, 2.2rem) 0 clamp(5.6rem, 11vw, 8.6rem);
+  padding: clamp(1.9rem, 4vw, 2.8rem) 0 clamp(5.6rem, 11vw, 8.6rem);
   overflow: clip;
 }
 
+.hero-stage__corner-decor {
+  position: absolute;
+  inset: clamp(0.45rem, 1.3vw, 1rem) clamp(0.6rem, 2.7vw, 2.2rem) auto;
+  height: clamp(3.5rem, 8vw, 5.8rem);
+  pointer-events: none;
+}
+
 .hero-stage__decor {
+  position: absolute;
   margin: 0;
-  max-width: 32ch;
+  max-width: min(40vw, 19rem);
+  font-family: var(--font-display);
   color: var(--color-text-subtle);
-  font-size: clamp(0.66rem, 0.76vw, 0.78rem);
-  letter-spacing: 0.36em;
-  text-align: center;
-  text-transform: uppercase;
-  opacity: 0.72;
+  font-size: clamp(1.5rem, 4.4vw, 2.9rem);
+  line-height: 0.9;
+  letter-spacing: 0.035em;
+  opacity: 0.42;
+  white-space: nowrap;
+}
+
+.hero-stage__decor--left {
+  left: 0;
+  top: 0;
+  rotate: -6deg;
+}
+
+.hero-stage__decor--right {
+  right: 0;
+  top: 0;
+  rotate: 6deg;
+  text-align: right;
 }
 
 .hero-stage__center {
@@ -28,7 +50,7 @@
   justify-items: center;
   align-content: center;
   gap: clamp(1rem, 2.6vw, 1.8rem);
-  margin-top: clamp(1.2rem, 2.8vw, 2rem);
+  margin-top: clamp(2.5rem, 7vw, 5rem);
 }
 
 .hero-stage__title {
@@ -127,6 +149,37 @@
 .hero-stage__arc--right {
   right: clamp(0.4rem, 3.2vw, 4rem);
   border-left-color: transparent;
+}
+
+@media (max-width: 900px) {
+  .hero-stage__corner-decor {
+    inset-inline: clamp(0.5rem, 3.8vw, 1.25rem);
+    height: clamp(2.8rem, 10vw, 4rem);
+  }
+
+  .hero-stage__decor {
+    max-width: 45vw;
+    font-size: clamp(1.05rem, 5.3vw, 1.7rem);
+    opacity: 0.35;
+  }
+
+  .hero-stage__center {
+    margin-top: clamp(2rem, 8vw, 3.4rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-stage__decor {
+    letter-spacing: 0.015em;
+  }
+
+  .hero-stage__decor--left {
+    rotate: -3deg;
+  }
+
+  .hero-stage__decor--right {
+    rotate: 3deg;
+  }
 }
 
 .editorial-block,

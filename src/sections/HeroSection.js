@@ -1,11 +1,14 @@
 import { Section } from '../ui/primitives.js';
 
-export const HeroSection = ({ topLeft, title, date, location, poetic }) => Section({
+export const HeroSection = ({ topLeft, topRight, title, date, location, poetic }) => Section({
   id: 'top',
   className: 'section--hero',
   content: `
     <div class="hero-stage reveal" data-reveal>
-      <p class="hero-stage__decor">${topLeft}</p>
+      <div class="hero-stage__corner-decor" aria-hidden="true">
+        <p class="hero-stage__decor hero-stage__decor--left">${topLeft}</p>
+        <p class="hero-stage__decor hero-stage__decor--right">${topRight}</p>
+      </div>
       <div class="hero-stage__center">
         <h1 class="hero-stage__title">
           <span>${title[0]}</span>
