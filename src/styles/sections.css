@@ -65,7 +65,7 @@
 
 .hero-stage__title span:nth-child(2) {
   font-size: 0.5em;
-  color: rgba(201, 143, 133, 0.68);
+  color: rgba(206, 126, 79, 0.72);
   margin: -0.045em 0 -0.02em;
 }
 
@@ -86,7 +86,7 @@
 
 .hero-stage__date-ring--outer {
   border: 1px solid var(--color-stroke-strong);
-  background: radial-gradient(circle at 50% 15%, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.06) 75%);
+  background: radial-gradient(circle at 50% 14%, rgba(255, 245, 225, 0.64), rgba(255, 255, 255, 0.08) 72%);
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35) inset;
 }
 
@@ -316,7 +316,7 @@
   padding: clamp(2rem, 4vw, 3rem);
   border: 1px solid var(--color-stroke);
   border-radius: min(4rem, 9vw);
-  background: linear-gradient(180deg, rgba(255,255,255,0.46), rgba(255,255,255,0.18));
+  background: linear-gradient(180deg, rgba(255, 250, 239, 0.66), rgba(255, 241, 223, 0.22));
   backdrop-filter: blur(var(--blur-soft));
   -webkit-backdrop-filter: blur(var(--blur-soft));
 }
@@ -362,7 +362,7 @@
   place-items: center;
   border: 1px solid var(--color-stroke-strong);
   border-radius: min(10rem, 10vw);
-  background: linear-gradient(180deg, rgba(255,255,255,0.34), rgba(255,255,255,0.12));
+  background: linear-gradient(180deg, rgba(255, 251, 243, 0.42), rgba(255, 237, 215, 0.16));
 }
 
 .venue-ornament__loop {
@@ -540,7 +540,7 @@
   height: 0.75rem;
   margin: 0 auto;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 245, 224, 0.9);
   border: 1px solid var(--color-stroke-strong);
   box-shadow: 0 0 0 0.65rem rgba(255, 255, 255, 0.16);
 }
@@ -733,7 +733,7 @@
 
 .rsvp-layout__frame::before {
   border: 1px solid rgba(112, 105, 128, 0.2);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.04));
+  background: linear-gradient(180deg, rgba(255, 250, 241, 0.4), rgba(255, 236, 211, 0.12));
 }
 
 .rsvp-layout__frame::after {
@@ -801,19 +801,23 @@
   padding: 0 1.4rem;
   border: 1px solid var(--color-stroke-strong);
   border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 250, 243, 0.64);
   outline: none;
 }
 
 .rsvp-form__choices {
   display: grid;
-  gap: clamp(0.4rem, 0.85vw, 0.65rem);
+  gap: clamp(0.55rem, 1vw, 0.75rem);
 }
 
 .rsvp-choice {
   display: flex;
   align-items: center;
   gap: 0.85rem;
+  min-height: 2.6rem;
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.85rem;
+  background: rgba(255, 255, 255, 0.24);
 }
 
 .rsvp-choice input {
@@ -907,7 +911,7 @@
 @media (max-width: 720px) {
   .intro-ornament {
     --intro-loop-width: min(100%, 30rem);
-    --intro-loop-height: clamp(9.6rem, 40vw, 12.2rem);
+    --intro-loop-height: clamp(8.8rem, 36vw, 11rem);
     --intro-loop-stroke: 1px;
     gap: clamp(1rem, 4vw, 1.4rem);
   }
@@ -928,13 +932,14 @@
   .hero-stage {
     min-height: auto;
     gap: var(--space-4);
-    padding-bottom: clamp(3.4rem, 10vw, 4.6rem);
+    padding: clamp(1.1rem, 4vw, 1.6rem) 0 clamp(2.4rem, 8vw, 3.6rem);
   }
 
   .hero-stage__center {
     width: 100%;
     justify-items: center;
-    margin-top: 0.4rem;
+    gap: clamp(0.75rem, 3.4vw, 1.2rem);
+    margin-top: 0;
   }
 
   .hero-stage__title,
@@ -945,11 +950,11 @@
   }
 
   .hero-stage__title {
-    font-size: clamp(3.9rem, 23vw, 6.1rem);
+    font-size: clamp(3.4rem, 21vw, 5.4rem);
   }
 
   .hero-stage__date-wrap {
-    width: clamp(13.4rem, 78vw, 18rem);
+    width: clamp(12.5rem, 72vw, 17rem);
   }
 
   .hero-stage__date-ring--inner {
@@ -957,47 +962,53 @@
   }
 
   .hero-stage__location {
-    letter-spacing: 0.3em;
+    letter-spacing: 0.24em;
+    font-size: clamp(0.68rem, 2.8vw, 0.82rem);
   }
 
   .hero-stage__poetic {
-    margin-top: clamp(1.2rem, 5vw, 2rem);
-    max-width: 24rem;
+    margin-top: clamp(0.6rem, 4vw, 1.2rem);
+    max-width: 22rem;
+    font-size: clamp(0.9rem, 3.7vw, 1rem);
+    line-height: 1.76;
   }
 
   .hero-stage__ornaments {
-    width: min(100%, 32rem);
-    bottom: 0.9rem;
+    width: min(100%, 24rem);
+    bottom: 0.35rem;
   }
 
   .hero-stage__arc {
-    width: clamp(7.4rem, 29vw, 9.5rem);
-    height: clamp(2.5rem, 8vw, 3.2rem);
+    width: clamp(5.3rem, 21vw, 7.2rem);
+    height: clamp(1.9rem, 6vw, 2.4rem);
+    opacity: 0.44;
   }
 
   .venue-ornament__frame {
     min-height: auto;
-    padding: clamp(4.3rem, 13vw, 5.5rem) 0;
-    border-radius: 3.2rem;
+    padding: clamp(2.8rem, 10vw, 4rem) 0;
+    border-radius: 2.4rem;
   }
 
   .venue-ornament__loop {
-    width: 9rem;
-    height: 14rem;
+    width: 7rem;
+    height: 10.5rem;
+    opacity: 0.46;
   }
 
   .venue-ornament__node--left { left: 9%; }
   .venue-ornament__node--right { right: 9%; }
 
   .timeline-system__line {
-    left: 9%;
-    right: 9%;
-    top: 4.9rem;
+    left: 15%;
+    right: 15%;
+    top: 4.45rem;
   }
 
   .timeline-system {
-    padding-inline: 0.8rem;
-    border-radius: 2rem;
+    margin-top: clamp(1.8rem, 7vw, 2.7rem);
+    padding: 1.15rem 0.95rem 1.35rem;
+    border-radius: 1.65rem;
   }
 
   .timeline-system::after {
@@ -1018,13 +1029,35 @@
 
   .timeline-ornament__line,
   .rsvp-ornament__line {
-    left: 0.1rem;
-    right: 0.1rem;
+    left: 0.4rem;
+    right: 0.4rem;
   }
 
   .rsvp-layout__frame {
-    padding: 1rem 0.85rem;
+    padding: 1rem 0.9rem 1.15rem;
     border-radius: 1.8rem;
+  }
+
+  .rsvp-form {
+    gap: 1rem;
+  }
+
+  .rsvp-form__field span,
+  .rsvp-form__fieldset legend {
+    line-height: 1.35;
+  }
+
+  .rsvp-form input[type='text'] {
+    min-height: 3.3rem;
+    padding: 0 1rem;
+  }
+
+  .rsvp-form__fieldset {
+    gap: 0.5rem;
+  }
+
+  .rsvp-choice {
+    min-height: 2.5rem;
   }
 
   .rsvp-layout__frame::after,
@@ -1055,6 +1088,178 @@
   }
 
   .organizer-field {
+    width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero-stage__corner-decor {
+    display: none;
+  }
+
+  .hero-stage {
+    padding-top: 0.6rem;
+    gap: 0.75rem;
+  }
+
+  .hero-stage__title {
+    font-size: clamp(3rem, 20vw, 4.6rem);
+    line-height: 0.76;
+  }
+
+  .hero-stage__date {
+    letter-spacing: 0.25em;
+    font-size: 0.68rem;
+  }
+
+  .hero-stage__location {
+    max-width: 30ch;
+    letter-spacing: 0.2em;
+  }
+
+  .hero-stage__ornaments {
+    display: none;
+  }
+
+  .editorial-block {
+    gap: 1.3rem;
+  }
+
+  .editorial-block--intro {
+    padding-top: 0.2rem;
+  }
+
+  .intro-ornament {
+    --intro-loop-height: auto;
+    gap: 0.85rem;
+  }
+
+  .intro-ornament__frame {
+    border-radius: 1.5rem;
+    padding: 1rem 0.9rem;
+  }
+
+  .intro-ornament__frame::before,
+  .intro-ornament__frame::after {
+    border-radius: 1.5rem;
+  }
+
+  .editorial-block__copy {
+    font-size: clamp(0.93rem, 4.1vw, 1rem);
+    line-height: 1.72;
+  }
+
+  .date-stage {
+    gap: 1.6rem;
+  }
+
+  .date-stage__content {
+    padding: 1.25rem 1rem 1.35rem;
+    border-radius: 1.7rem;
+    gap: 0.45rem;
+  }
+
+  .date-stage__weekday {
+    font-size: clamp(2.6rem, 16vw, 3.8rem);
+  }
+
+  .venue-ornament {
+    padding-block: 1rem 0.3rem;
+  }
+
+  .venue-ornament__loop,
+  .venue-ornament__node {
+    display: none;
+  }
+
+  .venue-ornament__frame {
+    border-radius: 1.8rem;
+    padding: 1.8rem 0;
+  }
+
+  .venue-ornament__content {
+    width: min(32rem, calc(100% - 2rem));
+    gap: 0.75rem;
+  }
+
+  .venue-ornament__name {
+    font-size: clamp(2rem, 14vw, 2.7rem);
+  }
+
+  .timeline-system {
+    padding: 1rem 0.8rem 1.2rem;
+    border-radius: 1.35rem;
+  }
+
+  .timeline-system__line {
+    display: none;
+  }
+
+  .timeline-system__track {
+    row-gap: 1.3rem;
+  }
+
+  .timeline-point {
+    gap: 0.5rem;
+    padding-top: 0.2rem;
+    text-align: left;
+    padding-inline: 0.3rem;
+  }
+
+  .timeline-point::before {
+    margin: 0;
+    width: 0.58rem;
+    height: 0.58rem;
+    box-shadow: 0 0 0 0.45rem rgba(255, 255, 255, 0.12);
+  }
+
+  .timeline-point__time {
+    font-size: clamp(2.2rem, 13vw, 3rem);
+  }
+
+  .details-layout {
+    margin-top: var(--space-6);
+  }
+
+  .details-layout__body {
+    gap: 0.95rem;
+  }
+
+  .organizer-field {
+    padding: 0.8rem 0.95rem;
+    gap: 0.45rem 0.75rem;
+    border-radius: 1rem;
+  }
+
+  .rsvp-layout {
+    gap: 0.9rem;
+  }
+
+  .rsvp-layout__frame {
+    border-radius: 1.35rem;
+    padding: 0.9rem 0.72rem 1rem;
+  }
+
+  .rsvp-form {
+    gap: 0.85rem;
+  }
+
+  .rsvp-form__fieldset {
+    gap: 0.45rem;
+  }
+
+  .rsvp-choice {
+    min-height: 2.35rem;
+    padding: 0.15rem 0.2rem;
+  }
+
+  .rsvp-choice span {
+    font-size: 0.95rem;
+  }
+
+  .rsvp-form .button {
+    margin-top: 0.3rem;
+    min-height: 3rem;
     width: 100%;
   }
 }

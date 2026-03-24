@@ -123,6 +123,7 @@
   background: var(--gradient-button-primary);
   color: var(--color-text);
   box-shadow: var(--shadow-soft);
+  border-color: color-mix(in srgb, var(--color-accent-sunrise) 40%, var(--color-stroke-strong));
 }
 
 .button--ghost {
@@ -170,10 +171,39 @@
   }
 
   .section-heading__number {
-    top: -2rem;
+    top: -1.3rem;
+    left: -0.12rem;
+    font-size: clamp(5.3rem, 24vw, 7.8rem);
+    opacity: 0.9;
   }
 
   .section-heading__title {
     max-width: none;
+    font-size: clamp(3rem, 14vw, 4.7rem);
+  }
+}
+
+@media (max-width: 430px) {
+  .section-heading {
+    gap: 0;
+  }
+
+  .section-heading__number {
+    top: -0.8rem;
+    font-size: clamp(4.3rem, 22vw, 5.8rem);
+    color: rgba(51, 43, 37, 0.06);
+  }
+
+  .section-heading__content {
+    gap: 0.45rem;
+  }
+
+  .section-heading__title {
+    font-size: clamp(2.35rem, 12vw, 3rem);
+    letter-spacing: -0.01em;
+  }
+
+  .site-header__brand {
+    font-size: clamp(1.6rem, 9vw, 2.1rem);
   }
 }

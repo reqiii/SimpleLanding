@@ -31,6 +31,16 @@
   to { transform: rotate(360deg); }
 }
 
+@keyframes sunriseGlow {
+  from { transform: scale(0.98) translate3d(0, -0.2rem, 0); }
+  to { transform: scale(1.05) translate3d(0, 0.6rem, 0); }
+}
+
+@keyframes sunriseHalo {
+  from { opacity: 0.62; transform: scale(0.96); }
+  to { opacity: 0.88; transform: scale(1.04); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
@@ -39,6 +49,8 @@
   }
 
   .background-system__orb,
+  .background-system__bloom,
+  .background-system__glow--halo,
   .dresscode-marquee__track,
   .countdown-stage__orbit--inner,
   .countdown-stage__orbit--inner::after {
