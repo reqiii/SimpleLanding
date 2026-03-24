@@ -19,27 +19,33 @@ export const RSVPSection = ({ number, label, title, deadline, fields, attendance
         <span class="rsvp-ornament__arc rsvp-ornament__arc--right"></span>
         ${SectionHeading({ number, label, title, reveal: false })}
       </div>
-      <p class="rsvp-layout__deadline reveal" data-reveal data-reveal-delay="70">${deadline}</p>
       <div class="rsvp-layout__frame reveal" data-reveal data-reveal-delay="120">
         <span class="rsvp-layout__halo" aria-hidden="true"></span>
         <form class="rsvp-form">
-          <label class="rsvp-form__field">
-            <span>${fields.name}</span>
-            <input type="text" name="name" placeholder="Ваше имя" />
-          </label>
-          <fieldset class="rsvp-form__fieldset">
-            <legend>${fields.attendance}</legend>
-            <div class="rsvp-form__choices">
-              ${attendanceOptions.map((option, index) => renderOption('attendance', option, index)).join('')}
+          <div class="rsvp-form__stack">
+            <div class="rsvp-form__group">
+              <label class="rsvp-form__field">
+                <span>${fields.name}</span>
+                <input type="text" name="name" placeholder="Ваше имя" />
+              </label>
             </div>
-          </fieldset>
-          <fieldset class="rsvp-form__fieldset">
-            <legend>${fields.transfer}</legend>
-            <div class="rsvp-form__choices">
-              ${transferOptions.map((option, index) => renderOption('transfer', option, index)).join('')}
-            </div>
-          </fieldset>
-          <button type="button" class="button button--ghost">${submit}</button>
+            <fieldset class="rsvp-form__fieldset rsvp-form__group">
+              <legend>${fields.attendance}</legend>
+              <div class="rsvp-form__choices">
+                ${attendanceOptions.map((option, index) => renderOption('attendance', option, index)).join('')}
+              </div>
+            </fieldset>
+            <fieldset class="rsvp-form__fieldset rsvp-form__group">
+              <legend>${fields.transfer}</legend>
+              <div class="rsvp-form__choices">
+                ${transferOptions.map((option, index) => renderOption('transfer', option, index)).join('')}
+              </div>
+            </fieldset>
+          </div>
+          <div class="rsvp-form__actions">
+            <p class="rsvp-form__helper">${deadline}</p>
+            <button type="button" class="button button--ghost">${submit}</button>
+          </div>
         </form>
       </div>
     </div>

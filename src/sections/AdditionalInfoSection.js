@@ -11,20 +11,26 @@ const renderPalette = ([index, name, color], delay) => `
   </div>
 `;
 
+const renderDressCodeBars = (text, modifier = '') => `
+  <div class="dresscode-bars ${modifier}" aria-hidden="true">
+    <span class="dresscode-bars__row">${text}</span>
+    <span class="dresscode-bars__row">${text}</span>
+    <span class="dresscode-bars__row">${text}</span>
+  </div>
+`;
+
 export const AdditionalInfoSection = ({ dressCode, details }) => Section({
   className: 'section--details',
   content: `
-    <div class="dresscode-marquee" aria-hidden="true">
-      <div class="dresscode-marquee__track">
-        <span>${dressCode.marquee}</span><span>${dressCode.marquee}</span><span>${dressCode.marquee}</span><span>${dressCode.marquee}</span>
-      </div>
-    </div>
+    ${renderDressCodeBars(dressCode.marquee, 'dresscode-bars--top')}
     <div class="dresscode-layout">
-      ${SectionHeading({ number: dressCode.number, label: dressCode.label, title: dressCode.title })}
-      <div class="dresscode-grid">
+      ${SectionHeading({ number: dressCode.number, label: dressCode.label, title: dressCode.label, align: 'center' })}
+      <p class="dresscode-layout__copy reveal" data-reveal data-reveal-delay="70">${dressCode.title}</p>
+      <div class="dresscode-swatches">
         ${dressCode.palette.map((item, index) => renderPalette(item, index * 50)).join('')}
       </div>
     </div>
+    ${renderDressCodeBars(dressCode.marquee, 'dresscode-bars--bottom')}
     <div class="details-layout">
       ${SectionHeading({ number: details.number, label: details.label, title: details.title })}
       <div class="details-layout__body reveal" data-reveal data-reveal-delay="70">

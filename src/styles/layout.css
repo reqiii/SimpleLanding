@@ -30,6 +30,7 @@
 .container {
   width: var(--container-width);
   margin: 0 auto;
+  padding-inline: var(--container-pad);
 }
 
 .section {
@@ -38,7 +39,7 @@
 }
 
 .section + .section {
-  margin-top: clamp(-0.7rem, -0.65vw, -0.35rem);
+  margin-top: clamp(-0.8rem, -0.75vw, -0.35rem);
 }
 
 .section--intro,
@@ -54,13 +55,25 @@
 
 .section--venue,
 .section--countdown {
-  padding-block: var(--space-section-large);
+  padding-block: var(--space-section-medium);
 }
 
 .section + .section.section--venue,
 .section + .section.section--rsvp,
 .section + .section.section--countdown {
-  margin-top: var(--space-section-lead);
+  margin-top: clamp(0rem, 0.7vw, 0.5rem);
+}
+
+.section--hero + .section--intro {
+  margin-top: clamp(-1.1rem, -1.2vw, -0.45rem);
+}
+
+.section--timeline + .section--details {
+  margin-top: clamp(0.1rem, 0.8vw, 0.7rem);
+}
+
+.section--details + .section--rsvp {
+  margin-top: clamp(0rem, 0.5vw, 0.45rem);
 }
 
 .background-system,

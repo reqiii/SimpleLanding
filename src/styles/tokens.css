@@ -139,7 +139,8 @@
   --radius-pill: 999px;
   --blur-soft: 18px;
   --blur-strong: 72px;
-  --container-width: min(74rem, calc(100vw - 2rem));
+  --container-width: min(74rem, 100vw);
+  --container-pad: clamp(0.75rem, 2vw, 1.15rem);
   --space-1: 0.5rem;
   --space-2: 0.75rem;
   --space-3: 1rem;
@@ -149,9 +150,9 @@
   --space-7: clamp(4.5rem, 9vw, 7rem);
   --space-8: clamp(6rem, 14vw, 10rem);
   --space-9: clamp(7rem, 16vw, 12rem);
-  --space-section-tight: clamp(4.5rem, 8vw, 6.5rem);
-  --space-section-medium: clamp(5.8rem, 10vw, 8.5rem);
-  --space-section-large: clamp(7.2rem, 12vw, 10.8rem);
+  --space-section-tight: clamp(4rem, 7.2vw, 5.6rem);
+  --space-section-medium: clamp(5rem, 8.8vw, 7.2rem);
+  --space-section-large: clamp(6.2rem, 10.5vw, 8.8rem);
   --space-section-lead: clamp(1.1rem, 3vw, 2.4rem);
   --space-heading-content: clamp(1.5rem, 3.6vw, 2.9rem);
   --font-body: 'Montserrat', 'Avenir Next', Avenir, sans-serif;
@@ -179,15 +180,16 @@
 
 @media (max-width: 720px) {
   :root {
-    --container-width: min(74rem, calc(100vw - 1.25rem));
+    --container-width: min(74rem, 100vw);
+    --container-pad: clamp(0.625rem, 3.8vw, 0.85rem);
     --radius-xl: 2rem;
     --radius-lg: 1.8rem;
     --horizon-shift: 5%;
     --space-7: clamp(4rem, 12vw, 5.5rem);
     --space-8: clamp(5rem, 14vw, 7rem);
-    --space-section-tight: clamp(3.8rem, 10vw, 5.1rem);
-    --space-section-medium: clamp(4.6rem, 12vw, 6rem);
-    --space-section-large: clamp(5.8rem, 14vw, 7.2rem);
+    --space-section-tight: clamp(3.3rem, 9vw, 4.6rem);
+    --space-section-medium: clamp(4rem, 10vw, 5.2rem);
+    --space-section-large: clamp(4.8rem, 11vw, 6.2rem);
     --space-section-lead: clamp(0.7rem, 3.2vw, 1.3rem);
     --space-heading-content: clamp(1.15rem, 4.8vw, 2rem);
     --text-hero: clamp(4.25rem, 18vw, 6.2rem);
