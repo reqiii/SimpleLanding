@@ -32,18 +32,23 @@
 }
 
 @keyframes sunriseCorePulse {
-  from { transform: scale(0.97) translate3d(0, -0.2rem, 0); opacity: 0.84; }
-  to { transform: scale(1.04) translate3d(0, 0.5rem, 0); opacity: 0.94; }
+  from { transform: scale(0.98) translate3d(0, -0.15rem, 0); opacity: 0.82; }
+  to { transform: scale(1.03) translate3d(0, 0.4rem, 0); opacity: 0.94; }
+}
+
+@keyframes sunriseOrbPulse {
+  from { transform: scale(0.96); opacity: 0.88; }
+  to { transform: scale(1.02); opacity: 1; }
 }
 
 @keyframes sunriseHaloBreath {
-  from { transform: scale(0.94); opacity: 0.5; }
-  to { transform: scale(1.06); opacity: 0.68; }
+  from { transform: scale(0.96); opacity: 0.44; }
+  to { transform: scale(1.04); opacity: 0.6; }
 }
 
 @keyframes sunriseRayDrift {
-  from { transform: translate3d(-1.2%, -0.8%, 0) scale(0.98); opacity: 0.2; }
-  to { transform: translate3d(1.3%, 1.2%, 0) scale(1.03); opacity: 0.3; }
+  from { transform: translate3d(-0.9%, -0.6%, 0) scale(0.99); opacity: 0.14; }
+  to { transform: translate3d(1%, 1.1%, 0) scale(1.02); opacity: 0.24; }
 }
 
 @keyframes sunriseReflectionShift {
