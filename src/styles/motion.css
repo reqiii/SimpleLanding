@@ -47,23 +47,23 @@
 }
 
 @keyframes sunriseRaySoftDrift {
-  from { transform: translate3d(-2.1%, -1.9%, 0) scale(0.93) rotate(-1.3deg); opacity: 0.62; }
-  to { transform: translate3d(2.1%, 1.9%, 0) scale(1.07) rotate(1.1deg); opacity: 0.84; }
+  from { transform: translate3d(-1.3%, -1.1%, 0) scale(0.96) rotate(-0.85deg); opacity: 0.7; }
+  to { transform: translate3d(1.3%, 1.1%, 0) scale(1.04) rotate(0.82deg); opacity: 0.92; }
 }
 
 @keyframes sunriseRayFocusDrift {
-  from { transform: translate3d(-1.6%, -1.25%, 0) scale(0.95) rotate(-0.9deg); opacity: 0.58; }
-  to { transform: translate3d(1.6%, 1.25%, 0) scale(1.04) rotate(0.8deg); opacity: 0.86; }
+  from { transform: translate3d(-0.95%, -0.78%, 0) scale(0.97) rotate(-0.65deg); opacity: 0.66; }
+  to { transform: translate3d(0.95%, 0.78%, 0) scale(1.03) rotate(0.62deg); opacity: 0.9; }
 }
 
 @keyframes sunriseRayStructureDrift {
-  from { transform: translate3d(-0.9%, -1.3%, 0) scale(0.97) rotate(-0.6deg); opacity: 0.34; }
-  to { transform: translate3d(1.1%, 1.1%, 0) scale(1.03) rotate(0.6deg); opacity: 0.56; }
+  from { transform: translate3d(-0.55%, -0.72%, 0) scale(0.98) rotate(-0.45deg); opacity: 0.44; }
+  to { transform: translate3d(0.55%, 0.72%, 0) scale(1.02) rotate(0.45deg); opacity: 0.68; }
 }
 
 @keyframes sunriseRayShimmer {
-  0%, 100% { opacity: 0.36; }
-  50% { opacity: 0.58; }
+  0%, 100% { opacity: 0.44; }
+  50% { opacity: 0.72; }
 }
 
 @keyframes sunriseReflectionShift {
