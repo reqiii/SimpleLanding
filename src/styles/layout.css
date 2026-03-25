@@ -121,8 +121,8 @@
 }
 
 .background-system__light--orb {
-  top: var(--sun-center-y);
-  left: var(--sun-center-x);
+  top: var(--sun-mass-y);
+  left: var(--sun-mass-x);
   width: min(12.25rem, 31vw);
   height: min(12.25rem, 31vw);
   border-radius: 50%;
@@ -134,8 +134,8 @@
 }
 
 .background-system__light--sun {
-  top: var(--sun-center-y);
-  left: var(--sun-center-x);
+  top: var(--sun-mass-y);
+  left: var(--sun-mass-x);
   width: min(29rem, 54vw);
   height: clamp(11.5rem, 22vw, 16rem);
   border-radius: 50%;
@@ -148,8 +148,8 @@
 }
 
 .background-system__light--halo {
-  top: var(--sun-center-y);
-  left: var(--sun-center-x);
+  top: var(--sun-mass-y);
+  left: var(--sun-mass-x);
   width: min(44rem, 74vw);
   height: clamp(16rem, 30vw, 22rem);
   border-radius: 50%;
@@ -164,8 +164,8 @@
 
 
 .background-system__light--axis {
-  top: var(--sun-center-y);
-  left: var(--sun-center-x);
+  top: var(--sun-mass-y);
+  left: var(--sun-mass-x);
   width: min(42rem, 80vw);
   height: clamp(18rem, 36vw, 24rem);
   border-radius: 50%;
@@ -181,10 +181,10 @@
 .background-system__light--rays-structure {
   inset: 0;
   mix-blend-mode: screen;
-  transform-origin: var(--sun-center-x) var(--sun-center-y);
+  transform-origin: var(--sun-mass-x) var(--sun-mass-y);
   will-change: transform, opacity, filter;
-  -webkit-mask-image: radial-gradient(120% 74% at var(--sun-center-x) var(--sun-center-y), rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.84) 52%, rgba(0, 0, 0, 0.5) 72%, rgba(0, 0, 0, 0.12) 87%, rgba(0, 0, 0, 0) 96%);
-  mask-image: radial-gradient(120% 74% at var(--sun-center-x) var(--sun-center-y), rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.84) 52%, rgba(0, 0, 0, 0.5) 72%, rgba(0, 0, 0, 0.12) 87%, rgba(0, 0, 0, 0) 96%);
+  -webkit-mask-image: radial-gradient(120% 74% at var(--sun-mass-x) var(--sun-mass-y), rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.84) 52%, rgba(0, 0, 0, 0.5) 72%, rgba(0, 0, 0, 0.12) 87%, rgba(0, 0, 0, 0) 96%);
+  mask-image: radial-gradient(120% 74% at var(--sun-mass-x) var(--sun-mass-y), rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.84) 52%, rgba(0, 0, 0, 0.5) 72%, rgba(0, 0, 0, 0.12) 87%, rgba(0, 0, 0, 0) 96%);
 }
 
 .background-system__light--rays-soft {
@@ -212,7 +212,7 @@
 
 .background-system__light--reflection {
   top: calc(80.8% + var(--horizon-shift));
-  left: var(--sun-center-x);
+  left: var(--sun-mass-x);
   width: min(66rem, 96vw);
   height: clamp(8rem, 15vw, 11.5rem);
   border-radius: 50%;
@@ -228,7 +228,7 @@
   background: var(--gradient-background-haze);
   mix-blend-mode: screen;
   opacity: var(--atmo-haze-opacity);
-  transform: translateY(calc(var(--horizon-shift) * 0.2));
+  transform: translateY(calc(var(--horizon-shift) * 0.08));
 }
 
 .background-system__vignette {
@@ -255,22 +255,22 @@
   }
 
   .background-system__light--orb {
-    width: min(11.2rem, 48vw);
-    height: min(11.2rem, 48vw);
+    width: min(10.4rem, 42vw);
+    height: min(10.4rem, 42vw);
     opacity: calc(var(--atmo-sun-orb-opacity) * 1.02);
   }
 
   .background-system__light--sun {
-    width: min(24rem, 82vw);
-    height: clamp(10.4rem, 40vw, 14.2rem);
+    width: min(22.6rem, 76vw);
+    height: clamp(9.8rem, 35vw, 13.4rem);
     opacity: calc(var(--atmo-sun-core-opacity) * 1.06);
   }
 
   .background-system__light--halo {
-    width: min(36rem, 118vw);
-    height: clamp(14.8rem, 64vw, 20rem);
-    filter: blur(3.8px);
-    opacity: calc(var(--atmo-sun-halo-opacity) * 1.16);
+    width: min(32rem, 102vw);
+    height: clamp(13.4rem, 52vw, 18.2rem);
+    filter: blur(3.3px);
+    opacity: calc(var(--atmo-sun-halo-opacity) * 1.08);
   }
 
   .background-system__light--reflection {
@@ -301,8 +301,8 @@
   .background-system__light--rays-structure {
     filter: blur(1px);
     opacity: calc(var(--atmo-ray-structure-opacity) * 1.09);
-    -webkit-mask-image: radial-gradient(112% 72% at var(--sun-center-x) var(--sun-center-y), rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.82) 54%, rgba(0, 0, 0, 0.42) 74%, rgba(0, 0, 0, 0.08) 90%, rgba(0, 0, 0, 0) 98%);
-    mask-image: radial-gradient(112% 72% at var(--sun-center-x) var(--sun-center-y), rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.82) 54%, rgba(0, 0, 0, 0.42) 74%, rgba(0, 0, 0, 0.08) 90%, rgba(0, 0, 0, 0) 98%);
+    -webkit-mask-image: radial-gradient(112% 72% at var(--sun-mass-x) var(--sun-mass-y), rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.82) 54%, rgba(0, 0, 0, 0.42) 74%, rgba(0, 0, 0, 0.08) 90%, rgba(0, 0, 0, 0) 98%);
+    mask-image: radial-gradient(112% 72% at var(--sun-mass-x) var(--sun-mass-y), rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.82) 54%, rgba(0, 0, 0, 0.42) 74%, rgba(0, 0, 0, 0.08) 90%, rgba(0, 0, 0, 0) 98%);
   }
 
   .background-system__sea {
@@ -322,7 +322,7 @@
   .background-system__light--orb,
   .background-system__light--sun,
   .background-system__light--halo {
-    top: var(--sun-center-y);
+    top: var(--sun-mass-y);
   }
 
   .background-system__light--axis {

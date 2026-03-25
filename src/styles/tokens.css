@@ -76,6 +76,8 @@
   --sun-center-x: 50.6%;
   --sun-center-y: 53.8%;
   --horizon-shift: 6.6%;
+  --sun-mass-x: var(--sun-center-x);
+  --sun-mass-y: var(--sun-center-y);
 
   --glass-blur: 13px;
   --glass-blur-strong: 16px;
@@ -106,7 +108,7 @@
   --gradient-accent-glow: radial-gradient(circle at top right, var(--color-accent-soft), var(--color-white-clear) 44%);
 
   --gradient-background-base:
-    radial-gradient(88% 41% at var(--sun-center-x) 21%, rgba(255, 226, 176, 0.62), rgba(255, 226, 176, 0) 61%),
+    radial-gradient(78% 37% at var(--sun-mass-x) calc(var(--sun-mass-y) - 1.2%), rgba(255, 227, 178, 0.5), rgba(255, 227, 178, 0) 63%),
     radial-gradient(126% 63% at 50% calc(79% + var(--horizon-shift)), rgba(186, 139, 132, 0.1), rgba(186, 139, 132, 0) 90%),
     linear-gradient(
       180deg,
@@ -120,7 +122,7 @@
   --gradient-background-horizon: linear-gradient(180deg, rgba(183, 149, 164, 0) 82%, rgba(160, 126, 145, 0.15) 90%, rgba(160, 126, 145, 0.07) 95%, rgba(160, 126, 145, 0) 100%);
   --gradient-background-sea: linear-gradient(180deg, rgba(210, 162, 146, 0) 80%, rgba(175, 114, 96, 0.1) 90%, rgba(147, 104, 93, 0.07) 96%, rgba(147, 104, 93, 0) 100%);
   --gradient-background-depth: linear-gradient(180deg, rgba(127, 96, 87, 0) 86%, rgba(121, 90, 84, 0.06) 94%, rgba(113, 84, 79, 0.12) 100%);
-  --gradient-background-haze: radial-gradient(circle at var(--sun-center-x) 19%, rgba(255, 240, 211, 0.42) 0%, rgba(255, 228, 198, 0.13) 49%, rgba(255, 255, 255, 0) 78%);
+  --gradient-background-haze: radial-gradient(circle at var(--sun-mass-x) calc(var(--sun-mass-y) - 1.8%), rgba(255, 240, 211, 0.34) 0%, rgba(255, 228, 198, 0.11) 46%, rgba(255, 255, 255, 0) 74%);
   --gradient-sun-orb: radial-gradient(circle, rgba(255, 255, 248, 1) 0%, rgba(255, 247, 218, 0.98) 24%, rgba(255, 222, 165, 0.84) 42%, rgba(255, 206, 144, 0.2) 60%, rgba(255, 206, 144, 0) 74%);
   --gradient-sun-core: radial-gradient(circle, rgba(255, 255, 250, 1) 0%, rgba(255, 252, 236, 1) 12%, rgba(255, 232, 176, 0.92) 26%, rgba(255, 206, 142, 0.56) 40%, rgba(255, 186, 126, 0.18) 56%, rgba(255, 186, 126, 0) 68%);
   --gradient-sun-halo: radial-gradient(circle, rgba(255, 232, 182, 0.48) 0%, rgba(233, 172, 149, 0.2) 38%, rgba(194, 154, 166, 0.08) 54%, rgba(183, 146, 164, 0) 72%);
@@ -250,7 +252,7 @@
     --space-heading-content: clamp(1.15rem, 4.8vw, 2rem);
     --text-hero: clamp(4.25rem, 18vw, 6.2rem);
     --gradient-background-base:
-      radial-gradient(97% 43% at var(--sun-center-x) 21%, rgba(255, 226, 176, 0.64), rgba(255, 226, 176, 0) 64%),
+      radial-gradient(84% 40% at var(--sun-mass-x) calc(var(--sun-mass-y) - 1.4%), rgba(255, 228, 179, 0.54), rgba(255, 228, 179, 0) 64%),
       radial-gradient(126% 62% at 50% calc(80% + var(--horizon-shift)), rgba(186, 139, 132, 0.1), rgba(186, 139, 132, 0) 90%),
       linear-gradient(
         180deg,
@@ -261,7 +263,7 @@
         var(--color-sunrise-sea-coral) 95%,
         #a9887b 100%
       );
-    --gradient-background-haze: radial-gradient(circle at var(--sun-center-x) 24%, rgba(255, 240, 211, 0.42) 0%, rgba(255, 228, 198, 0.14) 50%, rgba(255, 255, 255, 0) 80%);
+    --gradient-background-haze: radial-gradient(circle at var(--sun-mass-x) calc(var(--sun-mass-y) - 1.6%), rgba(255, 240, 211, 0.36) 0%, rgba(255, 228, 198, 0.12) 49%, rgba(255, 255, 255, 0) 77%);
     --gradient-background-horizon: linear-gradient(180deg, rgba(183, 149, 164, 0) 86%, rgba(160, 126, 145, 0.16) 94%, rgba(160, 126, 145, 0.03) 100%);
     --gradient-background-sea: linear-gradient(180deg, rgba(210, 162, 146, 0) 83%, rgba(175, 114, 96, 0.11) 92%, rgba(147, 104, 93, 0.03) 100%);
     --gradient-background-depth: linear-gradient(180deg, rgba(127, 96, 87, 0) 87%, rgba(121, 90, 84, 0.07) 95%, rgba(113, 84, 79, 0.12) 100%);
