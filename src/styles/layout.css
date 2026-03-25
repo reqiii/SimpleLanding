@@ -49,7 +49,7 @@
 }
 
 .section--intro {
-  padding-block: clamp(1.8rem, 4.8vw, 2.8rem);
+  padding-block: clamp(2rem, 5.1vw, 3rem);
 }
 
 .section--hero,
@@ -69,7 +69,7 @@
 }
 
 .section--hero + .section--intro {
-  margin-top: clamp(-3.1rem, -4.3vw, -1.8rem);
+  margin-top: clamp(-2.8rem, -3.8vw, -1.5rem);
 }
 
 .section--timeline + .section--details {
@@ -274,7 +274,7 @@
 
   .background-system__light--rays-focus {
     filter: blur(1.3px);
-    opacity: calc(var(--atmo-ray-focus-opacity) * 1.14);
+    opacity: calc(var(--atmo-ray-focus-opacity) * 1.1);
   }
 
   .background-system__light--rays-structure {
@@ -307,7 +307,7 @@
   }
 
   .background-system__light--rays-focus {
-    opacity: calc(var(--atmo-ray-focus-opacity) * 1.26);
+    opacity: calc(var(--atmo-ray-focus-opacity) * 1.22);
     filter: blur(0.9px);
     animation-duration: 18s;
   }

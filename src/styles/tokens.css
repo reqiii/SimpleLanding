@@ -234,8 +234,8 @@
     --container-pad: clamp(0.625rem, 3.8vw, 0.85rem);
     --radius-xl: 2rem;
     --radius-lg: 1.8rem;
-    --sun-center-x: 52.8%;
-    --sun-center-y: 59%;
+    --sun-center-x: 52.4%;
+    --sun-center-y: 58.8%;
     --horizon-shift: 7.8%;
     --space-7: clamp(4rem, 12vw, 5.5rem);
     --space-8: clamp(5rem, 14vw, 7rem);
@@ -269,8 +269,8 @@
 
 @media (max-width: 430px) {
   :root {
-    --sun-center-x: 53.2%;
-    --sun-center-y: 59.8%;
+    --sun-center-x: 52.7%;
+    --sun-center-y: 59.2%;
     --horizon-shift: 8.4%;
   }
 }

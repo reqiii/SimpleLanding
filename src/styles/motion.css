@@ -47,13 +47,13 @@
 }
 
 @keyframes sunriseRaySoftDrift {
-  from { transform: translate3d(-2.4%, -2.1%, 0) scale(0.92) rotate(-1.5deg); opacity: 0.62; }
-  to { transform: translate3d(2.4%, 2.1%, 0) scale(1.08) rotate(1.3deg); opacity: 0.86; }
+  from { transform: translate3d(-2.1%, -1.9%, 0) scale(0.93) rotate(-1.3deg); opacity: 0.62; }
+  to { transform: translate3d(2.1%, 1.9%, 0) scale(1.07) rotate(1.1deg); opacity: 0.84; }
 }
 
 @keyframes sunriseRayFocusDrift {
-  from { transform: translate3d(-1.8%, -1.4%, 0) scale(0.95) rotate(-1deg); opacity: 0.6; }
-  to { transform: translate3d(1.8%, 1.4%, 0) scale(1.05) rotate(0.9deg); opacity: 0.9; }
+  from { transform: translate3d(-1.6%, -1.25%, 0) scale(0.95) rotate(-0.9deg); opacity: 0.58; }
+  to { transform: translate3d(1.6%, 1.25%, 0) scale(1.04) rotate(0.8deg); opacity: 0.86; }
 }
 
 @keyframes sunriseRayStructureDrift {
