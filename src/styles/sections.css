@@ -22,14 +22,14 @@
 .hero-stage__inner::before {
   content: '';
   position: absolute;
-  inset: clamp(3.2rem, 7.2vw, 5.3rem) 50% auto;
+  inset: clamp(3.2rem, 7.2vw, 5.3rem) var(--sun-mass-x) auto;
   translate: -50% 0;
   width: min(54rem, 100%);
   height: clamp(21rem, 44vw, 30rem);
   border-radius: 50%;
   border: none;
   background:
-    radial-gradient(circle at 50% 46%, rgba(255, 250, 236, 0.33), rgba(255, 246, 232, 0.1) 48%, rgba(255, 246, 232, 0) 73%),
+    radial-gradient(circle at var(--sun-mass-x) 46%, rgba(255, 250, 236, 0.31), rgba(255, 246, 232, 0.09) 47%, rgba(255, 246, 232, 0) 71%),
     linear-gradient(180deg, rgba(255, 251, 244, 0.05), rgba(255, 246, 232, 0));
   z-index: 0;
   pointer-events: none;
