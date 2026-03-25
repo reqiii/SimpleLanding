@@ -39,7 +39,7 @@
 }
 
 .section + .section {
-  margin-top: clamp(-0.55rem, -0.6vw, -0.22rem);
+  margin-top: clamp(-0.45rem, -0.55vw, -0.16rem);
 }
 
 .section--intro,
@@ -49,7 +49,7 @@
 }
 
 .section--intro {
-  padding-block: clamp(2rem, 5.1vw, 3rem);
+  padding-block: clamp(1.35rem, 3.8vw, 2.2rem);
 }
 
 .section--hero,
@@ -69,7 +69,7 @@
 }
 
 .section--hero + .section--intro {
-  margin-top: clamp(-2.8rem, -3.8vw, -1.5rem);
+  margin-top: clamp(-3.35rem, -4.6vw, -1.9rem);
 }
 
 .section--timeline + .section--details {
@@ -162,6 +162,20 @@
   will-change: transform, opacity;
 }
 
+
+.background-system__light--axis {
+  top: var(--sun-center-y);
+  left: var(--sun-center-x);
+  width: min(42rem, 80vw);
+  height: clamp(18rem, 36vw, 24rem);
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 48%, rgba(255, 245, 223, 0.5) 0%, rgba(255, 231, 197, 0.3) 36%, rgba(255, 231, 197, 0) 72%);
+  mix-blend-mode: screen;
+  filter: blur(3px);
+  opacity: 0.58;
+  transform: translate3d(-50%, -50%, 0);
+}
+
 .background-system__light--rays-soft,
 .background-system__light--rays-focus,
 .background-system__light--rays-structure {
@@ -169,27 +183,27 @@
   mix-blend-mode: screen;
   transform-origin: var(--sun-center-x) var(--sun-center-y);
   will-change: transform, opacity, filter;
-  -webkit-mask-image: radial-gradient(112% 70% at var(--sun-center-x) var(--sun-center-y), rgba(0, 0, 0, 0.94) 0%, rgba(0, 0, 0, 0.72) 56%, rgba(0, 0, 0, 0.36) 74%, rgba(0, 0, 0, 0) 92%);
-  mask-image: radial-gradient(112% 70% at var(--sun-center-x) var(--sun-center-y), rgba(0, 0, 0, 0.94) 0%, rgba(0, 0, 0, 0.72) 56%, rgba(0, 0, 0, 0.36) 74%, rgba(0, 0, 0, 0) 92%);
+  -webkit-mask-image: radial-gradient(120% 74% at var(--sun-center-x) var(--sun-center-y), rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.84) 52%, rgba(0, 0, 0, 0.5) 72%, rgba(0, 0, 0, 0.12) 87%, rgba(0, 0, 0, 0) 96%);
+  mask-image: radial-gradient(120% 74% at var(--sun-center-x) var(--sun-center-y), rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.84) 52%, rgba(0, 0, 0, 0.5) 72%, rgba(0, 0, 0, 0.12) 87%, rgba(0, 0, 0, 0) 96%);
 }
 
 .background-system__light--rays-soft {
   background-image: var(--gradient-sun-rays-soft);
-  filter: blur(6px);
+  filter: blur(4px);
   opacity: var(--atmo-ray-soft-opacity);
   animation: sunriseRaySoftDrift 38s cubic-bezier(0.3, 0.05, 0.25, 1) infinite alternate;
 }
 
 .background-system__light--rays-focus {
   background-image: var(--gradient-sun-rays-focus);
-  filter: blur(2px);
+  filter: blur(1.2px);
   opacity: var(--atmo-ray-focus-opacity);
   animation: sunriseRayFocusDrift 28s cubic-bezier(0.32, 0.08, 0.3, 1) infinite alternate;
 }
 
 .background-system__light--rays-structure {
   background-image: var(--gradient-sun-rays-structure);
-  filter: blur(2.5px);
+  filter: blur(1.6px);
   opacity: var(--atmo-ray-structure-opacity);
   animation:
     sunriseRayStructureDrift 31s cubic-bezier(0.35, 0.08, 0.28, 1) infinite alternate,
@@ -197,7 +211,7 @@
 }
 
 .background-system__light--reflection {
-  top: calc(79% + var(--horizon-shift));
+  top: calc(80.8% + var(--horizon-shift));
   left: var(--sun-center-x);
   width: min(66rem, 96vw);
   height: clamp(8rem, 15vw, 11.5rem);
@@ -253,39 +267,50 @@
   }
 
   .background-system__light--halo {
-    width: min(34rem, 108vw);
-    height: clamp(13.5rem, 56vw, 19rem);
-    filter: blur(4.5px);
-    opacity: calc(var(--atmo-sun-halo-opacity) * 1.1);
+    width: min(36rem, 118vw);
+    height: clamp(14.8rem, 64vw, 20rem);
+    filter: blur(3.8px);
+    opacity: calc(var(--atmo-sun-halo-opacity) * 1.16);
   }
 
   .background-system__light--reflection {
-    top: calc(82.5% + var(--horizon-shift));
+    top: calc(84.2% + var(--horizon-shift));
     width: 112vw;
     height: clamp(7.8rem, 30vw, 10.2rem);
     filter: blur(8px);
     opacity: calc(var(--atmo-reflection-opacity) * 0.82);
   }
 
+  .background-system__light--axis {
+    width: 132vw;
+    height: clamp(16rem, 76vw, 24rem);
+    filter: blur(2.8px);
+    opacity: 0.68;
+  }
+
   .background-system__light--rays-soft {
-    filter: blur(4px);
-    opacity: calc(var(--atmo-ray-soft-opacity) * 1.08);
+    filter: blur(2.6px);
+    opacity: calc(var(--atmo-ray-soft-opacity) * 1.1);
   }
 
   .background-system__light--rays-focus {
-    filter: blur(1.3px);
-    opacity: calc(var(--atmo-ray-focus-opacity) * 1.1);
+    filter: blur(0.8px);
+    opacity: calc(var(--atmo-ray-focus-opacity) * 1.14);
   }
 
   .background-system__light--rays-structure {
-    filter: blur(1.7px);
-    opacity: calc(var(--atmo-ray-structure-opacity) * 1.03);
-    -webkit-mask-image: radial-gradient(105% 66% at var(--sun-center-x) var(--sun-center-y), rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 52%, rgba(0, 0, 0, 0.2) 71%, rgba(0, 0, 0, 0) 88%);
-    mask-image: radial-gradient(105% 66% at var(--sun-center-x) var(--sun-center-y), rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 52%, rgba(0, 0, 0, 0.2) 71%, rgba(0, 0, 0, 0) 88%);
+    filter: blur(1px);
+    opacity: calc(var(--atmo-ray-structure-opacity) * 1.09);
+    -webkit-mask-image: radial-gradient(112% 72% at var(--sun-center-x) var(--sun-center-y), rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.82) 54%, rgba(0, 0, 0, 0.42) 74%, rgba(0, 0, 0, 0.08) 90%, rgba(0, 0, 0, 0) 98%);
+    mask-image: radial-gradient(112% 72% at var(--sun-center-x) var(--sun-center-y), rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.82) 54%, rgba(0, 0, 0, 0.42) 74%, rgba(0, 0, 0, 0.08) 90%, rgba(0, 0, 0, 0) 98%);
+  }
+
+  .background-system__sea {
+    opacity: calc(var(--atmo-sea-opacity) * 0.94);
   }
 
   .background-system__depth {
-    opacity: calc(var(--atmo-depth-opacity) * 0.9);
+    opacity: calc(var(--atmo-depth-opacity) * 0.84);
   }
 
   .background-system__grain {
@@ -300,21 +325,26 @@
     top: var(--sun-center-y);
   }
 
+  .background-system__light--axis {
+    opacity: 0.72;
+    filter: blur(2.4px);
+  }
+
   .background-system__light--rays-soft {
-    opacity: calc(var(--atmo-ray-soft-opacity) * 1.03);
-    filter: blur(3.5px);
+    opacity: calc(var(--atmo-ray-soft-opacity) * 1.06);
+    filter: blur(2.1px);
     animation-duration: 26s;
   }
 
   .background-system__light--rays-focus {
-    opacity: calc(var(--atmo-ray-focus-opacity) * 1.22);
-    filter: blur(0.9px);
+    opacity: calc(var(--atmo-ray-focus-opacity) * 1.2);
+    filter: blur(0.6px);
     animation-duration: 18s;
   }
 
   .background-system__light--rays-structure {
-    opacity: calc(var(--atmo-ray-structure-opacity) * 1.02);
-    filter: blur(1.3px);
+    opacity: calc(var(--atmo-ray-structure-opacity) * 1.07);
+    filter: blur(0.72px);
     animation-duration: 20s, 11s;
   }
 
