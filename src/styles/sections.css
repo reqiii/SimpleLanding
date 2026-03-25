@@ -22,15 +22,15 @@
 .hero-stage__inner::before {
   content: '';
   position: absolute;
-  inset: clamp(3.2rem, 7.2vw, 5.3rem) var(--sun-mass-x) auto;
+  inset: clamp(3.2rem, 7.2vw, 5.3rem) 50% auto;
   translate: -50% 0;
   width: min(54rem, 100%);
   height: clamp(21rem, 44vw, 30rem);
   border-radius: 50%;
   border: none;
   background:
-    radial-gradient(circle at var(--sun-mass-x) 46%, rgba(255, 250, 236, 0.31), rgba(255, 246, 232, 0.09) 47%, rgba(255, 246, 232, 0) 71%),
-    linear-gradient(180deg, rgba(255, 251, 244, 0.05), rgba(255, 246, 232, 0));
+    radial-gradient(circle at 50% 46%, rgba(255, 250, 236, 0.34), rgba(255, 246, 232, 0.1) 47%, rgba(255, 246, 232, 0) 71%),
+    linear-gradient(180deg, rgba(255, 251, 244, 0.06), rgba(255, 246, 232, 0));
   z-index: 0;
   pointer-events: none;
 }
@@ -252,12 +252,12 @@
 
 .editorial-block--intro {
   justify-items: center;
-  padding-top: clamp(0.1rem, 1.2vw, 0.8rem);
+  padding-top: clamp(0.3rem, 1.6vw, 1rem);
 }
 
 .section--intro .section-heading {
-  padding-top: clamp(0.45rem, 1.3vw, 0.8rem);
-  margin-bottom: clamp(0.35rem, 1vw, 0.7rem);
+  padding-top: clamp(0.6rem, 1.6vw, 1rem);
+  margin-bottom: clamp(0.45rem, 1.2vw, 0.8rem);
 }
 
 .intro-ornament {
@@ -283,21 +283,6 @@
 .intro-ornament__frame::before,
 .intro-ornament__frame::after {
   content: none;
-}
-
-.intro-ornament__frame::before {
-  inset: 0;
-  border: 0;
-  border-radius: 0;
-  background:
-    linear-gradient(90deg, rgba(124, 94, 83, 0), rgba(124, 94, 83, 0.2) 15%, rgba(124, 94, 83, 0.2) 85%, rgba(124, 94, 83, 0)) top / 100% 1px no-repeat,
-    linear-gradient(90deg, rgba(124, 94, 83, 0), rgba(124, 94, 83, 0.14) 15%, rgba(124, 94, 83, 0.14) 85%, rgba(124, 94, 83, 0)) bottom / 100% 1px no-repeat;
-  box-shadow: none;
-  z-index: -2;
-}
-
-.intro-ornament__frame::after {
-  display: none;
 }
 
 .intro-ornament::before,
